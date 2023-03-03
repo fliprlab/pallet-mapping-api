@@ -1,0 +1,44 @@
+{
+  meta: {
+    req: {
+      url: '/favicon.ico',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57',
+        'sec-ch-ua-platform': '"Windows"',
+        accept: 'image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+        'sec-fetch-site': 'same-origin',
+        'sec-fetch-mode': 'no-cors',
+        'sec-fetch-dest': 'image',
+        referer: 'http://localhost:4000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        cookie: '_ga=GA1.1.1783044643.1675503311; _ga_KW2T2H69LG=GS1.1.1676626944.9.0.1676626944.0.0.0; _ga_50MXFB7SE3=GS1.1.1677497990.2.1.1677498839.0.0.0; _ga_K18N6CKMVE=GS1.1.1677749622.10.1.1677749885.0.0.0'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/favicon.ico',
+      query: {}
+    },
+    res: {
+      statusCode: 404,
+      body: '<!DOCTYPE html>\n' +
+        '<html lang="en">\n' +
+        '<head>\n' +
+        '<meta charset="utf-8">\n' +
+        '<title>Error</title>\n' +
+        '</head>\n' +
+        '<body>\n' +
+        '<pre>Cannot GET /favicon.ico</pre>\n' +
+        '</body>\n' +
+        '</html>\n'
+    },
+    responseTime: 2
+  },
+  level: 'warn',
+  message: 'HTTP GET /favicon.ico',
+  timestamp: '2023-03-03T05:41:54.676Z'
+}
