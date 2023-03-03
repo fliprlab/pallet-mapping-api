@@ -6,11 +6,11 @@ const bcrypt = require("bcryptjs");
 
 export const addProfile = async (req: Request, res: Response) => {
   try {
-    const { storeMail, password } = req.body;
+    const { username, password } = req.body;
     const { createAdminUser } = adminDao;
 
     const user = await createAdminUser({
-      username: storeMail,
+      username: username,
       password: bcrypt.hashSync(password, 10),
     });
 
