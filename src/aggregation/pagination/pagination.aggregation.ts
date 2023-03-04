@@ -1,12 +1,17 @@
 import { PipelineStage } from "mongoose";
 
 export const getPaginationAggregation = (
-  page: any,
-  itemPerPage: any
+  page: string,
+  itemPerPage: string
 ): PipelineStage[] => {
   let aggr: PipelineStage[] = [];
 
-  if (page && itemPerPage) {
+  if (
+    page !== undefined &&
+    itemPerPage !== undefined &&
+    page !== "undefined" &&
+    itemPerPage !== "undefined"
+  ) {
     const offset = Number(itemPerPage) * (Number(page) - 1);
     // bunch data
     aggr.push({

@@ -1,27 +1,26 @@
 import { Request, Response } from "express";
+import { getUsersAggregation } from "../../aggregation/user/users.aggregation";
 import { logger } from "../../config/logger";
 import { usersDao } from "../../dao/users-dao";
+import { paginated } from "../../middleware/paginate/paginated.middleware";
+import UsersModel from "../../models/UsersModel";
 import { JsonResponse } from "../../utils/jsonResponse";
 
 export const getUsers = async (req: Request, res: Response) => {
   try {
-    const { getUsersDao } = usersDao;
-    const users = await getUsersDao();
-    if (!users) {
-      return JsonResponse(res, {
-        statusCode: 400,
-        status: "error",
-        title: "Error",
-        message: "Can not find users. Please try again.",
-      });
-    }
+    const { data, pageData } = await paginated({
+      Model: UsersModel,
+      aggregationArray: getUsersAggregation({ req, res }),
+      req,
+    });
 
     return JsonResponse(res, {
       statusCode: 200,
       status: "success",
       title: "Success",
       message: "Find users successfully.",
-      data: users,
+      data: data,
+      pageData: pageData,
     });
   } catch (error) {
     logger.error(error);
