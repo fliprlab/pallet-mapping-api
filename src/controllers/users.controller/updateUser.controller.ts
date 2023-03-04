@@ -9,21 +9,17 @@ export const updateUser = async (req: Request, res: Response) => {
     const { updateUserDao } = usersDao;
     const { _id, userName, active, origin, password } = req.body;
 
-    let data: Partial<TUsers> = {};
+    let data: Partial<TUsers> = {
+      userName,
+      active,
+      origin,
+    };
 
-    if (userName) {
-      data.userName = userName;
-    }
-    if (active !== undefined) {
-      data.active = active;
-    }
-    if (origin) {
-      data.origin = origin;
-    }
     if (password) {
       data.password = bcrypt.hashSync(password, 10);
     }
-    const user = await updateUserDao(_id || "", data);
+
+    const user = await updateUserDao(_id, data);
     if (!user) {
       return JsonResponse(res, {
         statusCode: 400,
