@@ -19298,3 +19298,4258 @@
   message: 'HTTP GET /admin/get-users',
   timestamp: '2023-03-04T09:39:24.322Z'
 }
+{
+  meta: {
+    req: {
+      url: '/admin/get-profile',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer null',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-profile',
+      query: {}
+    },
+    res: {
+      statusCode: 401,
+      body: {
+        status: 'error',
+        title: 'Authentication Error',
+        message: 'jwt malformed'
+      }
+    },
+    responseTime: 8
+  },
+  level: 'warn',
+  message: 'HTTP GET /admin/get-profile',
+  timestamp: '2023-03-04T13:38:08.016Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-profile',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer null',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-profile',
+      query: {}
+    },
+    res: {
+      statusCode: 401,
+      body: {
+        status: 'error',
+        title: 'Authentication Error',
+        message: 'jwt malformed'
+      }
+    },
+    responseTime: 3
+  },
+  level: 'warn',
+  message: 'HTTP GET /admin/get-profile',
+  timestamp: '2023-03-04T13:38:08.208Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin-login',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '54',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer null',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin-login',
+      query: {},
+      body: { username: 'admin@gmail.com', password: 'Admin@1640' }
+    },
+    res: {
+      statusCode: 201,
+      body: {
+        status: 'success',
+        title: 'Logged in success',
+        message: 'Logged in successfully',
+        data: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A'
+      }
+    },
+    responseTime: 233
+  },
+  level: 'info',
+  message: 'HTTP POST /admin-login',
+  timestamp: '2023-03-04T13:38:30.572Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-profile',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer null',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-profile',
+      query: {}
+    },
+    res: {
+      statusCode: 401,
+      body: {
+        status: 'error',
+        title: 'Authentication Error',
+        message: 'jwt malformed'
+      }
+    },
+    responseTime: 2
+  },
+  level: 'warn',
+  message: 'HTTP GET /admin/get-profile',
+  timestamp: '2023-03-04T13:38:30.581Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-profile',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-profile',
+      query: {}
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Profile founded',
+        message: 'profile founded successfully',
+        data: {
+          _id: '64018a8ec6de776f815be7b8',
+          username: 'admin@gmail.com',
+          password: '$2a$10$KBWyLH4OPuie8/y4Xb29LeD8hKUzgNgE6WxFiiMuMpoBThdnE4E4O',
+          active: true,
+          createdAt: '2023-03-03T05:50:06.725Z',
+          updatedAt: '2023-03-03T05:50:06.725Z',
+          __v: 0
+        }
+      }
+    },
+    responseTime: 62
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-profile',
+  timestamp: '2023-03-04T13:38:30.647Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-profile',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"14c-E3h7H0NJi/QUK2XvqfyFL7GHntw"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-profile',
+      query: {}
+    },
+    res: { statusCode: 304 },
+    responseTime: 52
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-profile',
+  timestamp: '2023-03-04T13:38:30.760Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$7m6EXJKve2szg1v78I/eoOkJr1SgT9UpbBKa/2OW8NJ85QacOZzjy',
+            origin: 'indore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T10:49:43.086Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T09:17:00.982Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T09:00:34.879Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 54
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:38:32.080Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user3',
+        origin: 'indore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 109
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:38:40.600Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b4-WbNyCD+Xw088TgjrgnQIFPnYTNc"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 53
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:38:40.665Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user3',
+        origin: 'indore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 78
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:38:42.385Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b4-WbNyCD+Xw088TgjrgnQIFPnYTNc"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 40
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:38:42.430Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user3',
+        origin: 'indore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 119
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:38:51.238Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b4-WbNyCD+Xw088TgjrgnQIFPnYTNc"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 58
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:38:51.305Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user3',
+        origin: 'indore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 103
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:38:52.559Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b4-WbNyCD+Xw088TgjrgnQIFPnYTNc"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 56
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:38:52.622Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user4',
+        origin: 'indore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 255
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:38:56.840Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b4-WbNyCD+Xw088TgjrgnQIFPnYTNc"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$MqZJpMXieCyewSllT5c5P.WP8Ycmi4MbGYvUpElBC/5ewnc402dHS',
+            origin: 'indore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:38:56.773Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T09:17:00.982Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T09:00:34.879Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 55
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:38:56.903Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user3',
+        origin: 'indore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 91
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:40:16.304Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b4-D19gyDm0eJB7uluwKc3bv/B3JK0"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 46
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:40:16.368Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user4',
+        origin: 'ujjain',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 222
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:40:24.327Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b4-D19gyDm0eJB7uluwKc3bv/B3JK0"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$Qx/4E3v5BQXJL3pjS8MyLuzaEhyeWvqiB9JNQCJLF6SJ43QA1T2k.',
+            origin: 'ujjain',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:40:24.281Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T09:17:00.982Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T09:00:34.879Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 41
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:40:24.374Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '96',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user58',
+        origin: 'Banglore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 190
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:40:35.039Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b4-4gZpsJmsilfxep5YzUu4qmOiwno"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user58',
+            password: '$2a$10$ImsY7vquG19/h9YwX7fQXu6QguTbb/5fjJZcC1nUlYibt7RXBNNm6',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:40:34.995Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T09:17:00.982Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T09:00:34.879Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 41
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:40:35.087Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '95',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user4',
+        origin: 'Banglore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 186
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:40:39.787Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b7-+YlpeVqdveWzD99GbQiHGAa01pw"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:40:39.745Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T09:17:00.982Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T09:00:34.879Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 40
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:40:39.831Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '49',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: { _id: '64030f3eff5ff04dacb6d9fe', active: false }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 88
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:40:40.905Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b6-nJebmraJ7mD4VFK9AV85NNYbczQ"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:40:40.859Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T09:17:00.982Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T09:00:34.879Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 40
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:40:40.952Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '49',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: { _id: '64030f3eff5ff04dacb6d9fe', active: false }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 86
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:40:45.739Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b6-b5q0YLNBWOBrGpMjQERbxFadqQ8"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:40:45.697Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T09:17:00.982Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T09:00:34.879Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 44
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:40:45.788Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '49',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: { _id: '6403070f0ae689e765e58e59', active: false }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 84
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:41:12.116Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b6-DJNMNFialhZnbaWfCcyInydD9WQ"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:40:45.697Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T09:17:00.982Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 41
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:41:12.163Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '49',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: { _id: '64030f3eff5ff04dacb6d9fe', active: false }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 108
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:42:14.815Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b6-TaqmjVZx/n+k293TCfk/JSbFG8g"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:42:14.764Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T09:17:00.982Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 40
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:42:14.862Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '49',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: { _id: '64030f3eff5ff04dacb6d9fe', active: false }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 99
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:42:54.295Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b6-NtAHvbgbPc/Bnur7PtIl8Cz9enI"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: false,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:42:54.250Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T09:17:00.982Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 37
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:42:54.342Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '48',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: { _id: '64030f3eff5ff04dacb6d9fe', active: true }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 83
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:43:01.201Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b7-GLDxg/sWBQhBmPVgH3DZmuwEZG8"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T09:17:00.982Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 39
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:43:01.246Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '49',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: { _id: '640309640ae689e765e58e91', active: false }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 83
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:43:02.439Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b6-xUN7nQufFOM0h4XdcYmB1CKLOmo"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: false,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:02.397Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 38
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:43:02.484Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '48',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: { _id: '640309640ae689e765e58e91', active: true }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 88
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:43:03.350Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b7-VXaxjgSqU45jFqiJeELTQbhPwbs"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:03.302Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 46
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:43:03.413Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/add-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '59',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/add-user',
+      query: {},
+      body: { userName: 'user4', origin: 'mahow', password: '12345678' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Create user successfully.'
+      }
+    },
+    responseTime: 272
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/add-user',
+  timestamp: '2023-03-04T13:43:26.343Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"3b6-XcW4bgU3ejkEdVQXwhJlhGcAWLc"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64034afec97bc865b4d96803',
+            userName: 'user4',
+            password: '$2a$10$VG4rZuDXIt2eZfmu6sdQ6eQWqOmb4y9533yfquM98VO2u9Ne9RkXO',
+            origin: 'mahow',
+            active: true,
+            createdAt: '2023-03-04T13:43:26.288Z',
+            updatedAt: '2023-03-04T13:43:26.288Z',
+            __v: 0
+          },
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:03.302Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 49
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:43:26.399Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '92',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user4',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 221
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:43:32.726Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-K5RAaA2FbmEL7BbyvebFIQf7L7U"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64034afec97bc865b4d96803',
+            userName: 'user4',
+            password: '$2a$10$l3j3wtez9bbzSWoFKZkz4uJIWF78jaaP88D1WI34sqrAzvMcSPS6q',
+            origin: 'mahow',
+            active: true,
+            createdAt: '2023-03-04T13:43:26.288Z',
+            updatedAt: '2023-03-04T13:43:32.674Z',
+            __v: 0
+          },
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:03.302Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 47
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:43:32.778Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '92',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user5',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 210
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:43:37.738Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-+WDTCA6xPwJmdqhl1BQIheuf1cc"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64034afec97bc865b4d96803',
+            userName: 'user5',
+            password: '$2a$10$BggKM2ynP29Lq.bLMqdBvuY5MRre4Cg4EmJ8omce8vxVjO/rKF2/.',
+            origin: 'mahow',
+            active: true,
+            createdAt: '2023-03-04T13:43:26.288Z',
+            updatedAt: '2023-03-04T13:43:37.689Z',
+            __v: 0
+          },
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:03.302Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 46
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:43:37.790Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '92',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user4',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 91
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:43:41.460Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-6BxFun66iHfajb5VZ6RydwF4rJs"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 47
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:43:41.519Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '92',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user5',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 215
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:43:45.550Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-6BxFun66iHfajb5VZ6RydwF4rJs"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64034afec97bc865b4d96803',
+            userName: 'user5',
+            password: '$2a$10$TAlZksHv6DAq2UXASsu1ZuS.IEcUL3ajsNr3NRSx2jhQStR4atOdS',
+            origin: 'mahow',
+            active: true,
+            createdAt: '2023-03-04T13:43:26.288Z',
+            updatedAt: '2023-03-04T13:43:45.499Z',
+            __v: 0
+          },
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:03.302Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 47
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:43:45.603Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '92',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user5',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 193
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:45:22.422Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-zblgavgaeCTPOgZOTDrkpkwYmMc"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64034afec97bc865b4d96803',
+            userName: 'user5',
+            password: '$2a$10$1eP.gdKrNxbAfsyf7o2QludNKnu6Vvp91ZBe35d6c15e0cz8TrR6W',
+            origin: 'mahow',
+            active: true,
+            createdAt: '2023-03-04T13:43:26.288Z',
+            updatedAt: '2023-03-04T13:45:22.379Z',
+            __v: 0
+          },
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:03.302Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 35
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:45:22.465Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '92',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user4',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 62
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:45:26.711Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-1BAhuLInlCec6GFOmZVrITgPBQc"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 31
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:45:26.754Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user26',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 173
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:45:30.277Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-1BAhuLInlCec6GFOmZVrITgPBQc"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64034afec97bc865b4d96803',
+            userName: 'user26',
+            password: '$2a$10$1Mx9PvMHX0kNzhynMiDYsu8SQQZyC.9BKIAFUvBlDNxs3.jikDi0a',
+            origin: 'mahow',
+            active: true,
+            createdAt: '2023-03-04T13:43:26.288Z',
+            updatedAt: '2023-03-04T13:45:30.239Z',
+            __v: 0
+          },
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:03.302Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 32
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:45:30.316Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '84',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user5',
+        origin: 'mahow',
+        password: ''
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 105
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:45:34.554Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ac-c/u0TfUDLJGMU/HNOLiypCKiUKk"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64034afec97bc865b4d96803',
+            userName: 'user5',
+            password: '$2a$10$1Mx9PvMHX0kNzhynMiDYsu8SQQZyC.9BKIAFUvBlDNxs3.jikDi0a',
+            origin: 'mahow',
+            active: true,
+            createdAt: '2023-03-04T13:43:26.288Z',
+            updatedAt: '2023-03-04T13:45:34.511Z',
+            __v: 0
+          },
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:03.302Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 34
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:45:34.591Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '92',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user1',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 64
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:45:37.904Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-wyHw27gcS917BO1PIA3nIMu2G9k"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 31
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:45:37.949Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '92',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user5',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 185
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:45:40.951Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-wyHw27gcS917BO1PIA3nIMu2G9k"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64034afec97bc865b4d96803',
+            userName: 'user5',
+            password: '$2a$10$YJ4e8mxAWxP2JvY4ZawRwe1t.ijYzVBAJRyDGYFCOvv1NjwX5cASG',
+            origin: 'mahow',
+            active: true,
+            createdAt: '2023-03-04T13:43:26.288Z',
+            updatedAt: '2023-03-04T13:45:40.915Z',
+            __v: 0
+          },
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:03.302Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 32
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:45:40.989Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/add-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '58',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/add-user',
+      query: {},
+      body: { userName: 'user5', origin: 'naka', password: 'password' }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 32
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/add-user',
+  timestamp: '2023-03-04T13:45:51.107Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-NYhXHzxpdS9tzbtFgOXTCTZDWqg"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 32
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:45:51.159Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/add-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '58',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/add-user',
+      query: {},
+      body: { userName: 'user5', origin: 'naka', password: 'password' }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 32
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/add-user',
+  timestamp: '2023-03-04T13:45:53.114Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-NYhXHzxpdS9tzbtFgOXTCTZDWqg"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 32
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:45:53.150Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/add-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '58',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/add-user',
+      query: {},
+      body: { userName: 'user6', origin: 'naka', password: '12345678' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Create user successfully.'
+      }
+    },
+    responseTime: 151
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/add-user',
+  timestamp: '2023-03-04T13:46:01.200Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"4ab-NYhXHzxpdS9tzbtFgOXTCTZDWqg"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64034b99e96bc6619f76a98d',
+            userName: 'user6',
+            password: '$2a$10$tZK2vkbj1sXUypRlMRVTVOc6pxAV2HId3sUA7tfdD/lby3K/z5GNO',
+            origin: 'naka',
+            active: true,
+            createdAt: '2023-03-04T13:46:01.158Z',
+            updatedAt: '2023-03-04T13:46:01.158Z',
+            __v: 0
+          },
+          {
+            _id: '64034afec97bc865b4d96803',
+            userName: 'user5',
+            password: '$2a$10$YJ4e8mxAWxP2JvY4ZawRwe1t.ijYzVBAJRyDGYFCOvv1NjwX5cASG',
+            origin: 'mahow',
+            active: true,
+            createdAt: '2023-03-04T13:43:26.288Z',
+            updatedAt: '2023-03-04T13:45:40.915Z',
+            __v: 0
+          },
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:03.302Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 32
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:46:01.238Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '83',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034b99e96bc6619f76a98d',
+        userName: 'user5',
+        origin: 'naka',
+        password: ''
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 62
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:46:06.191Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"59f-V5w4FHt+OsCFuV/rHbAVGFM0/dg"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 33
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:46:06.238Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '83',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034b99e96bc6619f76a98d',
+        userName: 'user4',
+        origin: 'naka',
+        password: ''
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 72
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:46:14.121Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"59f-V5w4FHt+OsCFuV/rHbAVGFM0/dg"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: { statusCode: 304 },
+    responseTime: 32
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:46:14.167Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '85',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034b99e96bc6619f76a98d',
+        userName: 'user6',
+        origin: 'Mumbai',
+        password: ''
+      }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Update user successfully.'
+      }
+    },
+    responseTime: 97
+  },
+  level: 'info',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:46:23.716Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-users?search=',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+        'if-none-match': 'W/"59f-V5w4FHt+OsCFuV/rHbAVGFM0/dg"'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-users?search=',
+      query: { search: '' }
+    },
+    res: {
+      statusCode: 200,
+      body: {
+        status: 'success',
+        title: 'Success',
+        message: 'Find users successfully.',
+        data: [
+          {
+            _id: '64034b99e96bc6619f76a98d',
+            userName: 'user6',
+            password: '$2a$10$tZK2vkbj1sXUypRlMRVTVOc6pxAV2HId3sUA7tfdD/lby3K/z5GNO',
+            origin: 'Mumbai',
+            active: true,
+            createdAt: '2023-03-04T13:46:01.158Z',
+            updatedAt: '2023-03-04T13:46:23.681Z',
+            __v: 0
+          },
+          {
+            _id: '64034afec97bc865b4d96803',
+            userName: 'user5',
+            password: '$2a$10$YJ4e8mxAWxP2JvY4ZawRwe1t.ijYzVBAJRyDGYFCOvv1NjwX5cASG',
+            origin: 'mahow',
+            active: true,
+            createdAt: '2023-03-04T13:43:26.288Z',
+            updatedAt: '2023-03-04T13:45:40.915Z',
+            __v: 0
+          },
+          {
+            _id: '64030f3eff5ff04dacb6d9fe',
+            userName: 'user4',
+            password: '$2a$10$aPDBB0jgvedp6ZFVpknDeesFuEn7VL6n0.pluIaFsTiwWh7Zw45EO',
+            origin: 'Banglore',
+            active: true,
+            createdAt: '2023-03-04T09:28:30.348Z',
+            updatedAt: '2023-03-04T13:43:01.159Z',
+            __v: 0
+          },
+          {
+            _id: '64030d8bff5ff04dacb6d9e8',
+            userName: 'user3',
+            password: '',
+            origin: 'Indore',
+            active: true,
+            createdAt: '2023-03-04T09:21:15.700Z',
+            updatedAt: '2023-03-04T09:28:13.651Z',
+            __v: 0
+          },
+          {
+            _id: '640309640ae689e765e58e91',
+            userName: 'user2',
+            password: '',
+            origin: 'Dewas',
+            active: true,
+            createdAt: '2023-03-04T09:03:32.450Z',
+            updatedAt: '2023-03-04T13:43:03.302Z',
+            __v: 0
+          },
+          {
+            _id: '6403070f0ae689e765e58e59',
+            userName: 'user1',
+            password: '$2a$10$67zQm1/rEekiRPHZKCQTz.31rcinmdxceuM7Y8uWlsEUn0tqDVP0m',
+            origin: 'Banglor',
+            active: true,
+            createdAt: '2023-03-04T08:53:35.108Z',
+            updatedAt: '2023-03-04T13:41:12.074Z',
+            __v: 0
+          }
+        ]
+      }
+    },
+    responseTime: 32
+  },
+  level: 'info',
+  message: 'HTTP GET /admin/get-users?search=',
+  timestamp: '2023-03-04T13:46:23.757Z'
+}

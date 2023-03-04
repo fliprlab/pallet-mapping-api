@@ -10,7 +10,14 @@ interface IPaginated {
 
 export const paginated = async (
   props: IPaginated
-): Promise<{ data: any[]; pageData: any }> => {
+): Promise<{
+  data: {
+    [key: string]: any;
+  }[];
+  pageData?: {
+    [key: string]: any;
+  }[];
+}> => {
   const { Model, req, aggregationArray } = props;
   const paginationAggregation = getPaginationAggregation(
     req.query.page as string,

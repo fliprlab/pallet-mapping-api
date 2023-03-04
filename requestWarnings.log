@@ -6484,3 +6484,689 @@
   message: 'HTTP POST /admin/update-user',
   timestamp: '2023-03-04T09:39:20.087Z'
 }
+{
+  meta: {
+    req: {
+      url: '/admin/get-profile',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer null',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-profile',
+      query: {}
+    },
+    res: {
+      statusCode: 401,
+      body: {
+        status: 'error',
+        title: 'Authentication Error',
+        message: 'jwt malformed'
+      }
+    },
+    responseTime: 8
+  },
+  level: 'warn',
+  message: 'HTTP GET /admin/get-profile',
+  timestamp: '2023-03-04T13:38:08.016Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-profile',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer null',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-profile',
+      query: {}
+    },
+    res: {
+      statusCode: 401,
+      body: {
+        status: 'error',
+        title: 'Authentication Error',
+        message: 'jwt malformed'
+      }
+    },
+    responseTime: 3
+  },
+  level: 'warn',
+  message: 'HTTP GET /admin/get-profile',
+  timestamp: '2023-03-04T13:38:08.208Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/get-profile',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer null',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/admin/get-profile',
+      query: {}
+    },
+    res: {
+      statusCode: 401,
+      body: {
+        status: 'error',
+        title: 'Authentication Error',
+        message: 'jwt malformed'
+      }
+    },
+    responseTime: 2
+  },
+  level: 'warn',
+  message: 'HTTP GET /admin/get-profile',
+  timestamp: '2023-03-04T13:38:30.581Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user3',
+        origin: 'indore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 109
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:38:40.600Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user3',
+        origin: 'indore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 78
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:38:42.385Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user3',
+        origin: 'indore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 119
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:38:51.238Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user3',
+        origin: 'indore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 103
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:38:52.559Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '93',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64030f3eff5ff04dacb6d9fe',
+        userName: 'user3',
+        origin: 'indore',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 91
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:40:16.304Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '92',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user4',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 91
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:43:41.460Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '92',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user4',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 62
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:45:26.711Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '92',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034afec97bc865b4d96803',
+        userName: 'user1',
+        origin: 'mahow',
+        password: 'password'
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 64
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:45:37.904Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/add-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '58',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/add-user',
+      query: {},
+      body: { userName: 'user5', origin: 'naka', password: 'password' }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 32
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/add-user',
+  timestamp: '2023-03-04T13:45:51.107Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/add-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '58',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/add-user',
+      query: {},
+      body: { userName: 'user5', origin: 'naka', password: 'password' }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 32
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/add-user',
+  timestamp: '2023-03-04T13:45:53.114Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '83',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034b99e96bc6619f76a98d',
+        userName: 'user5',
+        origin: 'naka',
+        password: ''
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 62
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:46:06.191Z'
+}
+{
+  meta: {
+    req: {
+      url: '/admin/update-user',
+      headers: {
+        host: 'localhost:4000',
+        connection: 'keep-alive',
+        'content-length': '83',
+        'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"',
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-ch-ua-mobile': '?0',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY0MDE4YThlYzZkZTc3NmY4MTViZTdiOCIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkS0JXeUxINE9QdWllOC95NFhiMjlMZUQ4aEtVemdOZ0U2V3hGaWlNdU1wb0JUaGRuRTRFNE8ifSwiaWF0IjoxNjc3OTM3MTEwLCJleHAiOjE2NzgwMjM1MTB9.BDX0Sm7_LetxGPdNDENZd5npCGXJgIM5jz__cB5mZ9A',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63',
+        'sec-ch-ua-platform': '"Windows"',
+        origin: 'http://localhost:3000',
+        'sec-fetch-site': 'same-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://localhost:3000/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,hi;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/admin/update-user',
+      query: {},
+      body: {
+        _id: '64034b99e96bc6619f76a98d',
+        userName: 'user4',
+        origin: 'naka',
+        password: ''
+      }
+    },
+    res: {
+      statusCode: 400,
+      body: {
+        status: 'error',
+        title: 'Error',
+        message: 'User name already exists.'
+      }
+    },
+    responseTime: 72
+  },
+  level: 'warn',
+  message: 'HTTP POST /admin/update-user',
+  timestamp: '2023-03-04T13:46:14.121Z'
+}

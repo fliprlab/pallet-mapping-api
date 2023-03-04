@@ -3,8 +3,7 @@ import UsersModel from "../../models/UsersModel";
 
 export const findUserByIdDao = async (id: string) => {
   try {
-    const user = await UsersModel.findById(id).exec();
-    return user;
+    return await UsersModel.findById(id).exec();
   } catch (error) {
     logger.error(error);
   }

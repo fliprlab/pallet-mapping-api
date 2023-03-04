@@ -4,8 +4,7 @@ import UsersModel from "../../models/UsersModel";
 export const addUserDao = async (data: TUsers) => {
   try {
     const inserted = new UsersModel(data);
-    const user = await inserted.save();
-    return user;
+    return await inserted.save();
   } catch (error) {
     logger.error(error);
   }
