@@ -4,7 +4,7 @@ RUN mkdir -p /usr/app/
 WORKDIR /usr/app
 
 COPY package.json .
-RUN npm i --force
+RUN npm i
 
 COPY . .
 RUN npm run build
