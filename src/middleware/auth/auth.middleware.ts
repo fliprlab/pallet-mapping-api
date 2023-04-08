@@ -2,6 +2,8 @@ import { NextFunction, Request, Response } from "express";
 import { Config } from "../../config/Config";
 import { JsonResponse } from "../../utils/jsonResponse";
 import jwt from "jsonwebtoken";
+import { adminDao } from "../../dao/admin-dao";
+import { usersDao } from "../../dao/users-dao";
 
 export const checkAccess = (
   req: Request,
@@ -10,6 +12,7 @@ export const checkAccess = (
 ) => {
   const config = new Config();
   const token: any = req.headers[`${config.environmentVariable.headerKey}`];
+  const { findAdminById } = adminDao;
 
   if (!token) {
     return JsonResponse(res, {
@@ -22,7 +25,7 @@ export const checkAccess = (
     jwt.verify(
       token.replace("Bearer ", ""),
       config.environmentVariable.jwtSecret,
-      function (err: any, decoded: any) {
+      async function (err: any, decoded: any) {
         if (err) {
           return JsonResponse(res, {
             statusCode: 401,
@@ -31,8 +34,68 @@ export const checkAccess = (
             message: err.message,
           });
         } else {
+          const admin = await findAdminById(decoded.data.userId);
+
+          if (!admin) {
+            return JsonResponse(res, {
+              statusCode: 401,
+              status: "error",
+              title: "Authentication Error",
+              message: "No user found with this header",
+            });
+          }
+
           res.locals.userId = decoded.data.userId;
           res.locals.userRole = decoded.data.role;
+          next();
+        }
+      }
+    );
+  }
+};
+
+export const checkAccessUser = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  const config = new Config();
+  const token: any = req.headers[`${config.environmentVariable.headerKey}`];
+  const { findUserByIdDao } = usersDao;
+
+  if (!token) {
+    return JsonResponse(res, {
+      statusCode: 401,
+      status: "error",
+      title: "Authentication Failed",
+      message: "No Auth Header Available",
+    });
+  } else {
+    jwt.verify(
+      token.replace("Bearer ", ""),
+      config.environmentVariable.jwtSecret,
+      async function (err: any, decoded: any) {
+        if (err) {
+          return JsonResponse(res, {
+            statusCode: 401,
+            status: "error",
+            title: "Authentication Error",
+            message: err.message,
+          });
+        } else {
+          const user = await findUserByIdDao(decoded.data.userId);
+
+          if (!user) {
+            return JsonResponse(res, {
+              statusCode: 401,
+              status: "error",
+              title: "Authentication Error",
+              message: "No user found with this header",
+            });
+          }
+
+          res.locals.userId = decoded.data.userId;
+          res.locals.origin = user.origin;
           next();
         }
       }

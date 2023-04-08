@@ -10,6 +10,7 @@ import { AdminRoutes } from "./routes/admin/admin.routes";
 import { rateLimit } from "express-rate-limit";
 import { JsonResponse } from "./utils/jsonResponse";
 import { IndexRoutes } from "./routes/index/index.route";
+import { UserRoutes } from "./routes/user/user.routes";
 
 const normalizePort = (val: any) => {
   let port = parseInt(val, 10);
@@ -88,6 +89,7 @@ expressWinston.responseWhitelist.push("body");
 const runningMessage = `Server running at http://localhost:${port}`;
 routes.push(new IndexRoutes(app));
 routes.push(new AdminRoutes(app));
+routes.push(new UserRoutes(app));
 
 app.use(
   expressWinston.errorLogger({
