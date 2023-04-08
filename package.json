@@ -14,13 +14,7 @@
     "dev": "SET ENV=dev&&yarn debugStart",
     "prod": "SET ENV=prod&&yarn debugStart",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "rm -rf dist && tsc",
-    "gcp-build": "tsc -p .",
-    "deploy": "yarn build && gcloud app deploy",
-    "browser": "gcloud app browse",
-    "run:dev": "npx functions-framework --target=v2Dev --reload",
-    "deployFn:prod": "yarn build && gcloud functions deploy v2 --set-env-vars ENV=prod --runtime nodejs16 --trigger-http --allow-unauthenticated  --region asia-south1",
-    "deployFn:dev": "yarn build && gcloud functions deploy v2Dev --set-env-vars ENV=dev --runtime nodejs16 --trigger-http --allow-unauthenticated  --region asia-south1"
+    "prepare": "rm -rf dist"
   },
   "author": "pallet-mapping-api",
   "license": "ISC",
