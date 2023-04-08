@@ -5,7 +5,7 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "commonjs",
-    "outDir": "./outputData",
+    "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
     "inlineSourceMap": true,
