@@ -4,6 +4,7 @@ import { JsonResponse } from "../../utils/jsonResponse";
 import { checkAccess } from "../../middleware/auth/auth.middleware";
 import { adminController } from "../../controllers/admin.controller";
 import { userQuery } from "./queries/user.query";
+import { locationsQueries } from "./queries/location.query";
 
 export class AdminRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -22,7 +23,10 @@ export class AdminRoutes extends CommonRoutesConfig {
     });
 
     router.get("/get-profile", adminController.getProfile);
+    // User
     userQuery(router);
+    // Locations
+    locationsQueries(router);
 
     return this.app;
   }

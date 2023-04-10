@@ -1,12 +1,9 @@
 import { CommonRoutesConfig } from "../common/common.routes";
 import express, { Request, Response } from "express";
 import { JsonResponse } from "../../utils/jsonResponse";
-import {
-  checkAccess,
-  checkAccessUser,
-} from "../../middleware/auth/auth.middleware";
-import { adminController } from "../../controllers/admin.controller";
+import { checkAccessUser } from "../../middleware/auth/auth.middleware";
 import { usersController } from "../../controllers/users.controller";
+import { locationQueries } from "./query/location.query";
 
 export class UserRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -25,6 +22,8 @@ export class UserRoutes extends CommonRoutesConfig {
     });
 
     router.get("/get-profile", usersController.getUserProfile);
+    // locations
+    locationQueries(router);
 
     return this.app;
   }
