@@ -28,13 +28,13 @@ export const createLocation = async (req: Request, res: Response) => {
       title: "Created",
       message: "Location created successfully.",
     });
-  } catch (error) {
+  } catch (error: any) {
     logger.error(error);
     return JsonResponse(res, {
       statusCode: 500,
       status: "error",
       title: "Error",
-      message: "Something went wrong. Please try again.",
+      message: error.message,
     });
   }
 };

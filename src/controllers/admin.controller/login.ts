@@ -8,7 +8,6 @@ const bcrypt = require("bcryptjs");
 export const loginAdmin = async (req: Request, res: Response) => {
   try {
     const { username, password } = req.body;
-    console.log("password", password);
 
     const { findAdminByEmail } = adminDao;
     const admin = await findAdminByEmail(username);
