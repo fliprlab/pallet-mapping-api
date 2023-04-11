@@ -4,6 +4,8 @@ import { JsonResponse } from "../../utils/jsonResponse";
 import { checkAccessUser } from "../../middleware/auth/auth.middleware";
 import { usersController } from "../../controllers/users.controller";
 import { locationQueries } from "./query/location.query";
+import { shipmentQueries } from "./query/shipment.query";
+import { palletQueries } from "./query/pallet.query";
 
 export class UserRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -24,6 +26,10 @@ export class UserRoutes extends CommonRoutesConfig {
     router.get("/get-profile", usersController.getUserProfile);
     // locations
     locationQueries(router);
+    // Shipment
+    shipmentQueries(router);
+    // Pallet
+    palletQueries(router);
 
     return this.app;
   }

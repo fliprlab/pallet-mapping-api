@@ -1,9 +1,9 @@
-import { Document, Model, model, Schema } from "mongoose";
+import { Model, model, Schema } from "mongoose";
 import { TLocation } from "./type/location";
 
 const schema = new Schema<TLocation>(
   {
-    location: { type: String, required: true },
+    location: { type: String, required: true, unique: true },
     createdBy: { type: Object, required: true },
   },
   {
