@@ -5,6 +5,7 @@ import { checkAccess } from "../../middleware/auth/auth.middleware";
 import { adminController } from "../../controllers/admin.controller";
 import { userQuery } from "./queries/user.query";
 import { locationsQueries } from "./queries/location.query";
+import { gridQueries } from "./queries/grid.query";
 
 export class AdminRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -27,6 +28,8 @@ export class AdminRoutes extends CommonRoutesConfig {
     userQuery(router);
     // Locations
     locationsQueries(router);
+    // Grid
+    gridQueries(router);
 
     return this.app;
   }
