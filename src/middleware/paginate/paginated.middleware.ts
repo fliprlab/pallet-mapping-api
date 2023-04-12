@@ -1,5 +1,6 @@
 import { Request } from "express";
 import { Model, PipelineStage } from "mongoose";
+
 import { getPaginationAggregation } from "../../aggregation/pagination/pagination.aggregation";
 
 interface IPaginated {
@@ -10,25 +11,18 @@ interface IPaginated {
 
 export const paginated = async (
   props: IPaginated
-): Promise<{
-  data: {
-    [key: string]: any;
-  }[];
-  pageData?: {
-    [key: string]: any;
-  }[];
-}> => {
+): Promise<{ data: any[]; pageData: any }> => {
   const { Model, req, aggregationArray } = props;
   const paginationAggregation = getPaginationAggregation(
-    req.query.page as string,
-    req.query.itemPerPage as string
+    req.query.page,
+    req.query.itemPerPage
   );
   const aggregateQuery: PipelineStage[] = [
     ...aggregationArray,
     ...paginationAggregation,
   ];
 
-  let results = [];
+  let results: any[] = [];
 
   if (aggregateQuery.length > 0) {
     results = await Model.aggregate(aggregateQuery).exec();
