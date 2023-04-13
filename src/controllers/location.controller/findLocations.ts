@@ -1,33 +1,30 @@
 import { Request, Response } from "express";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { logger } from "../../config/logger";
-import { locationDao } from "../../dao/locations-dao";
+import { paginated } from "../../middleware/paginate/paginated.middleware";
+import LocationModel from "../../models/LocationModel";
 
 export const findLocations = async (req: Request, res: Response) => {
   try {
-    const { getLocations } = locationDao;
-    const locations = await getLocations([
-      {
-        $sort: {
-          _id: -1,
+    const { data, pageData } = await paginated({
+      Model: LocationModel,
+      aggregationArray: [
+        {
+          $sort: {
+            _id: -1,
+          },
         },
-      },
-    ]);
+      ],
+      req,
+    });
 
-    if (!locations) {
-      return JsonResponse(res, {
-        statusCode: 400,
-        status: "error",
-        title: "Not Found",
-        message: "Can not find locations. Please try again.",
-      });
-    }
     return JsonResponse(res, {
       statusCode: 200,
       status: "success",
       title: "Found Successfully",
       message: "Location find successfully",
-      data: locations,
+      data: data,
+      pageData: pageData,
     });
   } catch (error) {
     logger.error(error);

@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { getUsersAggregation } from "../../aggregation/user/users.aggregation";
 import { logger } from "../../config/logger";
-import { usersDao } from "../../dao/users-dao";
 import { paginated } from "../../middleware/paginate/paginated.middleware";
 import UsersModel from "../../models/UsersModel";
 import { JsonResponse } from "../../utils/jsonResponse";
