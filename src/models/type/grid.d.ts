@@ -15,4 +15,6 @@ type TGrid = {
   };
   status: TGridStatus;
   createdBy: ObjectId;
+  updatedBy: { _id: ObjectId; time: Date };
+  destination: string;
 };

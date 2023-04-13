@@ -18,7 +18,7 @@ export const createShipment = async (req: Request, res: Response) => {
     const shipment = await addShipment({
       palletId,
       items,
-      palletOrigin: location,
+      shipmentDestination: location,
       shipmentOrigin: origin,
       status: [{ statusName: "created", updatedBy: userId, time: new Date() }],
       latestStatus: "created",
@@ -46,6 +46,8 @@ export const createShipment = async (req: Request, res: Response) => {
       shipmentId: shipment._id,
       status: "pallet-created",
       lastUpdatedBy: { id: userId, time: new Date() },
+      hub: origin,
+      destination: location,
     });
 
     return JsonResponse(res, {

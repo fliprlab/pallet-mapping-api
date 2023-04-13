@@ -14,6 +14,8 @@ const schema = new Schema<TGrid>(
     },
     time: Date,
     createdBy: { type: ObjectId, required: true },
+    updatedBy: { type: Object, required: true },
+    destination: String,
   },
   {
     timestamps: true,

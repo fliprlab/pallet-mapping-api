@@ -11,4 +11,6 @@ type TPallet = {
     time: Date;
   };
   shipmentId: ObjectId;
+  hub: string;
+  destination: string;
 };
