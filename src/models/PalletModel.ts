@@ -13,6 +13,8 @@ const schema = new Schema<TPallet>(
       enum: ["pallet-created", "pallet-asign-grid", "pallet-out"],
       required: true,
     },
+    hub: { type: String, required: true },
+    destination: { type: String, required: true },
   },
   {
     timestamps: true,

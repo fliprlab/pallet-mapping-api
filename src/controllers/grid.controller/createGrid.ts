@@ -27,6 +27,7 @@ export const createGrid = async (req: Request, res: Response) => {
       createdBy: userId,
       hub: { _id: locationData._id, name: locationData.location },
       time: new Date(),
+      updatedBy: { _id: userId, time: new Date() },
     });
 
     if (!grid) {

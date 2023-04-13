@@ -5,10 +5,10 @@ type TShipmentStatus = "created" | "asign-grid" | "out" | "cancelled";
 type TShipments = {
   palletId: string;
   items: string[];
-  palletOrigin: string;
+  shipmentDestination: string;
   shipmentOrigin: string;
   shipmentId: string;
-  gridId: string;
+  gridId: ObjectId;
   latestStatus: TShipmentStatus;
   status: {
     statusName: TShipmentStatus;

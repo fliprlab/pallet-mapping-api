@@ -6,6 +6,7 @@ import { usersController } from "../../controllers/users.controller";
 import { locationQueries } from "./query/location.query";
 import { shipmentQueries } from "./query/shipment.query";
 import { palletQueries } from "./query/pallet.query";
+import { putAwayQueries } from "./query/putAway.query";
 
 export class UserRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -30,6 +31,8 @@ export class UserRoutes extends CommonRoutesConfig {
     shipmentQueries(router);
     // Pallet
     palletQueries(router);
+    // Put Away
+    putAwayQueries(router);
 
     return this.app;
   }
