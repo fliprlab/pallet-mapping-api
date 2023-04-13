@@ -1,20 +1,21 @@
 import { NextFunction, Request, Response } from "express";
 import { body, validationResult } from "express-validator";
-import { errorFormatter } from "../utils/error-formatter";
-import { JsonResponse } from "../utils/jsonResponse";
+import { errorFormatter } from "../../utils/error-formatter";
+import { JsonResponse } from "../../utils/jsonResponse";
 
-export const checkValidKiranaList = async (
+export const getItems = async (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
   const validations = [
-    body("name")
-      .not()
-      .isEmpty({ ignore_whitespace: true })
-      .withMessage("Enter a valid list name"),
-    body("list").isArray({ min: 5 }).withMessage("minimum 5 item allowed"),
+    body("locations")
+      .isArray()
+      .withMessage("locations required.")
+      .isAlphanumeric()
+      .withMessage("Enter a valid locations."),
   ];
+
   await Promise.all(validations.map((validation) => validation.run(req)));
   const errors = validationResult(req).formatWith(errorFormatter);
 
@@ -25,7 +26,7 @@ export const checkValidKiranaList = async (
       status: "error",
       statusCode: 400,
       title: "Missing required fields",
-      message: "All Fields are required",
+      message: errors.array()[0].error,
       data: errors.array(),
     });
   }

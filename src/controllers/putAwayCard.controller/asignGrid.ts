@@ -64,6 +64,7 @@ export const asignGrid = async (req: Request, res: Response) => {
     await updatePallet(pallet._id, {
       lastUpdatedBy: { id: userId, time: new Date() },
       status: "pallet-asign-grid",
+      asignGrid: grid._id,
     });
 
     await updateShipment(
