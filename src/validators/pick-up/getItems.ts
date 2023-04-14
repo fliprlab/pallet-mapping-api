@@ -9,11 +9,9 @@ export const getItems = async (
   next: NextFunction
 ) => {
   const validations = [
-    body("locations")
-      .isArray()
-      .withMessage("locations required.")
-      .isAlphanumeric()
-      .withMessage("Enter a valid locations."),
+    body("locations").isArray().withMessage("locations required."),
+    // .isAlphanumeric()
+    // .withMessage("Enter a valid locations."),
   ];
 
   await Promise.all(validations.map((validation) => validation.run(req)));

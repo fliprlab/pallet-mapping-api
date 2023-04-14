@@ -12,9 +12,9 @@ export const createShipment = async (
     body("location")
       .not()
       .isEmpty({ ignore_whitespace: true })
-      .withMessage("location required")
-      .isAlphanumeric()
-      .withMessage("Enter a valid location"),
+      .withMessage("location required"),
+    // .isAlphanumeric()
+    // .withMessage("Enter a valid location"),
     body("palletId")
       .not()
       .isEmpty({ ignore_whitespace: true })

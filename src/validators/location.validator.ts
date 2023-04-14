@@ -12,9 +12,9 @@ export const locationValidator = async (
     body("location")
       .not()
       .isEmpty({ ignore_whitespace: true })
-      .withMessage("location required")
-      .isAlphanumeric()
-      .withMessage("Enter a valid location"),
+      .withMessage("location required"),
+    // .isAlphanumeric()
+    // .withMessage("Enter a valid location"),
   ];
 
   await Promise.all(validations.map((validation) => validation.run(req)));
