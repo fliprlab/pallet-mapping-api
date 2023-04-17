@@ -1,13 +1,17 @@
 import { CommonRoutesConfig } from "../common/common.routes";
 import express, { Request, Response } from "express";
 import { JsonResponse } from "../../utils/jsonResponse";
-import { checkAccess } from "../../middleware/auth/auth.middleware";
-import { adminController } from "../../controllers/admin.controller";
+import {
+  checkAccess,
+  checkAccessHub,
+} from "../../middleware/auth/auth.middleware";
 
-export class AdminRoutes extends CommonRoutesConfig {
+import { adminHubController } from "../../controllers/admin-hub.controller";
+
+export class AdminHubRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
     super(app, "Admin Routes");
-    this.app.use("/hub", checkAccess, this.router);
+    this.app.use("/hub", checkAccessHub, this.router);
   }
 
   configureRoutes(router: express.Router): express.Application {
@@ -20,7 +24,7 @@ export class AdminRoutes extends CommonRoutesConfig {
       });
     });
 
-    router.get("/get-profile", adminController.getProfile);
+    router.get("/get-profile", adminHubController.getHubProfile);
 
     return this.app;
   }

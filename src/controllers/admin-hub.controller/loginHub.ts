@@ -1,16 +1,15 @@
 import { Request, Response } from "express";
 import { logger } from "../../config/logger";
-import { adminDao } from "../../dao/admin-dao";
 import { tokenDao } from "../../dao/token-dao";
 import { JsonResponse } from "../../utils/jsonResponse";
-import { usersDao } from "../../dao/users-dao";
+import { adminHubDao } from "../../dao/admin-hub-dao";
 const bcrypt = require("bcryptjs");
 
 export const loginHub = async (req: Request, res: Response) => {
   try {
     const { username, password } = req.body;
-    const { findUserByNameDao } = usersDao;
-    const admin = await findUserByNameDao(username);
+    const { getUserByUsername } = adminHubDao;
+    const admin = await getUserByUsername(username);
 
     if (!admin) {
       return JsonResponse(res, {
@@ -40,9 +39,9 @@ export const loginHub = async (req: Request, res: Response) => {
       });
     }
 
-    const { generateAuthToken } = tokenDao;
+    const { generateTokenHub } = tokenDao;
 
-    const token = await generateAuthToken(admin);
+    const token = await generateTokenHub(admin);
 
     if (token) {
       return JsonResponse(res, {

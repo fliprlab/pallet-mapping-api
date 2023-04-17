@@ -5,6 +5,7 @@ export interface IToken extends Document {
   expiryDate: Date;
   userId: Schema.Types.ObjectId;
   role: "admin" | "user";
+  origin: Schema.Types.ObjectId;
 }
 
 const TokenSchema = new Schema<IToken>(
@@ -13,6 +14,7 @@ const TokenSchema = new Schema<IToken>(
     expiryDate: Date,
     userId: Schema.Types.ObjectId,
     role: String,
+    origin: Schema.Types.ObjectId,
   },
   {
     timestamps: true,
