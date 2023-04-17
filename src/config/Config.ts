@@ -11,7 +11,6 @@ export class Config {
     this.environmentVariable = this.env.loadEnvironment();
 
     console.log("Env ", process.env.ENV);
-    console.log("End Variables ", this.environmentVariable);
   }
 
   async start() {
