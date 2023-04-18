@@ -1,4 +1,5 @@
 import { addUser } from "./addUser.controller";
+import { createUserHubAdmin } from "./createUserHubAdmin.controller";
 import { getUserProfile } from "./getUserProfile";
 import { getUsers } from "./getUsers.controller";
 import { loginUser } from "./login";
@@ -14,4 +15,5 @@ export const usersController = {
   getUserProfile,
   updateUserStatus,
   updateUserPassword,
+  createUserHubAdmin,
 };
