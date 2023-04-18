@@ -8,6 +8,7 @@
     "start": "node ./dist/app.js",
     "startDev": "nodemon ./src/app.ts",
     "local": "SET ENV=local&&yarn startDev",
+    "local:mac": "export SET ENV=prod&&yarn startDev",
     "debugStart": "yarn build && supervisor --unhandled-rejections=strict ./dist/app.js",
     "debug": "DEBUG=* && yarn debugStart",
     "debug-mac": "export DEBUG=* && yarn debugStart",
