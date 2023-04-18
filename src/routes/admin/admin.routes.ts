@@ -6,6 +6,7 @@ import { adminController } from "../../controllers/admin.controller";
 import { userQuery } from "./queries/user.query";
 import { locationsQueries } from "./queries/location.query";
 import { gridQueries } from "./queries/grid.query";
+import { hubAdminQueries } from "./queries/hub-admin.query";
 
 export class AdminRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -30,6 +31,9 @@ export class AdminRoutes extends CommonRoutesConfig {
     locationsQueries(router);
     // Grid
     gridQueries(router);
+
+    // Hub Admin
+    hubAdminQueries(router);
 
     return this.app;
   }
