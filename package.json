@@ -11,8 +11,8 @@
     "debugStart": "yarn build && supervisor --unhandled-rejections=strict ./dist/app.js",
     "debug": "DEBUG=* && yarn debugStart",
     "debug-mac": "export DEBUG=* && yarn debugStart",
-    "dev": "SET ENV=dev&&yarn debugStart",
-    "prod": "SET ENV=prod&&yarn debugStart",
+    "dev": "SET ENV=dev&&yarn startDev",
+    "prod": "SET ENV=prod&&yarn startDev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "rm -rf dist"
   },
