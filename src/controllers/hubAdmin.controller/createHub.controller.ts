@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { HubAdminDao } from "../../dao/hub-dao";
 import LocationModel from "../../models/LocationModel";
-const bcrypt = require("bcryptjs");
+import bcrypt from "bcryptjs";
 
 export const createHub = async (req: Request, res: Response) => {
   try {
