@@ -1,11 +1,22 @@
+import { FilterQuery } from "mongoose";
 import { logger } from "../../config/logger";
 import UsersModel from "../../models/UsersModel";
+import { TUsers } from "../../models/type/users";
 
-export const updateUserDao = async (id: string, data: Partial<TUsers>) => {
+interface IUpdate {
+  where: FilterQuery<TUsers>;
+  data: Partial<TUsers>;
+  upsert?: boolean;
+}
+
+export const updateUserDao = async (fields: IUpdate) => {
+  const { data, where, upsert = false } = fields;
   try {
-    return await UsersModel.findByIdAndUpdate(id, {
-      $set: data,
-    }).exec();
+    return await UsersModel.updateOne(
+      { ...where },
+      { $set: data },
+      { upsert: upsert }
+    ).exec();
   } catch (error) {
     logger.error(error);
   }
