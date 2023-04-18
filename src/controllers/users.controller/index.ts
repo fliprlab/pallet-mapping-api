@@ -3,6 +3,8 @@ import { getUserProfile } from "./getUserProfile";
 import { getUsers } from "./getUsers.controller";
 import { loginUser } from "./login";
 import { updateUser } from "./updateUser.controller";
+import { updateUserPassword } from "./updateUserPassword.controller";
+import { updateUserStatus } from "./updateUserStatus.controller";
 
 export const usersController = {
   addUser,
@@ -10,4 +12,6 @@ export const usersController = {
   getUsers,
   loginUser,
   getUserProfile,
+  updateUserStatus,
+  updateUserPassword,
 };

@@ -5,11 +5,6 @@ import { checkUserNameAlreadyExists } from "../../../middleware/user/checkUserNa
 export const userQuery = (router: Router) => {
   router.get("/get-users", usersController.getUsers);
   router.post("/add-user", checkUserNameAlreadyExists, usersController.addUser);
-  router.post(
-    "/update-user",
-    checkUserNameAlreadyExists,
-    usersController.updateUser
-  );
   router.post("/update-user-status", usersController.updateUserStatus);
   router.post("/update-user-password", usersController.updateUserPassword);
 };

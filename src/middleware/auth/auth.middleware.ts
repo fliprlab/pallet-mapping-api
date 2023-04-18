@@ -96,7 +96,7 @@ export const checkAccessUser = (
           }
 
           res.locals.userId = decoded.data.userId;
-          res.locals.origin = user.origin;
+          res.locals.origin = user.origin.origin ?? user.origin;
           next();
         }
       }

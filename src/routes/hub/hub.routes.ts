@@ -7,6 +7,8 @@ import {
 } from "../../middleware/auth/auth.middleware";
 
 import { adminHubController } from "../../controllers/admin-hub.controller";
+import { userQuery } from "./queries/user.query";
+import { locationsQueries } from "./queries/location.query";
 
 export class AdminHubRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -25,6 +27,13 @@ export class AdminHubRoutes extends CommonRoutesConfig {
     });
 
     router.get("/get-profile", adminHubController.getHubProfile);
+
+    // user query
+    userQuery(router);
+
+    // location query
+
+    locationsQueries(router);
 
     return this.app;
   }

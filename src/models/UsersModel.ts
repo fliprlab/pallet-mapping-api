@@ -1,4 +1,5 @@
 import { Model, model, Schema } from "mongoose";
+import { TUsers } from "./type/users";
 
 const usersSchema = new Schema<TUsers>(
   {
@@ -11,13 +12,14 @@ const usersSchema = new Schema<TUsers>(
       required: true,
     },
     origin: {
-      type: String,
-      required: true,
+      _id: Schema.Types.ObjectId,
+      origin: String,
     },
     active: {
       type: Boolean,
       default: true,
     },
+    addedBy: Schema.Types.ObjectId,
   },
   {
     timestamps: true,
