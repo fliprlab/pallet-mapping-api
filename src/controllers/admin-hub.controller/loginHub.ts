@@ -3,7 +3,7 @@ import { logger } from "../../config/logger";
 import { tokenDao } from "../../dao/token-dao";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { adminHubDao } from "../../dao/admin-hub-dao";
-const bcrypt = require("bcryptjs");
+import bcrypt from "bcryptjs";
 
 export const loginHub = async (req: Request, res: Response) => {
   try {
