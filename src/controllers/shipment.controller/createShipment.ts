@@ -55,6 +55,7 @@ export const createShipment = async (req: Request, res: Response) => {
       status: "success",
       title: "Shipment Created",
       message: "Shipment created successfully",
+      data: { shipmentId: shipment.shipmentId },
     });
   } catch (error) {
     logger.error(error);
