@@ -35,7 +35,7 @@ export const asignGrid = async (req: Request, res: Response) => {
       });
     }
 
-    if (grid.hub.name === origin) {
+    if (grid.hub.name !== origin) {
       return JsonResponse(res, {
         statusCode: 400,
         status: "error",
