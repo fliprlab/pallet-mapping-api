@@ -2,6 +2,7 @@ import { body, validationResult } from "express-validator";
 import { errorFormatter } from "../../utils/error-formatter";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { NextFunction, Request, Response } from "express";
+import { REGX } from "../../constants";
 
 export const checkValidPallet = async (
   req: Request,
@@ -19,7 +20,7 @@ export const checkValidPallet = async (
       .not()
       .isEmpty({ ignore_whitespace: true })
       .withMessage("Pallet Id required")
-      .isAlphanumeric()
+      .matches(REGX.PALLET_ID)
       .withMessage("Enter a valid pallet Id"),
   ];
 

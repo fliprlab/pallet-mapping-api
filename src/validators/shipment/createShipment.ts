@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import { body, validationResult } from "express-validator";
 import { errorFormatter } from "../../utils/error-formatter";
 import { JsonResponse } from "../../utils/jsonResponse";
+import { REGX } from "../../constants";
 
 export const createShipment = async (
   req: Request,
@@ -19,12 +20,14 @@ export const createShipment = async (
       .not()
       .isEmpty({ ignore_whitespace: true })
       .withMessage("Pallet Id required")
-      .isAlphanumeric()
+      .matches(REGX.PALLET_ID)
       .withMessage("Enter a valid pallet id."),
     body("items")
       .isArray()
       .withMessage("Items required.")
       .isAlphanumeric()
+      .withMessage("Enter a valid items.")
+      .matches(REGX.PALLET_ITEMS)
       .withMessage("Enter a valid items."),
   ];
 

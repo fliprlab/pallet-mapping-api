@@ -38,6 +38,8 @@ export const getPickUpItemAggregation = (
         _id: -1,
         gridId: "$grid.gridId",
         shipmentId: 1,
+        palletId: 1,
+        virtualId: 1,
         createdAt: 1,
       },
     },

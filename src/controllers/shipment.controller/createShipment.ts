@@ -15,6 +15,8 @@ export const createShipment = async (req: Request, res: Response) => {
     const { addEvent } = eventsDao;
     const { addPallet } = palletDao;
 
+    const itemLength = items.length > 10 ? `0${items.length}` : items.length;
+
     const shipment = await addShipment({
       palletId,
       items,
@@ -23,6 +25,7 @@ export const createShipment = async (req: Request, res: Response) => {
       status: [{ statusName: "created", updatedBy: userId, time: new Date() }],
       latestStatus: "created",
       shipmentId: uuid(),
+      virtualId: "B" + palletId + "-" + itemLength,
     });
 
     if (!shipment) {
@@ -55,7 +58,7 @@ export const createShipment = async (req: Request, res: Response) => {
       status: "success",
       title: "Shipment Created",
       message: "Shipment created successfully",
-      data: { shipmentId: shipment.shipmentId },
+      data: { virtualId: shipment.virtualId },
     });
   } catch (error) {
     logger.error(error);

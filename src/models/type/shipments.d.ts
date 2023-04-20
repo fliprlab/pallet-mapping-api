@@ -15,4 +15,5 @@ type TShipments = {
     updatedBy: ObjectId;
     time: Date;
   }[];
+  virtualId: string;
 };

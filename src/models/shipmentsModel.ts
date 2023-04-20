@@ -16,6 +16,7 @@ const schema = new Schema<TShipments>(
     shipmentOrigin: { type: String, required: true },
     shipmentId: { type: String, required: true, unique: true },
     status: Array,
+    virtualId: { type: String, required: true },
   },
   {
     timestamps: true,

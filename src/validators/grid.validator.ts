@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import { body, validationResult } from "express-validator";
 import { errorFormatter } from "../utils/error-formatter";
 import { JsonResponse } from "../utils/jsonResponse";
+import { REGX } from "../constants";
 
 export const gridValidator = async (
   req: Request,
@@ -13,7 +14,7 @@ export const gridValidator = async (
       .not()
       .isEmpty({ ignore_whitespace: true })
       .withMessage("Grid Id required")
-      .isAlphanumeric()
+      .matches(REGX.GRID_ID)
       .withMessage("Enter a valid grid id."),
     body("location")
       .not()
