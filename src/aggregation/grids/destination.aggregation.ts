@@ -7,16 +7,12 @@ export const getAllDestinationsAggregation = (
 ): PipelineStage[] => {
   const aggr: PipelineStage[] = [];
   const { res } = _params;
-
-  if (res.locals.origin) {
-    aggr.push({
-      $match: {
-        "hub._id": new ObjectId(res.locals.origin._id),
-        status: "occupied",
-      },
-    });
-  }
-
+  aggr.push({
+    $match: {
+      "hub._id": new ObjectId(res.locals.origin._id),
+      status: "occupied",
+    },
+  });
   aggr.push({
     $group: {
       _id: "$destination",
