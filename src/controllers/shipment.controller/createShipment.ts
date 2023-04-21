@@ -15,7 +15,7 @@ export const createShipment = async (req: Request, res: Response) => {
     const { addEvent } = eventsDao;
     const { addPallet } = palletDao;
 
-    const itemLength = items.length > 10 ? `0${items.length}` : items.length;
+    const itemLength = items.length < 10 ? `0${items.length}` : items.length;
 
     const shipment = await addShipment({
       palletId,
