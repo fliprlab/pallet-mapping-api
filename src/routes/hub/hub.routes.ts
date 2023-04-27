@@ -9,6 +9,7 @@ import {
 import { adminHubController } from "../../controllers/admin-hub.controller";
 import { userQuery } from "./queries/user.query";
 import { locationsQueries } from "./queries/location.query";
+import { gridQueries } from "./queries/grid.query";
 import { destinationQueries } from "./queries/destination.query";
 
 export class AdminHubRoutes extends CommonRoutesConfig {
@@ -35,6 +36,8 @@ export class AdminHubRoutes extends CommonRoutesConfig {
     // location query
     locationsQueries(router);
 
+    // grid query
+    gridQueries(router);
     // destination query
     destinationQueries(router);
 

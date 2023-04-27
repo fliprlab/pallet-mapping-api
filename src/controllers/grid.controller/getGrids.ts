@@ -3,18 +3,13 @@ import { paginated } from "../../middleware/paginate/paginated.middleware";
 import GridModel from "../../models/GridModel";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { logger } from "../../config/logger";
+import { getGridsAggregation } from "../../aggregation/grid/grid.aggregation";
 
 export const getGrids = async (req: Request, res: Response) => {
   try {
     const { data, pageData } = await paginated({
       Model: GridModel,
-      aggregationArray: [
-        {
-          $sort: {
-            _id: -1,
-          },
-        },
-      ],
+      aggregationArray: getGridsAggregation({ req, res }),
       req,
     });
 
