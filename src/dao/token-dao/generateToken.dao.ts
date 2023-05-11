@@ -17,7 +17,7 @@ export const generateAuthToken = async (data: any) => {
           role: data.role,
         },
       },
-      config.environmentVariable.jwtSecret,
+      process.env.jwtSecret ?? "",
       { expiresIn: "1days" }
     );
 

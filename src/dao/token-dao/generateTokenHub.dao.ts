@@ -17,7 +17,7 @@ export const generateTokenHub = async (data: any) => {
           origin: data.origin,
         },
       },
-      config.environmentVariable.jwtSecret,
+      process.env.jwtSecret ?? "",
       { expiresIn: "1days" }
     );
 

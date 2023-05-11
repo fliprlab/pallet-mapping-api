@@ -1,22 +1,10 @@
 import mongoose from "mongoose";
-import { Env } from "../env/Env";
 
 export class Config {
-  env: Env;
-  environmentVariable: EnvironmentVariable;
-
-  constructor() {
-    const environment: Environment = process.env.ENV;
-    this.env = new Env(environment);
-    this.environmentVariable = this.env.loadEnvironment();
-
-    console.log("Env ", process.env.ENV);
-  }
-
   async start() {
     try {
       // Connect to mondoDb
-      await this.dbConnect(this.env.loadEnvironment().mondoDbUrl);
+      await this.dbConnect(process.env.mondoDbUrl ?? "");
     } catch (error: any) {
       console.error("OOPS! ", error);
       throw new Error("error");
@@ -33,6 +21,6 @@ export class Config {
   }
 
   getBaseUrl(): string {
-    return this.env.loadEnvironment().baseUrl;
+    return process.env.baseUrl ?? "";
   }
 }

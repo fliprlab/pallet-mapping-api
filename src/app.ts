@@ -3,6 +3,8 @@ import * as http from "http";
 import * as expressWinston from "express-winston";
 import cors from "cors";
 import debug from "debug";
+import * as dotenv from "dotenv";
+dotenv.config();
 import { CommonRoutesConfig } from "./routes/common/common.routes";
 import { Config } from "./config/Config";
 import { logger, requestLogger } from "./config/logger";
@@ -28,7 +30,6 @@ const normalizePort = (val: any) => {
 
   return false;
 };
-
 const app: express.Application = express();
 const server: http.Server = http.createServer(app);
 const port = normalizePort(process.env.PORT || "4000");

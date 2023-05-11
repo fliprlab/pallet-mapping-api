@@ -12,7 +12,7 @@ export const checkAccess = (
   next: NextFunction
 ) => {
   const config = new Config();
-  const token: any = req.headers[`${config.environmentVariable.headerKey}`];
+  const token: any = req.headers[`${process.env.headerKey}`];
   const { findAdminById } = adminDao;
 
   if (!token) {
@@ -25,7 +25,7 @@ export const checkAccess = (
   } else {
     jwt.verify(
       token.replace("Bearer ", ""),
-      config.environmentVariable.jwtSecret,
+      process.env.jwtSecret ?? "",
       async function (err: any, decoded: any) {
         if (err) {
           return JsonResponse(res, {
@@ -61,7 +61,7 @@ export const checkAccessUser = (
   next: NextFunction
 ) => {
   const config = new Config();
-  const token: any = req.headers[`${config.environmentVariable.headerKey}`];
+  const token: any = req.headers[`${process.env.headerKey}`];
   const { findUserByIdDao } = usersDao;
 
   if (!token) {
@@ -74,7 +74,7 @@ export const checkAccessUser = (
   } else {
     jwt.verify(
       token.replace("Bearer ", ""),
-      config.environmentVariable.jwtSecret,
+      process.env.jwtSecret ?? "",
       async function (err: any, decoded: any) {
         if (err) {
           return JsonResponse(res, {
@@ -110,7 +110,7 @@ export const checkAccessHub = (
   next: NextFunction
 ) => {
   const config = new Config();
-  const token: any = req.headers[`${config.environmentVariable.headerKey}`];
+  const token: any = req.headers[`${process.env.headerKey}`];
 
   if (!token) {
     return JsonResponse(res, {
@@ -122,7 +122,7 @@ export const checkAccessHub = (
   } else {
     jwt.verify(
       token.replace("Bearer ", ""),
-      config.environmentVariable.jwtSecret,
+      process.env.jwtSecret ?? "",
       async function (err: any, decoded: any) {
         if (err) {
           return JsonResponse(res, {
