@@ -1,13 +1,18 @@
 import { Request, Response } from "express";
 import { logger } from "../../config/logger";
-import { adminDao } from "../../dao/admin-dao";
+
 import { JsonResponse } from "../../utils/jsonResponse";
+import AdminUserModel from "../../models/AdminModel";
 
 export const getProfile = async (req: Request, res: Response) => {
   try {
     const userId = res.locals.userId;
-    const { findAdminById } = adminDao;
-    const user = await findAdminById(userId);
+
+    let user = await AdminUserModel.findById(userId, {
+      password: 0,
+      active: 0,
+    }).exec();
+
     if (user) {
       return JsonResponse(res, {
         statusCode: 200,
