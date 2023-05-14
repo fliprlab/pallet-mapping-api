@@ -8,7 +8,7 @@ export const getHubProfile = async (req: Request, res: Response) => {
   try {
     const userId = res.locals.userId;
 
-    const user = await HubAdminModel.findById(userId).exec();
+    const user = await HubAdminModel.findById(userId, { password: 0 }).exec();
     if (user) {
       return JsonResponse(res, {
         statusCode: 200,
