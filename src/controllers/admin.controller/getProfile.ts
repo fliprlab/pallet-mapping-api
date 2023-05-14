@@ -8,7 +8,7 @@ export const getProfile = async (req: Request, res: Response) => {
   try {
     const userId = res.locals.userId;
 
-    let user = await AdminUserModel.findById(userId, {
+    const user = await AdminUserModel.findById(userId, {
       password: 0,
       active: 0,
     }).exec();
