@@ -61,7 +61,10 @@ app.use(express.json());
 // here we are adding middleware to allow cross-origin requests
 app.use(
   cors({
-    origin: ["https://*.intutrack.com/", "https://(*.)flipr.co.in"],
+    origin: [
+      "https://*.intutrack.com/",
+      new RegExp("https://(.*).flipr.co.in"),
+    ],
   })
 );
 
