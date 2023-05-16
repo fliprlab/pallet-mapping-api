@@ -1,7 +1,4 @@
-import { Config } from "./Config";
 import { createLogger, format, transports } from "winston";
-
-const config = new Config();
 
 const loggerTransports: any[] = [
   new transports.File({
@@ -21,16 +18,16 @@ const loggerRequestTransports = [
   }),
 ];
 
-if (config.env.env !== "prod") {
-  loggerTransports.push(new transports.Console());
+// if (config.env.env !== "prod") {
+//   loggerTransports.push(new transports.Console());
 
-  loggerRequestTransports.push(
-    new transports.File({
-      level: "info",
-      filename: `requestInfo.log`,
-    })
-  );
-}
+//   loggerRequestTransports.push(
+//     new transports.File({
+//       level: "info",
+//       filename: `requestInfo.log`,
+//     })
+//   );
+// }
 
 export const logger = createLogger({
   transports: loggerTransports,
