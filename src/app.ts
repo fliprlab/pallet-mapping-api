@@ -59,7 +59,11 @@ app.use(apiRequestLimiter);
 app.use(express.json());
 
 // here we are adding middleware to allow cross-origin requests
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://*.intutrack.com/"],
+  })
+);
 
 // Set content type GLOBALLY for any response.
 app.use(function (req, res, next) {
