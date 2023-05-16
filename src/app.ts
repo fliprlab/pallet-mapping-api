@@ -62,7 +62,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://*.intutrack.com/",
+      new RegExp("https://(.*).intutrack.com"),
       new RegExp("https://(.*).flipr.co.in"),
     ],
   })
