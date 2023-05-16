@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from "express";
-import { Config } from "../../config/Config";
 import { JsonResponse } from "../../utils/jsonResponse";
 import jwt from "jsonwebtoken";
 import { adminDao } from "../../dao/admin-dao";
@@ -11,7 +10,6 @@ export const checkAccess = (
   res: Response,
   next: NextFunction
 ) => {
-  const config = new Config();
   const token: any = req.headers[`${process.env.headerKey}`];
   const { findAdminById } = adminDao;
 
@@ -60,7 +58,6 @@ export const checkAccessUser = (
   res: Response,
   next: NextFunction
 ) => {
-  const config = new Config();
   const token: any = req.headers[`${process.env.headerKey}`];
   const { findUserByIdDao } = usersDao;
 
@@ -109,7 +106,6 @@ export const checkAccessHub = (
   res: Response,
   next: NextFunction
 ) => {
-  const config = new Config();
   const token: any = req.headers[`${process.env.headerKey}`];
 
   if (!token) {
