@@ -3,6 +3,7 @@ type TServerResponse = {
   status: "success" | "error";
   title: string;
   message: string;
+  extraData?: string;
   data?: any;
   pageData?: any;
 };

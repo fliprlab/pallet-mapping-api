@@ -5,6 +5,7 @@ import { loginValidator } from "../../validators/admin.validator";
 import { adminController } from "../../controllers/admin.controller";
 import { userQuries } from "./queries/user.queries";
 import { adminHubController } from "../../controllers/admin-hub.controller";
+import { adminMultipleRoleLogin } from "../../controllers/admin-multiple-role-login";
 
 export class IndexRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -14,7 +15,7 @@ export class IndexRoutes extends CommonRoutesConfig {
 
   configureRoutes(router: express.Router): express.Application {
     router.get("/", indexController.index);
-    router.post("/admin-login", loginValidator, adminController.login);
+    router.post("/admin-login", adminMultipleRoleLogin);
     router.post("/create-admin-user", adminController.addProfile);
 
     // User Queries

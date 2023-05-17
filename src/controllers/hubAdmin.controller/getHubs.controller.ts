@@ -7,6 +7,7 @@ import { getHubsAggregation } from "../../aggregation/hub-admins/hubAdmin.aggreg
 
 export const getHubs = async (req: Request, res: Response) => {
   try {
+    console.log("userId", res.locals.userId);
     const { data, pageData } = await paginated({
       Model: HubAdminModel,
       aggregationArray: getHubsAggregation({ req, res }),
