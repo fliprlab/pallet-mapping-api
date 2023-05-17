@@ -51,6 +51,7 @@ export const loginAdmin = async (req: Request, res: Response) => {
         title: "Logged in success",
         message: "Logged in successfully",
         data: token.token,
+        extraData: admin.role,
       });
     } else {
       return JsonResponse(res, {

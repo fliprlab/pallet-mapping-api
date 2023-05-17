@@ -9,9 +9,7 @@ export const loginValidator = async (
   next: NextFunction
 ) => {
   const validations = [
-    body("username", "Field is required")
-      .isEmail()
-      .withMessage("Enter a valid email"),
+    body("username", "Field is required").withMessage("Enter a valid username"),
     body("password", "Field is required")
       .isLength({ min: 8 })
       .withMessage("must be at least 8 chars long"),

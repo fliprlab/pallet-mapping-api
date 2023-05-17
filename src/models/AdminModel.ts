@@ -7,6 +7,7 @@ const AdminUserSchema = new Schema<TAdminUser>(
     role: {
       type: String,
       enum: ["admin"],
+      default: "admin",
     },
     active: {
       type: Boolean,

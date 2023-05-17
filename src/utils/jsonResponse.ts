@@ -8,5 +8,6 @@ export const JsonResponse = (res: Response, body: TServerResponse) => {
     message: body.message,
     data: body.data,
     pageData: body.pageData,
+    extraData: body.extraData,
   });
 };

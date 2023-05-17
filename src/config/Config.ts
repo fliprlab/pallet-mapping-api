@@ -5,6 +5,7 @@ export class Config {
     try {
       // Connect to mondoDb
       await this.dbConnect(process.env.mondoDbUrl ?? "");
+      console.log("mongodb", process.env.mondoDbUrl);
     } catch (error: any) {
       console.error("OOPS! ", error);
       throw new Error("error");

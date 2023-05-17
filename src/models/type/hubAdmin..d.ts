@@ -8,4 +8,5 @@ type THubAdmin = {
     origin: string;
   };
   active: boolean;
+  role: "hub-admin";
 };
