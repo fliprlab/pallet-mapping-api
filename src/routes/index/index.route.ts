@@ -1,10 +1,12 @@
 import { CommonRoutesConfig } from "../common/common.routes";
-import express from "express";
+import express, { Request, Response } from "express";
 import indexController from "../../controllers/index.controller/index.controller";
 import { loginValidator } from "../../validators/admin.validator";
 import { adminController } from "../../controllers/admin.controller";
 import { userQuries } from "./queries/user.queries";
 import { adminHubController } from "../../controllers/admin-hub.controller";
+import { rateLimit } from "express-rate-limit";
+import { JsonResponse } from "../../utils/jsonResponse";
 
 export class IndexRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -13,16 +15,42 @@ export class IndexRoutes extends CommonRoutesConfig {
   }
 
   configureRoutes(router: express.Router): express.Application {
+    const maxLoginRequest = rateLimit({
+      windowMs: 1 * 60 * 1000, // 1 hour
+      max: 3, // Limit each IP to 5 create account requests per `window` (here, per hour)
+      handler: function (req: Request, res: Response /*next*/) {
+        return JsonResponse(res, {
+          statusCode: 429,
+          title: "max login called",
+          status: "error",
+          message:
+            "Too many tries to login from this IP, please try again after an hour",
+        });
+      },
+
+      standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+      legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+    });
+
     router.get("/", indexController.index);
-    router.post("/admin-login", loginValidator, adminController.login);
-    router.post("/create-admin-user", adminController.addProfile);
+    router.post(
+      "/admin-login",
+      maxLoginRequest,
+      loginValidator,
+      adminController.login
+    );
+    router.post(
+      "/create-admin-user",
+      maxLoginRequest,
+      adminController.addProfile
+    );
 
     // User Queries
     userQuries(router);
 
     // Admin hub
 
-    router.post("/login-hub", adminHubController.loginHub);
+    router.post("/login-hub", maxLoginRequest, adminHubController.loginHub);
 
     return this.app;
   }

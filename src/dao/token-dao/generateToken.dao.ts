@@ -10,8 +10,6 @@ export const generateAuthToken = async (data: any) => {
         data: {
           userId: data._id,
           username: data.username ?? data.name,
-          password: data.password,
-          role: data.role,
         },
       },
       process.env.jwtSecret ?? "",

@@ -10,7 +10,6 @@ export const generateTokenHub = async (data: any) => {
         data: {
           userId: data._id,
           username: data.username ?? data.name,
-          password: data.password,
           origin: data.origin,
         },
       },
