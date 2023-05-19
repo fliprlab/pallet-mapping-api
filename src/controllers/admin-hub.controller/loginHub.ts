@@ -9,6 +9,7 @@ export const loginHub = async (req: Request, res: Response) => {
   try {
     const { username, password } = req.body;
     const { getUserByUsername } = adminHubDao;
+
     const admin = await getUserByUsername(username);
 
     if (!admin) {
@@ -49,7 +50,8 @@ export const loginHub = async (req: Request, res: Response) => {
         status: "success",
         title: "Logged in success",
         message: "Logged in successfully",
-        data: { token: token.token, origin: admin.origin, _id: admin._id },
+        data: token.token,
+        extraData: admin.role,
       });
     } else {
       return JsonResponse(res, {

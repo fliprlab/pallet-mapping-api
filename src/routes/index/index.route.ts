@@ -7,6 +7,7 @@ import { userQuries } from "./queries/user.queries";
 import { adminHubController } from "../../controllers/admin-hub.controller";
 import { rateLimit } from "express-rate-limit";
 import { JsonResponse } from "../../utils/jsonResponse";
+import { adminMultipleRoleLogin } from "../../controllers/admin-multiple-role-login";
 
 export class IndexRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -33,12 +34,8 @@ export class IndexRoutes extends CommonRoutesConfig {
     });
 
     router.get("/", indexController.index);
-    router.post(
-      "/admin-login",
-      maxLoginRequest,
-      loginValidator,
-      adminController.login
-    );
+
+    router.post("/admin-login", maxLoginRequest, adminMultipleRoleLogin);
     router.post(
       "/create-admin-user",
       maxLoginRequest,
