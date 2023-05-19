@@ -62,11 +62,9 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      new RegExp("https://(.*).intutrack.com"),
-      new RegExp("https://(.*).flipr.co.in"),
-      "http://localhost:3000",
-      "http://localhost:3001",
-      "http://localhost:3002",
+      "https://admin.pma.intutrack.com",
+      "https://pma.intutrack.com",
+      "https://pma-admin-vipt-testing.dev.flipr.co.in",
     ],
   })
 );

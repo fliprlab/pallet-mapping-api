@@ -1,7 +1,7 @@
 import { CommonRoutesConfig } from "../common/common.routes";
 import express, { Request, Response } from "express";
 import indexController from "../../controllers/index.controller/index.controller";
-import { loginValidator } from "../../validators/admin.validator";
+
 import { adminController } from "../../controllers/admin.controller";
 import { userQuries } from "./queries/user.queries";
 import { adminHubController } from "../../controllers/admin-hub.controller";
@@ -34,13 +34,8 @@ export class IndexRoutes extends CommonRoutesConfig {
     });
 
     router.get("/", indexController.index);
-
     router.post("/admin-login", maxLoginRequest, adminMultipleRoleLogin);
-    router.post(
-      "/create-admin-user",
-      maxLoginRequest,
-      adminController.addProfile
-    );
+    router.post("/create-admin-user", adminController.addProfile);
 
     // User Queries
     userQuries(router);
