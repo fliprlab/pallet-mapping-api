@@ -9,14 +9,7 @@ import { rateLimit } from "express-rate-limit";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { adminMultipleRoleLogin } from "../../controllers/admin-multiple-role-login";
 
-export class IndexRoutes extends CommonRoutesConfig {
-  constructor(app: express.Application) {
-    super(app, "Index Routes");
-    this.app.use("/", this.router);
-  }
-
-  configureRoutes(router: express.Router): express.Application {
-    const maxLoginRequest = rateLimit({
+   export const maxLoginRequest = rateLimit({
       windowMs: 1 * 60 * 1000, // 1 hour
       max: 3, // Limit each IP to 5 create account requests per `window` (here, per hour)
       handler: function (req: Request, res: Response /*next*/) {
@@ -32,6 +25,17 @@ export class IndexRoutes extends CommonRoutesConfig {
       standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
       legacyHeaders: false, // Disable the `X-RateLimit-*` headers
     });
+
+export class IndexRoutes extends CommonRoutesConfig {
+  constructor(app: express.Application) {
+    super(app, "Index Routes");
+    this.app.use("/", this.router);
+  }
+
+  
+
+  configureRoutes(router: express.Router): express.Application {
+ 
 
     router.get("/", indexController.index);
     router.post("/admin-login", maxLoginRequest, adminMultipleRoleLogin);
