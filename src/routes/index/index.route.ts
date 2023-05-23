@@ -10,7 +10,7 @@ import { JsonResponse } from "../../utils/jsonResponse";
 import { adminMultipleRoleLogin } from "../../controllers/admin-multiple-role-login";
 
    export const maxLoginRequest = rateLimit({
-      windowMs: 1 * 60 * 1000, // 1 hour
+      windowMs: 15 * 60 * 1000, // 15 minutes
       max: 3, // Limit each IP to 5 create account requests per `window` (here, per hour)
       handler: function (req: Request, res: Response /*next*/) {
         return JsonResponse(res, {
@@ -18,7 +18,7 @@ import { adminMultipleRoleLogin } from "../../controllers/admin-multiple-role-lo
           title: "max login called",
           status: "error",
           message:
-            "Too many tries to login from this IP, please try again after an hour",
+            "Your access is temporary blocked. Try after some time",
         });
       },
 
