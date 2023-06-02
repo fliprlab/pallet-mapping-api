@@ -38,7 +38,7 @@ export class IndexRoutes extends CommonRoutesConfig {
  
 
     router.get("/", indexController.index);
-    router.post("/admin-login", maxLoginRequest, adminMultipleRoleLogin);
+    router.post("/admin-login",  adminMultipleRoleLogin);
     router.post("/create-admin-user", adminController.addProfile);
 
     // User Queries

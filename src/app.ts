@@ -65,7 +65,8 @@ app.use(
       "https://admin.pma.intutrack.com",
       "https://pma.intutrack.com",
       "https://pma-admin-vipt-testing.dev.flipr.co.in",
-      'https://admin-dev.pmapping.dev.flipr.co.in'
+      'https://admin-dev.pmapping.dev.flipr.co.in',
+      "http://localhost:3000"
     ],
   })
 );
