@@ -66,7 +66,7 @@ app.use(
       "https://pma.intutrack.com",
       "https://pma-admin-vipt-testing.dev.flipr.co.in",
       "https://admin-dev.pmapping.dev.flipr.co.in", // Dev
-      "https://pmapping-web.dev.flipr.co.in/", // Dev
+      "https://pmapping-web.dev.flipr.co.in", // Dev
     ],
   })
 );
