@@ -27,7 +27,11 @@ export const createShipment = async (
       .withMessage("Items required.")
       .isAlphanumeric()
       .withMessage("Enter a valid items.")
-      .matches(REGX.PALLET_ITEMS)
+      .custom((e) => {
+        return e.every((a: string) => {
+          return REGX.PALLET_ITEMS.test(a);
+        });
+      })
       .withMessage("Enter a valid items."),
   ];
 
