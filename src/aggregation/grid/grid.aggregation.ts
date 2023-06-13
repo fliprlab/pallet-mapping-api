@@ -17,6 +17,17 @@ export const getGridsAggregation = (_params: TRouteParams): PipelineStage[] => {
     });
   }
 
+  // Search Filter
+
+  if (req.query.search) {
+    const SearchRegex = new RegExp(req.query.search as string, "i");
+    aggr.push({
+      $match: {
+        $or: [{ gridId: SearchRegex }, { "palletId.name": SearchRegex }],
+      },
+    });
+  }
+
   // status Filter
   if (req.query.status && req.query.status !== "") {
     aggr.push({
@@ -30,6 +41,7 @@ export const getGridsAggregation = (_params: TRouteParams): PipelineStage[] => {
   if (req.query.destination && req.query.destination !== "") {
     aggr.push({
       $match: {
+        status: "occupied",
         destination: req.query.destination,
       },
     });
