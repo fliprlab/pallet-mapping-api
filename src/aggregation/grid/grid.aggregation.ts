@@ -6,13 +6,21 @@ export const getGridsAggregation = (_params: TRouteParams): PipelineStage[] => {
   const aggr: PipelineStage[] = [];
   const { req, res } = _params;
 
-  console.log("req.query", req.query);
-  console.log("res.locals.origin", res.locals.origin);
-
   if (res.locals.origin) {
     aggr.push({
       $match: {
         "hub._id": new ObjectId(res.locals.origin._id),
+      },
+    });
+  }
+
+  // Search Filter
+
+  if (req.query.search) {
+    const SearchRegex = new RegExp(req.query.search as string, "i");
+    aggr.push({
+      $match: {
+        $or: [{ gridId: SearchRegex }, { "palletId.name": SearchRegex }],
       },
     });
   }
@@ -30,6 +38,7 @@ export const getGridsAggregation = (_params: TRouteParams): PipelineStage[] => {
   if (req.query.destination && req.query.destination !== "") {
     aggr.push({
       $match: {
+        status: "occupied",
         destination: req.query.destination,
       },
     });
