@@ -51,5 +51,6 @@ export const putAwayCheckValidPalletMiddleware = async (
   }
   res.locals.pallet = { _id: pallet._id, name: pallet.palletId };
   res.locals.shipmentId = pallet.shipmentId;
+
   next();
 };

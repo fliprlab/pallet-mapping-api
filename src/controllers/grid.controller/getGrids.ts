@@ -4,6 +4,8 @@ import GridModel from "../../models/GridModel";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { logger } from "../../config/logger";
 import { getGridsAggregation } from "../../aggregation/grid/grid.aggregation";
+import { getGridsLookup } from "../../aggregation/grid/getGridsLookup";
+import { PipelineStage } from "mongoose";
 
 export const getGrids = async (req: Request, res: Response) => {
   try {
@@ -11,6 +13,7 @@ export const getGrids = async (req: Request, res: Response) => {
       Model: GridModel,
       aggregationArray: getGridsAggregation({ req, res }),
       req,
+      afterPagination: getGridsLookup() as PipelineStage.FacetPipelineStage[],
     });
 
     return JsonResponse(res, {
