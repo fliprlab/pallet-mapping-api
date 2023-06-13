@@ -6,9 +6,6 @@ export const getGridsAggregation = (_params: TRouteParams): PipelineStage[] => {
   const aggr: PipelineStage[] = [];
   const { req, res } = _params;
 
-  console.log("req.query", req.query);
-  console.log("res.locals.origin", res.locals.origin);
-
   if (res.locals.origin) {
     aggr.push({
       $match: {
