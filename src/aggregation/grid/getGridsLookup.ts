@@ -41,6 +41,7 @@ export const getGridsLookup = () => {
         status: 1,
         virtualId: "$shipments.virtualId",
         destination: 1,
+        hub: 1,
       },
     }
   );
