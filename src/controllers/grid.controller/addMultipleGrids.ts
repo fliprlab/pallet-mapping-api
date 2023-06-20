@@ -4,6 +4,7 @@ import { JsonResponse } from "../../utils/jsonResponse";
 import LocationModel from "../../models/LocationModel";
 import { gridDao } from "../../dao/grid-dao";
 import { TGrid } from "../../models/type/grid";
+import { ObjectId } from "mongodb";
 
 export const addMultipleGrids = async (req: Request, res: Response) => {
   try {
@@ -11,12 +12,10 @@ export const addMultipleGrids = async (req: Request, res: Response) => {
     const { userId, origin } = res.locals;
     const { upsertGrids } = gridDao;
 
-    const location = await LocationModel.findOne({ location: origin }).exec();
-
     const data: TGrid[] = grids.map((item: string) => ({
       gridId: item,
       createdBy: userId,
-      hub: { _id: location?._id, name: location?.location },
+      hub: { _id: origin._id, name: origin.origin },
       time: new Date(),
       updatedBy: { _id: userId, time: new Date() },
     }));
