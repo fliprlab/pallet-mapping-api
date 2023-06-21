@@ -5,6 +5,8 @@ import { gridDao } from "../../dao/grid-dao";
 import { eventsDao } from "../../dao/events-dao";
 import { palletDao } from "../../dao/pallet-dao";
 import { shipmentDao } from "../../dao/shipment-dao";
+import { ItemDao } from "../../dao/item-dao";
+import { ObjectId } from "mongodb";
 
 export const asignGrid = async (req: Request, res: Response) => {
   try {
@@ -14,6 +16,7 @@ export const asignGrid = async (req: Request, res: Response) => {
     const { updatePallet } = palletDao;
     const { updateShipment } = shipmentDao;
     const { addEvent } = eventsDao;
+    const { updateItems } = ItemDao;
 
     const grid = await findByGridId(gridId);
 
@@ -88,6 +91,18 @@ export const asignGrid = async (req: Request, res: Response) => {
       eventDomain: "grid",
       eventName: "asign-grid",
       relatedTo: { tableName: "shipments", relatedId: shipmentId },
+    });
+
+    await updateItems({
+      shipmentId: new ObjectId(shipmentId),
+      data: {
+        status: "asign-grid",
+        lastUpdatedAt: new Date(),
+        grid: {
+          _id: grid._id,
+          name: grid.gridId,
+        },
+      },
     });
 
     return JsonResponse(res, {
