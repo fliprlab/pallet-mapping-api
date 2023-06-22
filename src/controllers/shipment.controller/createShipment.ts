@@ -5,7 +5,7 @@ import { shipmentDao } from "../../dao/shipment-dao";
 import { eventsDao } from "../../dao/events-dao";
 import { palletDao } from "../../dao/pallet-dao";
 import { uuid } from "uuidv4";
-import { PALLET_STATUS } from "../../constants";
+import { ItemDao } from "../../dao/item-dao";
 
 export const createShipment = async (req: Request, res: Response) => {
   try {
@@ -14,6 +14,7 @@ export const createShipment = async (req: Request, res: Response) => {
     const { addShipment } = shipmentDao;
     const { addEvent } = eventsDao;
     const { addPallet } = palletDao;
+    const { addItems } = ItemDao;
 
     const itemLength = items.length < 10 ? `0${items.length}` : items.length;
 
@@ -44,7 +45,7 @@ export const createShipment = async (req: Request, res: Response) => {
       createdBy: userId,
     });
 
-    await addPallet({
+    const pallet = await addPallet({
       palletId: palletId,
       shipmentId: shipment._id,
       status: "pallet-created",
@@ -52,6 +53,22 @@ export const createShipment = async (req: Request, res: Response) => {
       hub: origin,
       destination: location,
     });
+
+    const itemsData = items.map((item: string) => ({
+      itemId: item,
+      pallet: {
+        _id: pallet?._id,
+        name: pallet?.palletId,
+      },
+      shipmentId: shipment._id,
+      virtualId: shipment.virtualId,
+      status: "created",
+      origin: shipment.shipmentOrigin,
+      destination: shipment.shipmentDestination,
+      lastUpdatedAt: new Date(),
+    }));
+
+    await addItems(itemsData);
 
     return JsonResponse(res, {
       statusCode: 200,

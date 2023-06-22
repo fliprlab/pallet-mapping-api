@@ -5,6 +5,8 @@ import { shipmentDao } from "../../dao/shipment-dao";
 import { gridDao } from "../../dao/grid-dao";
 import { palletDao } from "../../dao/pallet-dao";
 import { eventsDao } from "../../dao/events-dao";
+import { ItemDao } from "../../dao/item-dao";
+import { ObjectId } from "mongodb";
 
 export const pickUpShipment = async (req: Request, res: Response) => {
   try {
@@ -14,6 +16,7 @@ export const pickUpShipment = async (req: Request, res: Response) => {
     const { updateGrid } = gridDao;
     const { updatePallet } = palletDao;
     const { addEvent } = eventsDao;
+    const { updateItems } = ItemDao;
 
     const update = await updateShipment(
       shipmentId,
@@ -42,6 +45,11 @@ export const pickUpShipment = async (req: Request, res: Response) => {
     await updatePallet(palletId._id, {
       status: "pallet-out",
       lastUpdatedBy: { id: userId, time: new Date() },
+    });
+
+    await updateItems({
+      shipmentId: new ObjectId(shipmentId),
+      data: { status: "out", lastUpdatedAt: new Date() },
     });
 
     await addEvent({

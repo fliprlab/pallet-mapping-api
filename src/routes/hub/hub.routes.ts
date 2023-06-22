@@ -11,6 +11,7 @@ import { userQuery } from "./queries/user.query";
 import { locationsQueries } from "./queries/location.query";
 import { gridQueries } from "./queries/grid.query";
 import { destinationQueries } from "./queries/destination.query";
+import { itemQuery } from "./queries/item.query";
 
 export class AdminHubRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -40,6 +41,8 @@ export class AdminHubRoutes extends CommonRoutesConfig {
     gridQueries(router);
     // destination query
     destinationQueries(router);
+    // Items query
+    itemQuery(router)
 
     return this.app;
   }
