@@ -4,6 +4,13 @@ import { TRouteParams } from "../../types/Express";
 export const getItemAggregation = (_params: TRouteParams): PipelineStage[] => {
   const aggr: PipelineStage[] = [];
   const { req, res } = _params;
+  const { origin } = res.locals;
+
+  aggr.push({
+    $match: {
+      origin: origin.origin,
+    },
+  });
 
   if (req.query.status && req.query.status !== "all") {
     aggr.push({
