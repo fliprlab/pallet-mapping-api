@@ -9,4 +9,5 @@ export const gridQueries = (router: Router) => {
     hubGridAddValidator,
     gridController.addMultipleGrids
   );
+  router.get("/get-grid-count", gridController.getHubAdminGridCountData);
 };
