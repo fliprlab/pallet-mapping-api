@@ -70,6 +70,7 @@ app.use(
       "https://pmapping-web-v2.dev.flipr.co.in", // Dev
       "http://localhost:3000",
       "http://localhost:3001",
+      "https://pmapping-admin.dev.flipr.co.in/",
     ],
   })
 );
