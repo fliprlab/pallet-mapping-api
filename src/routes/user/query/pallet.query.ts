@@ -8,4 +8,6 @@ export const palletQueries = (router: Router) => {
     palletValidator,
     palletControlller.checkPalletStatus
   );
+
+  router.post("/pallet/scan-location", palletControlller.scanPalletLocation);
 };
