@@ -3,10 +3,10 @@ import express, { Request, Response } from "express";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { checkAccess } from "../../middleware/auth/auth.middleware";
 import { adminController } from "../../controllers/admin.controller";
-// import { userQuery } from "./queries/user.query";
 import { locationsQueries } from "./queries/location.query";
 import { gridQueries } from "./queries/grid.query";
 import { hubAdminQueries } from "./queries/hub-admin.query";
+import { locationItemsQueries } from "./queries/location-items.query";
 
 export class AdminRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -34,6 +34,9 @@ export class AdminRoutes extends CommonRoutesConfig {
 
     // Hub Admin
     hubAdminQueries(router);
+
+    // location items
+    locationItemsQueries(router);
 
     return this.app;
   }
