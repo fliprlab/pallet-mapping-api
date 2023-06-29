@@ -10,4 +10,5 @@ export const palletQueries = (router: Router) => {
   );
 
   router.post("/pallet/scan-location", palletControlller.scanPalletLocation);
+  router.post("/pallet/scan", palletControlller.scanPallet);
 };
