@@ -5,30 +5,54 @@ import { logger } from "../../config/logger";
 import { locationItemsDao } from "../../dao/location-item-dao";
 
 import { TLocationItems } from "../../models/type/location-items";
+import LocationModel from "../../models/LocationModel";
+import LocationItemsModel from "../../models/LocationItemsModel";
 
 export const uploadLocationItem = async (req: Request, res: Response) => {
   try {
     const { items } = req.body as { items: TLocationItems[] };
 
+    const invalidLocation: TLocationItems[] = [];
+    const duplicateEntries: TLocationItems[] = [];
+    const validEntries: TLocationItems[] = [];
+
+    await Promise.all(
+      items.map(async (item) => {
+        const location = await LocationModel.findOne({
+          location: item.destination,
+        }).exec();
+
+        if (!location) {
+          invalidLocation.push(item);
+        } else {
+          const duplicate = await LocationItemsModel.findOne({
+            itemId: item.itemId,
+          }).exec();
+
+          if (duplicate) {
+            duplicateEntries.push(item);
+          } else {
+            validEntries.push(item);
+          }
+        }
+      })
+    );
+
     const { addLocationItems } = locationItemsDao;
 
-    const inserted = await addLocationItems(items);
+    const inserted = await addLocationItems(validEntries);
 
-    if (inserted.length > 0) {
-      return JsonResponse(res, {
-        statusCode: 200,
-        status: "success",
-        title: "Items created",
-        message: "Items Created Successfully",
-      });
-    } else {
-      return JsonResponse(res, {
-        statusCode: 400,
-        status: "error",
-        title: "Error",
-        message: "Something went wrong. Please try again",
-      });
-    }
+    return JsonResponse(res, {
+      statusCode: 200,
+      status: "success",
+      title: "Items created",
+      message: "Items Created Successfully",
+      data: {
+        invalidLocation,
+        duplicateEntries,
+        inserted,
+      },
+    });
   } catch (error: any) {
     logger.error(error);
 
