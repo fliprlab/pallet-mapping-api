@@ -8,6 +8,7 @@ import { shipmentQueries } from "./query/shipment.query";
 import { palletQueries } from "./query/pallet.query";
 import { putAwayQueries } from "./query/putAway.query";
 import { pickUpQueries } from "./query/pickUp.query";
+import { itemsQueries } from "./query/item.query";
 
 export class UserRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -36,6 +37,8 @@ export class UserRoutes extends CommonRoutesConfig {
     putAwayQueries(router);
     // Pick Up
     pickUpQueries(router);
+    // Scan Items
+    itemsQueries(router);
 
     return this.app;
   }
