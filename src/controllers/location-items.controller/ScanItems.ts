@@ -11,7 +11,7 @@ export const scanItem = async (req: Request, res: Response) => {
 
     if (!item) {
       return JsonResponse(res, {
-        statusCode: 200,
+        statusCode: 400,
         status: "error",
         title: "Invalid Scan",
         message:
