@@ -6,13 +6,14 @@ interface IUpdate {
   where: FilterQuery<TLocationItems>;
   data: Partial<TLocationItems>;
   upsert?: boolean;
+  unsetData?: ObjInterFace;
 }
 
 export const updateLocationItemDao = async (fields: IUpdate) => {
-  const { data, where, upsert = false } = fields;
+  const { data, where, upsert = false, unsetData } = fields;
   return await LocationItemsModel.updateOne(
     { ...where },
-    { $set: data },
+    { $set: data, $unset: unsetData },
     { upsert: upsert }
   ).exec();
 };

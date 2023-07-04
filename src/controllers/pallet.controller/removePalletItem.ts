@@ -7,13 +7,16 @@ export const removePalletItem = async (req: Request, res: Response) => {
   try {
     const { _id } = req.body;
 
+    console.log("_id", _id);
+
     const updated = await updateLocationItemDao({
       where: {
         _id: _id,
       },
-      data: {
-        pallet: undefined,
-        status: undefined,
+      data: {},
+      unsetData: {
+        pallet: 1,
+        status: 1,
       },
     });
 
