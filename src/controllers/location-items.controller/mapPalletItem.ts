@@ -57,6 +57,7 @@ export const mapPalletItem = async (req: Request, res: Response) => {
     }
   } catch (error) {
     logger.error(error);
+    console.log("Error ", error);
     return JsonResponse(res, {
       statusCode: 500,
       status: "error",
