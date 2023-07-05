@@ -13,7 +13,7 @@ export const updateLocationItemDao = async (fields: IUpdate) => {
   const { data, where, upsert = false, unsetData } = fields;
   return await LocationItemsModel.updateOne(
     { ...where },
-    { $set: data, $unset: unsetData },
+    { $set: data, $unset: unsetData || {} },
     { upsert: upsert }
   ).exec();
 };
