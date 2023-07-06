@@ -15,4 +15,5 @@ export const palletQueries = (router: Router) => {
   router.post("/location-pallets", palletControlller.getLocationPallets);
   router.post("/pallets/items", locationItemsController.getPalletItems);
   router.post("/pallets/remove-item", palletControlller.removePalletItem);
+  router.post("/dispatch-items/get", palletControlller.getPalletLocationItems);
 };

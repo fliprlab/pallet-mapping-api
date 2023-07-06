@@ -35,6 +35,7 @@ export const mapPalletItem = async (req: Request, res: Response) => {
         status: "created",
         destination: location,
         origin: res.locals.origin,
+        shipmentId: pallet.shipmentId,
       },
     });
 
