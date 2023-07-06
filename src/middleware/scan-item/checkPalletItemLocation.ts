@@ -18,7 +18,7 @@ export const checkPalletItemLocation = async (
       statusCode: 400,
       status: "error",
       title: "Failed",
-      message: "Location of pallet and Item Should be same",
+      message: "Pallet ID doesn't match the location. Kindly re-scan. ",
     });
   }
   next();
