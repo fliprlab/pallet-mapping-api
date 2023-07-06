@@ -12,4 +12,5 @@ type TLocationItems = {
   status: TShipmentStatus;
   origin: string;
   destination: string;
+  shipmentId: ObjectId;
 };

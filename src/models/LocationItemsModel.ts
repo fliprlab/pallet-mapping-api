@@ -15,6 +15,7 @@ const schema = new Schema<TLocationItems>(
       type: String,
       enum: ["created", "out", "cancelled"],
     },
+    shipmentId: ObjectId,
   },
   {
     timestamps: true,
