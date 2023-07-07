@@ -13,7 +13,7 @@ const schema = new Schema<TLocationItems>(
     },
     status: {
       type: String,
-      enum: ["created", "out", "cancelled"],
+      enum: ["created", "out", "cancelled", "picked up"],
     },
     shipmentId: ObjectId,
   },
