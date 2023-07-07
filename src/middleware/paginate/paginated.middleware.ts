@@ -14,6 +14,7 @@ export const paginated = async (
   props: IPaginated
 ): Promise<{ data: any[]; pageData: any }> => {
   const { Model, req, aggregationArray, afterPagination } = props;
+
   const paginationAggregation = getPaginationAggregation(
     req.query.page,
     req.query.itemPerPage,
