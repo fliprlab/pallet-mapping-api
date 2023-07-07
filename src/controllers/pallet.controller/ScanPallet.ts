@@ -5,25 +5,22 @@ import { shipmentDao } from "../../dao/shipment-dao";
 import { uuid } from "uuidv4";
 import { addEvent } from "../../dao/events-dao/addEvent";
 import { updatePalletDao } from "../../dao/pallet-dao/updatePallet.dao";
-import { REGX } from "../../constants";
 
 export const scanPallet = async (req: Request, res: Response) => {
   try {
     const { userId, origin } = res.locals;
-    const { pallet, location } = req.body;
-
-    console.log("pallet.test(REGX.PALLET_ID", REGX.PALLET_ID.test(pallet));
+    const { palletId, location } = req.body;
 
     const { addShipment } = shipmentDao;
 
     const shipment = await addShipment({
-      palletId: pallet,
+      palletId: palletId,
       shipmentDestination: location,
       shipmentOrigin: origin,
       status: [{ statusName: "created", updatedBy: userId, time: new Date() }],
       latestStatus: "created",
       shipmentId: uuid(),
-      virtualId: "B" + pallet + "-" + "0",
+      virtualId: "B" + palletId + "-" + "0",
     });
 
     if (!shipment) {
@@ -44,10 +41,10 @@ export const scanPallet = async (req: Request, res: Response) => {
 
     const palletInserted = await updatePalletDao({
       where: {
-        palletId: pallet,
+        palletId: palletId,
       },
       data: {
-        palletId: pallet,
+        palletId: palletId,
         shipmentId: shipment._id,
         status: "pallet-created",
         lastUpdatedBy: { id: userId, time: new Date() },
@@ -73,7 +70,7 @@ export const scanPallet = async (req: Request, res: Response) => {
       statusCode: 200,
       status: "success",
       title: "Completed",
-      message: `Pallet ID - ${pallet} is successfully mapped to location - ${location}`,
+      message: `Pallet ID - ${palletId} is successfully mapped to location - ${location}`,
     });
   } catch (error: any) {
     logger.error(error);
