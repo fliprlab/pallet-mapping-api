@@ -7,6 +7,7 @@ import { palletDao } from "../../dao/pallet-dao";
 import { eventsDao } from "../../dao/events-dao";
 import { ItemDao } from "../../dao/item-dao";
 import { ObjectId } from "mongodb";
+import LocationItemsModel from "../../models/LocationItemsModel";
 
 export const pickUpShipment = async (req: Request, res: Response) => {
   try {
@@ -51,6 +52,13 @@ export const pickUpShipment = async (req: Request, res: Response) => {
       shipmentId: new ObjectId(shipmentId),
       data: { status: "out", lastUpdatedAt: new Date() },
     });
+
+    await LocationItemsModel.updateMany(
+      { shipmentId },
+      {
+        $set: { status: "picked up" },
+      }
+    ).exec();
 
     await addEvent({
       createdBy: userId,

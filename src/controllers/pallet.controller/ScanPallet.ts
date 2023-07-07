@@ -5,11 +5,14 @@ import { shipmentDao } from "../../dao/shipment-dao";
 import { uuid } from "uuidv4";
 import { addEvent } from "../../dao/events-dao/addEvent";
 import { updatePalletDao } from "../../dao/pallet-dao/updatePallet.dao";
+import { REGX } from "../../constants";
 
 export const scanPallet = async (req: Request, res: Response) => {
   try {
     const { userId, origin } = res.locals;
     const { pallet, location } = req.body;
+
+    console.log("pallet.test(REGX.PALLET_ID", REGX.PALLET_ID.test(pallet));
 
     const { addShipment } = shipmentDao;
 
