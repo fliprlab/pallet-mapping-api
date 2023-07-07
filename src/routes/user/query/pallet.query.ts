@@ -11,7 +11,7 @@ export const palletQueries = (router: Router) => {
   );
 
   router.post("/pallet/scan-location", palletControlller.scanPalletLocation);
-  router.post("/pallet/scan", palletControlller.scanPallet);
+  router.post("/pallet/scan", palletValidator, palletControlller.scanPallet);
   router.post("/location-pallets", palletControlller.getLocationPallets);
   router.post("/pallets/items", locationItemsController.getPalletItems);
   router.post("/pallets/remove-item", palletControlller.removePalletItem);
