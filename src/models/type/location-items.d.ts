@@ -13,4 +13,6 @@ type TLocationItems = {
   origin: string;
   destination: string;
   shipmentId: ObjectId;
+  zone: string;
+  lpst: string;
 };

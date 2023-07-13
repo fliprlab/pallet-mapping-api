@@ -7,6 +7,7 @@ import { locationItemsDao } from "../../dao/location-item-dao";
 import { TLocationItems } from "../../models/type/location-items";
 import LocationModel from "../../models/LocationModel";
 import LocationItemsModel from "../../models/LocationItemsModel";
+import { REGX } from "../../constants";
 
 export const uploadLocationItem = async (req: Request, res: Response) => {
   try {
@@ -15,6 +16,7 @@ export const uploadLocationItem = async (req: Request, res: Response) => {
     const invalidLocation: TLocationItems[] = [];
     const duplicateEntries: TLocationItems[] = [];
     const validEntries: TLocationItems[] = [];
+    const invalidEntries: TLocationItems[] = [];
 
     await Promise.all(
       items.map(async (item) => {
@@ -31,6 +33,8 @@ export const uploadLocationItem = async (req: Request, res: Response) => {
 
           if (duplicate) {
             duplicateEntries.push(item);
+          } else if (!REGX.LPST.test(item.lpst)) {
+            invalidEntries.push(item);
           } else {
             validEntries.push(item);
           }
@@ -51,6 +55,7 @@ export const uploadLocationItem = async (req: Request, res: Response) => {
         invalidLocation,
         duplicateEntries,
         inserted,
+        invalidEntries,
       },
     });
   } catch (error: any) {
