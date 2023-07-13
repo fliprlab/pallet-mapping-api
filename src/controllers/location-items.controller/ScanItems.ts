@@ -27,6 +27,8 @@ export const scanItem = async (req: Request, res: Response) => {
       data: {
         location: item.destination,
         itemId: item.itemId,
+        zone: item.zone,
+        lpst: item.lpst,
       },
     });
   } catch (error) {
