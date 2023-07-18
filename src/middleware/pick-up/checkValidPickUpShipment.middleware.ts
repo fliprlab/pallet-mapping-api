@@ -53,6 +53,15 @@ export const checkValidPickUpShipmentMiddleware = async (
     });
   }
 
+  if (!grid.active) {
+    return JsonResponse(res, {
+      statusCode: 400,
+      status: "error",
+      title: "Grid In-Active.",
+      message: `Grid In-Active.`,
+    });
+  }
+
   if (grid.gridId !== gridId) {
     return JsonResponse(res, {
       statusCode: 400,

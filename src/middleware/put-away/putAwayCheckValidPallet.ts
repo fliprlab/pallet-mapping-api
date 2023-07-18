@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { palletDao } from "../../dao/pallet-dao";
+import { findGridById } from "../../dao/grid-dao/findGridById";
+import GridModel from "../../models/GridModel";
 
 export const putAwayCheckValidPalletMiddleware = async (
   req: Request,
@@ -8,7 +10,7 @@ export const putAwayCheckValidPalletMiddleware = async (
   next: NextFunction
 ) => {
   const { origin } = res.locals;
-  const { palletId, location } = req.body;
+  const { palletId, location, gridId } = req.body;
   const { findByPalletId } = palletDao;
 
   const pallet = await findByPalletId(palletId);
@@ -49,6 +51,22 @@ export const putAwayCheckValidPalletMiddleware = async (
       message: "Pallet out already.",
     });
   }
+
+  const grid = await GridModel.findOne({
+    "hub.name": origin,
+    gridId: gridId,
+    active: false,
+  });
+
+  if (grid) {
+    return JsonResponse(res, {
+      statusCode: 400,
+      status: "error",
+      title: "Grid In-Active.",
+      message: `Grid In-Active.`,
+    });
+  }
+
   res.locals.pallet = { _id: pallet._id, name: pallet.palletId };
   res.locals.shipmentId = pallet.shipmentId;
 

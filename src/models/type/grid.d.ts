@@ -17,4 +17,5 @@ type TGrid = {
   createdBy: ObjectId;
   updatedBy: { _id: ObjectId; time: Date };
   destination: string;
+  active: boolean;
 };

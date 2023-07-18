@@ -33,7 +33,8 @@ export const createGrid = async (req: Request, res: Response) => {
         statusCode: 400,
         status: "error",
         title: "Already Available",
-        message: "It seems this already available in this location.",
+        message:
+          "It seems this already available in this location. Or In-Active",
       });
     }
 
