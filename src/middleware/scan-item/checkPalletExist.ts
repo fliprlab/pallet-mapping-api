@@ -9,8 +9,6 @@ export const checkPalletExist = async (
 ) => {
   const { palletId } = req.body;
 
-  console.log("palletId", palletId);
-
   const pallet = await PalletModel.findOne({
     palletId: palletId,
   }).exec();

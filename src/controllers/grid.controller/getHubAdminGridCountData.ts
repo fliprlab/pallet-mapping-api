@@ -7,7 +7,10 @@ export const getHubAdminGridCountData = async (req: Request, res: Response) => {
   try {
     const { origin } = res.locals;
 
-    const totalGrids = await GridModel.find({ "hub._id": origin._id }).exec();
+    const totalGrids = await GridModel.find({
+      "hub._id": origin._id,
+      active: { $ne: false },
+    }).exec();
 
     return JsonResponse(res, {
       statusCode: 200,

@@ -43,6 +43,21 @@ export const getGridsAggregation = (_params: TRouteParams): PipelineStage[] => {
       },
     });
   }
+  // active filter
+
+  if (req.query.inactive && req.query.inactive === "in-active") {
+    aggr.push({
+      $match: {
+        active: false,
+      },
+    });
+  } else {
+    aggr.push({
+      $match: {
+        $or: [{ active: true }, { active: null }],
+      },
+    });
+  }
 
   //   sort filter
   if (
