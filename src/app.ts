@@ -56,7 +56,7 @@ const apiRequestLimiter = rateLimit({
 app.use(apiRequestLimiter);
 
 // here we are adding middleware to parse all incoming requests as JSON
-app.use(express.json());
+app.use(express.json({ limit: "3mb" }));
 
 // here we are adding middleware to allow cross-origin requests
 app.use(
