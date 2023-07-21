@@ -6,8 +6,9 @@ import LocationModel from "../../models/LocationModel";
 export const scanPalletLocation = async (req: Request, res: Response) => {
   try {
     const { scan } = req.body;
+    const regExp = new RegExp("^" + scan + "$", "i");
 
-    const location = await LocationModel.findOne({ location: scan }).exec();
+    const location = await LocationModel.findOne({ location: regExp }).exec();
 
     if (!location) {
       return JsonResponse(res, {
