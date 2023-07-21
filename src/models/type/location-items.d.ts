@@ -15,4 +15,5 @@ type TLocationItems = {
   shipmentId: ObjectId;
   zone: string;
   lpst: string;
+  reason?: string;
 };
