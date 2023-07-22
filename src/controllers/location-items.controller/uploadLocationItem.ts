@@ -25,18 +25,18 @@ export const uploadLocationItem = async (req: Request, res: Response) => {
         }).exec();
 
         if (!location) {
-          invalidLocation.push(item);
+          invalidLocation.push({ ...item, reason: "Location Not Available" });
         } else {
           const duplicate = await LocationItemsModel.findOne({
             itemId: item.itemId,
           }).exec();
 
           if (duplicate) {
-            duplicateEntries.push(item);
+            duplicateEntries.push({ ...item, reason: "Duplicate items" });
           } else if (!REGX.LPST.test(item.lpst)) {
-            invalidEntries.push(item);
+            invalidEntries.push({ ...item, reason: "Incorrect LPST" });
           } else {
-            validEntries.push(item);
+            validEntries.push({ ...item, reason: "Item Created" });
           }
         }
       })
