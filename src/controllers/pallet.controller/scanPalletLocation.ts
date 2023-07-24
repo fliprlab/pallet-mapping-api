@@ -14,7 +14,7 @@ export const scanPalletLocation = async (req: Request, res: Response) => {
         statusCode: 200,
         status: "error",
         title: "Invalid Location Scanned",
-        message: "Invalid Location. Scan the valid location",
+        message: `Invalid Location ${location}. Scan the valid location`,
       });
     }
 
