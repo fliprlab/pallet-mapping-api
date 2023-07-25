@@ -10,9 +10,10 @@ export const getPalletLocationItems = async (req: Request, res: Response) => {
   try {
     const { scan } = req.body;
 
+    console.log("Scan ", scan);
+
     const pallet = await PalletModel.findOne({
       palletId: scan,
-      status: "pallet-created",
     });
 
     if (!pallet) {
