@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { PipelineStage } from "mongoose";
+import { regExpLocation } from "../../constants";
 
 export const getPickUpItemAggregation = (
   req: Request,
@@ -14,7 +15,7 @@ export const getPickUpItemAggregation = (
       $match: {
         latestStatus: "asign-grid",
         shipmentDestination: {
-          $in: locations,
+          $in: regExpLocation(locations),
         },
         shipmentOrigin: origin,
       },

@@ -4,6 +4,9 @@ export const PALLET_STATUS = {
   out: "pallet-out",
 };
 
+export const regExpLocation = (location: string) =>
+  new RegExp("^" + location + "$", "i");
+
 export const REGX = {
   PALLET_ID: /^[1-9][0-9]{4}$/,
   GRID_ID: /^G[0-9]{3}-[0-9]{2}$/,

@@ -1,5 +1,6 @@
 import { PipelineStage } from "mongoose";
 import { TRouteParams } from "../../types/Express";
+import { regExpLocation } from "../../constants";
 
 export const getLocationPalletsAggregation = (
   _params: TRouteParams
@@ -9,7 +10,7 @@ export const getLocationPalletsAggregation = (
 
   aggr.push({
     $match: {
-      shipmentDestination: req.body.destination,
+      shipmentDestination: regExpLocation(req.body.destination),
       latestStatus: "created",
     },
   });

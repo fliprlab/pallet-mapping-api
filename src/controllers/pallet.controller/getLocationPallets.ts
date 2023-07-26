@@ -5,13 +5,16 @@ import LocationModel from "../../models/LocationModel";
 import { paginated } from "../../middleware/paginate/paginated.middleware";
 import ShipmentsModel from "../../models/shipmentsModel";
 import { getLocationPalletsAggregation } from "../../aggregation/pallets/pallet.aggregation";
+import { regExpLocation } from "../../constants";
 
 export const getLocationPallets = async (req: Request, res: Response) => {
   try {
     const { destination } = req.body;
 
+    console.log("destination", destination);
+
     const location = await LocationModel.findOne({
-      location: destination,
+      location: regExpLocation(destination),
     }).exec();
 
     if (!location) {
