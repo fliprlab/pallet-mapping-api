@@ -15,7 +15,7 @@ export const getPickUpItemAggregation = (
       $match: {
         latestStatus: "asign-grid",
         shipmentDestination: {
-          $in: regExpLocation(locations),
+          $in: locations,
         },
         shipmentOrigin: origin,
       },
