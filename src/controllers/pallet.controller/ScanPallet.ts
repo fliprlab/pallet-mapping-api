@@ -5,6 +5,7 @@ import { shipmentDao } from "../../dao/shipment-dao";
 import { uuid } from "uuidv4";
 import { addEvent } from "../../dao/events-dao/addEvent";
 import { updatePalletDao } from "../../dao/pallet-dao/updatePallet.dao";
+import { palletDao } from "../../dao/pallet-dao";
 
 export const scanPallet = async (req: Request, res: Response) => {
   try {
@@ -12,6 +13,17 @@ export const scanPallet = async (req: Request, res: Response) => {
     const { palletId, location } = req.body;
 
     const { addShipment } = shipmentDao;
+
+    /// check pallet shipment
+    const pallet = await palletDao.findByPalletId(palletId);
+    if (pallet && pallet.status != "pallet-out") {
+      return JsonResponse(res, {
+        statusCode: 400,
+        status: "error",
+        title: "Can't Use",
+        message: `This Pallet is already assigned for ${pallet.destination} Location. You Can't reassign it before completing the PICK-UP process.`,
+      });
+    }
 
     const shipment = await addShipment({
       palletId: palletId,
