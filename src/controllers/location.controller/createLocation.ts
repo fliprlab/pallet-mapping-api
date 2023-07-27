@@ -9,6 +9,17 @@ export const createLocation = async (req: Request, res: Response) => {
     const { location } = req.body;
     const { addLocation } = locationDao;
 
+    // find location
+    const find = await locationDao.getLocationByName(location);
+    if (find) {
+      return JsonResponse(res, {
+        statusCode: 400,
+        status: "error",
+        title: "OOPS!",
+        message: "Location already added.",
+      });
+    }
+
     const inserted = await addLocation({
       location,
       createdBy: { _id: userId, date: new Date() },
