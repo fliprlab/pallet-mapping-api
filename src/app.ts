@@ -67,7 +67,6 @@ app.use(
       "https://pma-admin-vipt-testing.dev.flipr.co.in",
       "https://admin-dev.pmapping.dev.flipr.co.in", // Dev
       "https://pmapping-web.dev.flipr.co.in", // Dev
-      "https://pmapping-web-v2.dev.flipr.co.in", // Dev
       "http://localhost:3000",
       "http://localhost:3001",
       "https://pmapping-admin.dev.flipr.co.in",
