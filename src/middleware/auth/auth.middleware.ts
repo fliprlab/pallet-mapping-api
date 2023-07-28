@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import { adminDao } from "../../dao/admin-dao";
 import { usersDao } from "../../dao/users-dao";
 import HubAdminModel from "../../models/HubAdminModel";
+import { tokenDao } from "../../dao/token-dao";
 
 export const checkAccess = async (
   req: Request,
@@ -35,6 +36,17 @@ export const checkAccess = async (
         status: "error",
         title: "Authentication Failed",
         message: "No Auth Header Available",
+      });
+    }
+    const { verifyTokenDao } = tokenDao;
+    let tokenVerified = await verifyTokenDao(bearerToken);
+
+    if (!tokenVerified) {
+      return JsonResponse(res, {
+        statusCode: 401,
+        status: "error",
+        title: "Authentication Error",
+        message: "Token is not valid",
       });
     }
 
@@ -90,6 +102,20 @@ export const checkAccessUser = (
             message: err.message,
           });
         } else {
+          const { verifyTokenDao } = tokenDao;
+          let tokenVerified = await verifyTokenDao(
+            token.replace("Bearer ", "")
+          );
+
+          if (!tokenVerified) {
+            return JsonResponse(res, {
+              statusCode: 401,
+              status: "error",
+              title: "Authentication Error",
+              message: "Token is not valid",
+            });
+          }
+
           const user = await findUserByIdDao(decoded.data.userId);
 
           if (!user) {
@@ -139,6 +165,18 @@ export const checkAccessHub = async (
         status: "error",
         title: "Authentication Failed",
         message: "No Auth Header Available",
+      });
+    }
+
+    const { verifyTokenDao } = tokenDao;
+    let tokenVerified = await verifyTokenDao(bearerToken);
+
+    if (!tokenVerified) {
+      return JsonResponse(res, {
+        statusCode: 401,
+        status: "error",
+        title: "Authentication Error",
+        message: "Token is not valid",
       });
     }
 
