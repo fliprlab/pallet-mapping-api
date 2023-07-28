@@ -1,20 +1,23 @@
-import { Request, Response } from "express";
+import { Request } from "express";
 import { paginated } from "../../middleware/paginate/paginated.middleware";
 import LocationItemsModel from "../../models/LocationItemsModel";
-import { TRouteParams } from "../../types/Express";
+
 import { PipelineStage } from "mongoose";
 
+interface IGetLocationItemsParams {
+  status: "created" | "bagged" | "sort";
+  date: [Date, Date];
+  search: string;
+}
+
 const getLocationItemsAggregation = (
-  _params: TRouteParams
+  params: IGetLocationItemsParams
 ): PipelineStage[] => {
+  const { date, search, status } = params;
   const aggr: PipelineStage[] = [];
-  const req = _params.req;
 
-  const status = req.query.status;
-  const date = req.query.date as unknown as [null, null] | null;
-
-  if (req.query.search) {
-    const SearchRegex = new RegExp(req.query.search as string, "i");
+  if (search) {
+    const SearchRegex = new RegExp(search, "i");
     aggr.push({
       $match: {
         $or: [
@@ -76,10 +79,13 @@ const getLocationItemsAggregation = (
   return aggr;
 };
 
-export const getLocationItemsDao = async (req: Request, res: Response) => {
+export const getLocationItemsDao = async (
+  req: Request,
+  params: IGetLocationItemsParams
+) => {
   return await paginated({
     Model: LocationItemsModel,
-    aggregationArray: getLocationItemsAggregation({ req, res }),
+    aggregationArray: getLocationItemsAggregation(params),
     req,
   });
 };
