@@ -1,7 +1,10 @@
-import { PipelineStage } from "mongoose";
+import { Request, Response } from "express";
+import { paginated } from "../../middleware/paginate/paginated.middleware";
+import LocationItemsModel from "../../models/LocationItemsModel";
 import { TRouteParams } from "../../types/Express";
+import { PipelineStage } from "mongoose";
 
-export const getLocationItemsAggregation = (
+const getLocationItemsAggregation = (
   _params: TRouteParams
 ): PipelineStage[] => {
   const aggr: PipelineStage[] = [];
@@ -71,4 +74,12 @@ export const getLocationItemsAggregation = (
   });
 
   return aggr;
+};
+
+export const getLocationItemsDao = async (req: Request, res: Response) => {
+  return await paginated({
+    Model: LocationItemsModel,
+    aggregationArray: getLocationItemsAggregation({ req, res }),
+    req,
+  });
 };
