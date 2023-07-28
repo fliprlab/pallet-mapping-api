@@ -14,21 +14,17 @@ export const maxUserLoginAttempts = async (
   res: Response,
   next: NextFunction
 ) => {
-  try {
-    rateLimiter
-      .consume(req.socket.remoteAddress as string, 1)
-      .then((apiResponse) => {
-        next();
-      })
-      .catch((apiResponseErr) => {
-        return JsonResponse(res, {
-          statusCode: 429,
-          title: "max login attempts",
-          status: "error",
-          message: "Your access is temporary blocked. Try after some time",
-        });
+  rateLimiter
+    .consume(req.socket.remoteAddress as string, 1)
+    .then((apiResponse) => {
+      next();
+    })
+    .catch((apiResponseErr) => {
+      return JsonResponse(res, {
+        statusCode: 429,
+        title: "max login attempts",
+        status: "error",
+        message: "Your access is temporary blocked. Try after some time",
       });
-  } catch (error: any) {
-    console.log("error", error.message);
-  }
+    });
 };

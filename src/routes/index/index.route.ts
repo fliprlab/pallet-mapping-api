@@ -8,6 +8,7 @@ import { adminHubController } from "../../controllers/admin-hub.controller";
 import { rateLimit } from "express-rate-limit";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { adminMultipleRoleLogin } from "../../controllers/admin-multiple-role-login";
+import { maxUserLoginAttempts } from "../../middleware/user/maxUserLoginAttempts";
 
 export const maxLoginRequest = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -41,7 +42,11 @@ export class IndexRoutes extends CommonRoutesConfig {
 
     // Admin hub
 
-    router.post("/login-hub", maxLoginRequest, adminHubController.loginHub);
+    router.post(
+      "/login-hub",
+      maxUserLoginAttempts,
+      adminHubController.loginHub
+    );
 
     return this.app;
   }
