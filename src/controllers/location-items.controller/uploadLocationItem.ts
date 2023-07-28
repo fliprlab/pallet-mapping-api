@@ -7,7 +7,7 @@ import { locationItemsDao } from "../../dao/location-item-dao";
 import { TLocationItems } from "../../models/type/location-items";
 import LocationModel from "../../models/LocationModel";
 import LocationItemsModel from "../../models/LocationItemsModel";
-import { REGX } from "../../constants";
+import { REGX, regExpLocation } from "../../constants";
 
 export const uploadLocationItem = async (req: Request, res: Response) => {
   try {
@@ -21,7 +21,7 @@ export const uploadLocationItem = async (req: Request, res: Response) => {
     await Promise.all(
       items.map(async (item) => {
         const location = await LocationModel.findOne({
-          location: item.destination,
+          location: regExpLocation(item.destination),
         }).exec();
 
         if (!location) {
