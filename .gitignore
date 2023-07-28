@@ -1,6 +1,8 @@
 **/logs
 node_modules/
 
+.env
+
 dist/
 requestErrors.log/
 requestInfo.log/
