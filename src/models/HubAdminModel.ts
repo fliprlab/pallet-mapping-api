@@ -17,6 +17,11 @@ const HubAdminSchema = new Schema<THubAdmin>(
       type: Boolean,
       default: true,
     },
+    role: {
+      type: String,
+      enum: ["hub-admin"],
+      default: "hub-admin",
+    },
   },
   {
     timestamps: true,

@@ -37,3 +37,38 @@ export const gridValidator = async (
     });
   }
 };
+
+export const hubGridAddValidator = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  const validations = [
+    body("grids")
+      .isArray()
+      .withMessage("Items Valid Grid Id..")
+      .isAlphanumeric()
+      .withMessage("Enter a valid Grids..")
+      .custom((e) => {
+        return e.every((a: string) => {
+          return REGX.GRID_ID.test(a);
+        });
+      })
+      .withMessage("Enter a valid Grid Id."),
+  ];
+
+  await Promise.all(validations.map((validation) => validation.run(req)));
+  const errors = validationResult(req).formatWith(errorFormatter);
+
+  if (errors.isEmpty()) {
+    next();
+  } else {
+    return JsonResponse(res, {
+      status: "error",
+      statusCode: 400,
+      title: "Missing required fields",
+      message: errors.array()[0].error,
+      data: errors.array(),
+    });
+  }
+};

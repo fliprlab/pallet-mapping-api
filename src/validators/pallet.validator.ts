@@ -27,7 +27,7 @@ export const palletValidator = async (
     return JsonResponse(res, {
       status: "error",
       statusCode: 400,
-      title: "Missing required fields",
+      title: "Invalid Pallet Id",
       message: errors.array()[0].error,
       data: errors.array(),
     });

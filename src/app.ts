@@ -3,6 +3,8 @@ import * as http from "http";
 import * as expressWinston from "express-winston";
 import cors from "cors";
 import debug from "debug";
+import * as dotenv from "dotenv";
+dotenv.config();
 import { CommonRoutesConfig } from "./routes/common/common.routes";
 import { Config } from "./config/Config";
 import { logger, requestLogger } from "./config/logger";
@@ -28,7 +30,6 @@ const normalizePort = (val: any) => {
 
   return false;
 };
-
 const app: express.Application = express();
 const server: http.Server = http.createServer(app);
 const port = normalizePort(process.env.PORT || "4000");
@@ -55,10 +56,23 @@ const apiRequestLimiter = rateLimit({
 app.use(apiRequestLimiter);
 
 // here we are adding middleware to parse all incoming requests as JSON
-app.use(express.json());
+app.use(express.json({ limit: "3mb" }));
 
 // here we are adding middleware to allow cross-origin requests
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://admin.pma.intutrack.com",
+      "https://pma.intutrack.com",
+      "https://pma-admin-vipt-testing.dev.flipr.co.in",
+      "https://admin-dev.pmapping.dev.flipr.co.in", // Dev
+      "https://pmapping-web.dev.flipr.co.in", // Dev
+      "http://localhost:3000",
+      "http://localhost:3001",
+      "https://pmapping-admin.dev.flipr.co.in",
+    ],
+  })
+);
 
 // Set content type GLOBALLY for any response.
 app.use(function (req, res, next) {

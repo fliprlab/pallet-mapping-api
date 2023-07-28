@@ -1,57 +1,76 @@
 import { NextFunction, Request, Response } from "express";
-import { Config } from "../../config/Config";
 import { JsonResponse } from "../../utils/jsonResponse";
 import jwt from "jsonwebtoken";
 import { adminDao } from "../../dao/admin-dao";
 import { usersDao } from "../../dao/users-dao";
 import HubAdminModel from "../../models/HubAdminModel";
+import { tokenDao } from "../../dao/token-dao";
 
-export const checkAccess = (
+export const checkAccess = async (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  const config = new Config();
-  const token: any = req.headers[`${config.environmentVariable.headerKey}`];
-  const { findAdminById } = adminDao;
+  try {
+    const token: any = req.headers[`${process.env.headerKey}`];
+    const { findAdminById } = adminDao;
 
-  if (!token) {
+    const bearerToken = token.replace("Bearer ", "");
+
+    if (!bearerToken || bearerToken === "null" || bearerToken === "undefined") {
+      return JsonResponse(res, {
+        statusCode: 401,
+        status: "error",
+        title: "Authentication Failed",
+        message: "No Auth Header Available",
+      });
+    }
+    const verify: any = await jwt.verify(
+      bearerToken,
+      process.env.jwtSecret ?? ""
+    );
+
+    if (!verify) {
+      return JsonResponse(res, {
+        statusCode: 401,
+        status: "error",
+        title: "Authentication Failed",
+        message: "No Auth Header Available",
+      });
+    }
+    const { verifyTokenDao } = tokenDao;
+    let tokenVerified = await verifyTokenDao(bearerToken);
+
+    if (!tokenVerified) {
+      return JsonResponse(res, {
+        statusCode: 401,
+        status: "error",
+        title: "Authentication Error",
+        message: "Token is not valid",
+      });
+    }
+
+    const admin = await findAdminById(verify.data.userId);
+
+    if (!admin) {
+      return JsonResponse(res, {
+        statusCode: 401,
+        status: "error",
+        title: "Authentication Error",
+        message: "No user found with this header",
+      });
+    }
+
+    res.locals.userId = verify.data.userId;
+    res.locals.userRole = verify.data.role;
+    next();
+  } catch (error) {
     return JsonResponse(res, {
       statusCode: 401,
       status: "error",
-      title: "Authentication Failed",
-      message: "No Auth Header Available",
+      title: "Authentication Error",
+      message: "No user found with this header",
     });
-  } else {
-    jwt.verify(
-      token.replace("Bearer ", ""),
-      config.environmentVariable.jwtSecret,
-      async function (err: any, decoded: any) {
-        if (err) {
-          return JsonResponse(res, {
-            statusCode: 401,
-            status: "error",
-            title: "Authentication Error",
-            message: err.message,
-          });
-        } else {
-          const admin = await findAdminById(decoded.data.userId);
-
-          if (!admin) {
-            return JsonResponse(res, {
-              statusCode: 401,
-              status: "error",
-              title: "Authentication Error",
-              message: "No user found with this header",
-            });
-          }
-
-          res.locals.userId = decoded.data.userId;
-          res.locals.userRole = decoded.data.role;
-          next();
-        }
-      }
-    );
   }
 };
 
@@ -60,8 +79,7 @@ export const checkAccessUser = (
   res: Response,
   next: NextFunction
 ) => {
-  const config = new Config();
-  const token: any = req.headers[`${config.environmentVariable.headerKey}`];
+  const token: any = req.headers[`${process.env.headerKey}`];
   const { findUserByIdDao } = usersDao;
 
   if (!token) {
@@ -74,7 +92,7 @@ export const checkAccessUser = (
   } else {
     jwt.verify(
       token.replace("Bearer ", ""),
-      config.environmentVariable.jwtSecret,
+      process.env.jwtSecret ?? "",
       async function (err: any, decoded: any) {
         if (err) {
           return JsonResponse(res, {
@@ -84,6 +102,20 @@ export const checkAccessUser = (
             message: err.message,
           });
         } else {
+          const { verifyTokenDao } = tokenDao;
+          let tokenVerified = await verifyTokenDao(
+            token.replace("Bearer ", "")
+          );
+
+          if (!tokenVerified) {
+            return JsonResponse(res, {
+              statusCode: 401,
+              status: "error",
+              title: "Authentication Error",
+              message: "Token is not valid",
+            });
+          }
+
           const user = await findUserByIdDao(decoded.data.userId);
 
           if (!user) {
@@ -104,50 +136,70 @@ export const checkAccessUser = (
   }
 };
 
-export const checkAccessHub = (
+export const checkAccessHub = async (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  const config = new Config();
-  const token: any = req.headers[`${config.environmentVariable.headerKey}`];
+  try {
+    const token: any = req.headers[`${process.env.headerKey}`];
 
-  if (!token) {
+    const bearerToken = token.replace("Bearer ", "");
+
+    if (!bearerToken || bearerToken === "null" || bearerToken === "undefined") {
+      return JsonResponse(res, {
+        statusCode: 401,
+        status: "error",
+        title: "Authentication Failed",
+        message: "No Auth Header Available",
+      });
+    }
+    const verify: any = await jwt.verify(
+      bearerToken,
+      process.env.jwtSecret ?? ""
+    );
+
+    if (!verify) {
+      return JsonResponse(res, {
+        statusCode: 401,
+        status: "error",
+        title: "Authentication Failed",
+        message: "No Auth Header Available",
+      });
+    }
+
+    const { verifyTokenDao } = tokenDao;
+    let tokenVerified = await verifyTokenDao(bearerToken);
+
+    if (!tokenVerified) {
+      return JsonResponse(res, {
+        statusCode: 401,
+        status: "error",
+        title: "Authentication Error",
+        message: "Token is not valid",
+      });
+    }
+
+    const user = await HubAdminModel.findById(verify.data.userId).exec();
+
+    if (!user) {
+      return JsonResponse(res, {
+        statusCode: 401,
+        status: "error",
+        title: "Authentication Error",
+        message: "No user found with this header",
+      });
+    }
+
+    res.locals.userId = verify.data.userId;
+    res.locals.origin = user.origin;
+    next();
+  } catch (error) {
     return JsonResponse(res, {
       statusCode: 401,
       status: "error",
-      title: "Authentication Failed",
-      message: "No Auth Header Available",
+      title: "Authentication Error",
+      message: "No user found with this header",
     });
-  } else {
-    jwt.verify(
-      token.replace("Bearer ", ""),
-      config.environmentVariable.jwtSecret,
-      async function (err: any, decoded: any) {
-        if (err) {
-          return JsonResponse(res, {
-            statusCode: 401,
-            status: "error",
-            title: "Authentication Error",
-            message: err.message,
-          });
-        } else {
-          const user = await HubAdminModel.findById(decoded.data.userId).exec();
-
-          if (!user) {
-            return JsonResponse(res, {
-              statusCode: 401,
-              status: "error",
-              title: "Authentication Error",
-              message: "No user found with this header",
-            });
-          }
-
-          res.locals.userId = decoded.data.userId;
-          res.locals.origin = user.origin;
-          next();
-        }
-      }
-    );
   }
 };

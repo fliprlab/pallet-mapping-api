@@ -3,6 +3,7 @@ import { logger } from "../../config/logger";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { gridDao } from "../../dao/grid-dao";
 import { locationDao } from "../../dao/locations-dao";
+import GridModel from "../../models/GridModel";
 
 export const createGrid = async (req: Request, res: Response) => {
   try {
@@ -19,6 +20,21 @@ export const createGrid = async (req: Request, res: Response) => {
         status: "error",
         title: "Invalid Location",
         message: "location not found",
+      });
+    }
+
+    const availableGrid = await GridModel.findOne({
+      gridId: gridId,
+      hub: { _id: locationData._id, name: locationData.location },
+    }).exec();
+
+    if (availableGrid) {
+      return JsonResponse(res, {
+        statusCode: 400,
+        status: "error",
+        title: "Already Available",
+        message:
+          "It seems this already available in this location. Or In-Active",
       });
     }
 

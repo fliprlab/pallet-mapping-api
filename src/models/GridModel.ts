@@ -4,7 +4,7 @@ import { ObjectId } from "mongodb";
 
 const schema = new Schema<TGrid>(
   {
-    gridId: { type: String, required: true, unique: true },
+    gridId: { type: String, required: true },
     palletId: Object,
     hub: { type: Object, required: true },
     status: {
@@ -16,6 +16,7 @@ const schema = new Schema<TGrid>(
     createdBy: { type: ObjectId, required: true },
     updatedBy: { type: Object, required: true },
     destination: String,
+    active: { type: Boolean, default: true },
   },
   {
     timestamps: true,

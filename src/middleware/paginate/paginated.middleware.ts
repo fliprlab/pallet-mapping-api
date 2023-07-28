@@ -7,15 +7,18 @@ interface IPaginated {
   req: Request;
   Model: Model<any>;
   aggregationArray: PipelineStage[];
+  afterPagination?: PipelineStage.FacetPipelineStage[];
 }
 
 export const paginated = async (
   props: IPaginated
 ): Promise<{ data: any[]; pageData: any }> => {
-  const { Model, req, aggregationArray } = props;
+  const { Model, req, aggregationArray, afterPagination } = props;
+
   const paginationAggregation = getPaginationAggregation(
     req.query.page,
-    req.query.itemPerPage
+    req.query.itemPerPage,
+    afterPagination
   );
   const aggregateQuery: PipelineStage[] = [
     ...aggregationArray,

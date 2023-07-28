@@ -1,23 +1,18 @@
 import jwt from "jsonwebtoken";
 import moment from "moment";
-import { Config } from "../../config/Config";
 import { logger } from "../../config/logger";
 import TokenModel from "../../models/TokenModel";
 
 export const generateAuthToken = async (data: any) => {
   try {
-    const config = new Config();
-
     const tokenValue = jwt.sign(
       {
         data: {
           userId: data._id,
           username: data.username ?? data.name,
-          password: data.password,
-          role: data.role,
         },
       },
-      config.environmentVariable.jwtSecret,
+      process.env.jwtSecret ?? "",
       { expiresIn: "1days" }
     );
 
