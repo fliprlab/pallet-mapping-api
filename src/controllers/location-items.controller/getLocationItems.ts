@@ -1,15 +1,20 @@
 import { Request, Response } from "express";
 import { logger } from "../../config/logger";
 import { JsonResponse } from "../../utils/jsonResponse";
-import { paginated } from "../../middleware/paginate/paginated.middleware";
-import LocationItemsModel from "../../models/LocationItemsModel";
+import { locationItemsDao } from "../../dao/location-item-dao";
 
 export const getLocationItems = async (req: Request, res: Response) => {
   try {
-    const { data, pageData } = await paginated({
-      Model: LocationItemsModel,
-      aggregationArray: [{ $sort: { createdAt: -1 } }],
-      req,
+    const { getLocationItemsDao } = locationItemsDao;
+
+    const date = req.query.date as unknown as [Date, Date];
+    const search = req.query.search as string;
+    const status = req.query.status as "created" | "bagged" | "sort";
+
+    const { data, pageData } = await getLocationItemsDao(req, {
+      date: date,
+      search: search,
+      status: status,
     });
 
     return JsonResponse(res, {
@@ -18,7 +23,7 @@ export const getLocationItems = async (req: Request, res: Response) => {
       title: "Data Find Successfully",
       message: "Data Find Successfully",
       data: data,
-      pageData: pageData,
+      pageData: pageData ?? { total: 0 },
     });
   } catch (error) {
     logger.error(error);
