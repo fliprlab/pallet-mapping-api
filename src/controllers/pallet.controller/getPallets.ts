@@ -14,7 +14,10 @@ export const getPallets = async (req: Request, res: Response) => {
           },
         },
       ],
-      req,
+      paging: {
+        itemPerPage: req.query.itemPerPage as string,
+        page: req.query.page as string,
+      },
     });
     return JsonResponse(res, {
       statusCode: 200,

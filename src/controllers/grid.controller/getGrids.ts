@@ -12,7 +12,10 @@ export const getGrids = async (req: Request, res: Response) => {
     const { data, pageData } = await paginated({
       Model: GridModel,
       aggregationArray: getGridsAggregation({ req, res }),
-      req,
+      paging: {
+        itemPerPage: req.query.itemPerPage as string,
+        page: req.query.page as string,
+      },
       afterPagination: getGridsLookup() as PipelineStage.FacetPipelineStage[],
     });
 

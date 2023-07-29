@@ -86,6 +86,9 @@ export const getLocationItemsDao = async (
   return await paginated({
     Model: LocationItemsModel,
     aggregationArray: getLocationItemsAggregation(params),
-    req,
+    paging: {
+      itemPerPage: req.query.itemPerPage as string,
+      page: req.query.page as string,
+    },
   });
 };

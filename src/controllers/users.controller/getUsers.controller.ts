@@ -10,7 +10,10 @@ export const getUsers = async (req: Request, res: Response) => {
     const { data, pageData } = await paginated({
       Model: UsersModel,
       aggregationArray: getUsersAggregation({ req, res }),
-      req,
+      paging: {
+        itemPerPage: req.query.itemPerPage as string,
+        page: req.query.page as string,
+      },
     });
 
     return JsonResponse(res, {

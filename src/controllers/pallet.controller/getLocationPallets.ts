@@ -28,7 +28,10 @@ export const getLocationPallets = async (req: Request, res: Response) => {
 
     const { data, pageData } = await paginated({
       Model: ShipmentsModel,
-      req,
+      paging: {
+        itemPerPage: req.query.itemPerPage as string,
+        page: req.query.page as string,
+      },
       aggregationArray: getLocationPalletsAggregation({ req, res }),
     });
 
