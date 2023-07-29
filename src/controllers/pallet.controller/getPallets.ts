@@ -1,23 +1,19 @@
 import { Request, Response } from "express";
-import PalletModel from "../../models/PalletModel";
-import { paginated } from "../../middleware/paginate/paginated.middleware";
 import { JsonResponse } from "../../utils/jsonResponse";
+import { palletDao } from "../../dao/pallet-dao";
 
 export const getPallets = async (req: Request, res: Response) => {
   try {
-    const { data, pageData } = await paginated({
-      Model: PalletModel,
-      aggregationArray: [
-        {
-          $sort: {
-            palletId: 1,
-          },
-        },
-      ],
+    const { data, pageData } = await palletDao.getPalletsDao({
       paging: {
         itemPerPage: req.query.itemPerPage as string,
         page: req.query.page as string,
       },
+      search: req.query.search as string,
+      status: req.query.status as
+        | "pallet-created"
+        | "pallet-asign-grid"
+        | "pallet-out",
     });
     return JsonResponse(res, {
       statusCode: 200,

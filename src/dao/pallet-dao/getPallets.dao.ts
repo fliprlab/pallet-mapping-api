@@ -1,12 +1,11 @@
-import { Request } from "express";
 import { paginated } from "../../middleware/paginate/paginated.middleware";
 import { PipelineStage } from "mongoose";
 import PalletModel from "../../models/PalletModel";
 
 interface IFilterParams {
   status: "pallet-created" | "pallet-asign-grid" | "pallet-out";
-  date: [Date, Date];
   search: string;
+  paging: { page: string; itemPerPage: string };
 }
 
 const getPalletsAggregation = (params: IFilterParams): PipelineStage[] => {
@@ -20,9 +19,7 @@ const getPalletsAggregation = (params: IFilterParams): PipelineStage[] => {
         $or: [
           { palletId: SearchRegex },
           { destination: SearchRegex },
-          { zone: SearchRegex },
-          { lpst: SearchRegex },
-          { "pallet.name": SearchRegex },
+          { hub: SearchRegex },
         ],
       },
     });
@@ -44,13 +41,10 @@ const getPalletsAggregation = (params: IFilterParams): PipelineStage[] => {
   return aggr;
 };
 
-export const getPalletsDao = async (req: Request, params: IFilterParams) => {
+export const getPalletsDao = async (params: IFilterParams) => {
   return await paginated({
     Model: PalletModel,
     aggregationArray: getPalletsAggregation(params),
-    paging: {
-      itemPerPage: req.query.itemPerPage as string,
-      page: req.query.page as string,
-    },
+    paging: params.paging,
   });
 };

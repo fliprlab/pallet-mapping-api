@@ -14,7 +14,7 @@ export const getPalletLocationItems = async (req: Request, res: Response) => {
 
     const pallet = await PalletModel.findOne({
       palletId: scan,
-    });
+    }).exec();
 
     if (!pallet) {
       return JsonResponse(res, {
