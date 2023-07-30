@@ -27,44 +27,42 @@ export const uploadLocationItemV2 = async (req: Request, res: Response) => {
     fs.createReadStream(filePath)
       .pipe(csvParser())
       .on("data", async (data) => {
-        const inserted = await createLocationItemDao(data);
-        validEntries.push(inserted);
-        // const location = await checkInvalidLocationDao(
-        //   data.shipment_destination_location_name
-        // );
-        // if (location) {
-        //   invalidLocation.push({
-        //     destination: data.shipment_destination_location_name,
-        //     itemId: data.primary_key,
-        //     lpst: data.LPST,
-        //     zone: data.Zone,
-        //     reason: "Location Not Available",
-        //   });
-        // } else {
-        //   const duplicate = await checkDuplicateLocationItemDao(
-        //     data.primary_key
-        //   );
-        //   if (duplicate) {
-        //     duplicateEntries.push({
-        //       destination: data.shipment_destination_location_name,
-        //       itemId: data.primary_key,
-        //       lpst: data.LPST,
-        //       zone: data.Zone,
-        //       reason: "Duplicate items",
-        //     });
-        //   } else if (!REGX.LPST.test(data.LPST)) {
-        //     invalidEntries.push({
-        //       destination: data.shipment_destination_location_name,
-        //       itemId: data.primary_key,
-        //       lpst: data.LPST,
-        //       zone: data.Zone,
-        //       reason: "Incorrect LPST",
-        //     });
-        //   } else {
-        //     const inserted = await createLocationItemDao(data);
-        //     validEntries.push(inserted);
-        //   }
-        // }
+        const location = await checkInvalidLocationDao(
+          data.shipment_destination_location_name
+        );
+        if (location) {
+          invalidLocation.push({
+            destination: data.shipment_destination_location_name,
+            itemId: data.primary_key,
+            lpst: data.LPST,
+            zone: data.Zone,
+            reason: "Location Not Available",
+          });
+        } else {
+          const duplicate = await checkDuplicateLocationItemDao(
+            data.primary_key
+          );
+          if (duplicate) {
+            duplicateEntries.push({
+              destination: data.shipment_destination_location_name,
+              itemId: data.primary_key,
+              lpst: data.LPST,
+              zone: data.Zone,
+              reason: "Duplicate items",
+            });
+          } else if (!REGX.LPST.test(data.LPST)) {
+            invalidEntries.push({
+              destination: data.shipment_destination_location_name,
+              itemId: data.primary_key,
+              lpst: data.LPST,
+              zone: data.Zone,
+              reason: "Incorrect LPST",
+            });
+          } else {
+            const inserted = await createLocationItemDao(data);
+            validEntries.push(inserted);
+          }
+        }
 
         processedRows++;
         const percentage = Math.round((processedRows / totalRows) * 100);
