@@ -13,6 +13,7 @@ import {
   createLocationItemDao,
 } from "../../dao/location-item-dao/createLocation.dao";
 import { io } from "../../app";
+import { ObjectId } from "mongodb";
 
 let invalidLocation: TLocationItems[] = [];
 let duplicateEntries: TLocationItems[] = [];
@@ -30,7 +31,10 @@ const getCsvRowCount = async (fileDir: string) => {
   }
 };
 
-const processCsvLine = async (data: ICSVLocationItem) => {
+const processCsvLine = async (
+  data: ICSVLocationItem,
+  hub: { _id: ObjectId; origin: string }
+) => {
   try {
     const location = await checkInvalidLocationDao(
       data.shipment_destination_location_name
@@ -61,8 +65,16 @@ const processCsvLine = async (data: ICSVLocationItem) => {
           zone: data.Zone,
           reason: "Incorrect LPST",
         });
+      } else if (!REGX.PALLET_ITEMS.test(data.primary_key)) {
+        invalidEntries.push({
+          destination: data.shipment_destination_location_name,
+          itemId: data.primary_key,
+          lpst: data.LPST,
+          zone: data.Zone,
+          reason: "In-valid item name",
+        });
       } else {
-        const inserted = await createLocationItemDao(data);
+        const inserted = await createLocationItemDao({ ...data, hub: hub });
         validEntries.push(inserted);
       }
     }
@@ -75,7 +87,7 @@ export const uploadLocationItemV2 = async (req: Request, res: Response) => {
   try {
     const file = req.file;
     const filePath = `./uploads/${file?.originalname}`;
-
+    const { origin } = res.locals;
     invalidLocation = [];
     duplicateEntries = [];
     validEntries = [];
@@ -89,7 +101,7 @@ export const uploadLocationItemV2 = async (req: Request, res: Response) => {
     let processedRows = 0;
 
     for await (const csvLine of readStream.pipe(csvParser())) {
-      await processCsvLine(csvLine);
+      await processCsvLine(csvLine, origin);
       processedRows++;
       const percentage = Math.round((processedRows / totalRows) * 100);
       io.emit("progress", percentage);

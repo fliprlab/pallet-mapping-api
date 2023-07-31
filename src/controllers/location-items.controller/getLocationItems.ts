@@ -5,17 +5,22 @@ import { locationItemsDao } from "../../dao/location-item-dao";
 
 export const getLocationItems = async (req: Request, res: Response) => {
   try {
-    const { getLocationItemsDao } = locationItemsDao;
-
     const date = req.query.date as unknown as [Date, Date];
     const search = req.query.search as string;
     const status = req.query.status as "created" | "bagged" | "sort";
 
-    const { data, pageData } = await getLocationItemsDao(req, {
-      date: date,
-      search: search,
-      status: status,
-    });
+    const { data, pageData } = await locationItemsDao.getLocationItemsDao(
+      {
+        itemPerPage: req.query.itemPerPage as string,
+        page: req.query.page as string,
+      },
+      {
+        date: date,
+        search: search,
+        status: status,
+        hub: res.locals.origin,
+      }
+    );
 
     return JsonResponse(res, {
       statusCode: 200,

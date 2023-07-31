@@ -19,6 +19,7 @@ const schema = new Schema<TLocationItems>(
     shipmentId: ObjectId,
     lpst: String,
     zone: String,
+    hub: { _id: ObjectId, origin: String },
   },
   {
     timestamps: true,

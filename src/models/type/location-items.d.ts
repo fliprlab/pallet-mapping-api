@@ -16,4 +16,8 @@ type TLocationItems = {
   zone: string;
   lpst: string;
   reason?: string;
+  hub?: {
+    _id: ObjectId;
+    origin: String;
+  };
 };
