@@ -8,92 +8,107 @@ import { checkDuplicateLocationItemDao } from "../../dao/location-item-dao/check
 import { TLocationItems } from "../../models/type/location-items";
 import { checkInvalidLocationDao } from "../../dao/location-item-dao/checkInvalidLocation.dao";
 import { REGX } from "../../constants";
-import { createLocationItemDao } from "../../dao/location-item-dao/createLocation.dao";
+import {
+  ICSVLocationItem,
+  createLocationItemDao,
+} from "../../dao/location-item-dao/createLocation.dao";
 import { io } from "../../app";
+
+let invalidLocation: TLocationItems[] = [];
+let duplicateEntries: TLocationItems[] = [];
+let validEntries: TLocationItems[] = [];
+let invalidEntries: TLocationItems[] = [];
+
+const getCsvRowCount = async (fileDir: string) => {
+  try {
+    const fileContent = await fs.promises.readFile(fileDir, "utf-8");
+    const lineCount = fileContent.trim().split("\n").length;
+
+    return lineCount - 1;
+  } catch (error) {
+    console.error("Error reading CSV file:", error);
+  }
+};
+
+const processCsvLine = async (data: ICSVLocationItem) => {
+  try {
+    const location = await checkInvalidLocationDao(
+      data.shipment_destination_location_name
+    );
+    if (!location) {
+      invalidLocation.push({
+        destination: data.shipment_destination_location_name,
+        itemId: data.primary_key,
+        lpst: data.LPST,
+        zone: data.Zone,
+        reason: "Location Not Available",
+      });
+    } else {
+      const duplicate = await checkDuplicateLocationItemDao(data.primary_key);
+      if (duplicate) {
+        duplicateEntries.push({
+          destination: data.shipment_destination_location_name,
+          itemId: data.primary_key,
+          lpst: data.LPST,
+          zone: data.Zone,
+          reason: "Duplicate items",
+        });
+      } else if (!REGX.LPST.test(data.LPST)) {
+        invalidEntries.push({
+          destination: data.shipment_destination_location_name,
+          itemId: data.primary_key,
+          lpst: data.LPST,
+          zone: data.Zone,
+          reason: "Incorrect LPST",
+        });
+      } else {
+        const inserted = await createLocationItemDao(data);
+        validEntries.push(inserted);
+      }
+    }
+  } catch (error) {
+    console.error("Error processing CSV line:", error);
+  }
+};
 
 export const uploadLocationItemV2 = async (req: Request, res: Response) => {
   try {
     const file = req.file;
     const filePath = `./uploads/${file?.originalname}`;
 
-    const invalidLocation: TLocationItems[] = [];
-    const duplicateEntries: TLocationItems[] = [];
-    const validEntries: TLocationItems[] = [];
-    const invalidEntries: TLocationItems[] = [];
+    invalidLocation = [];
+    duplicateEntries = [];
+    validEntries = [];
+    invalidEntries = [];
 
-    const totalRows = 1274;
+    const readStream = fs.createReadStream(filePath);
+
+    const count = await getCsvRowCount(filePath);
+
+    const totalRows = count ?? 0;
     let processedRows = 0;
 
-    fs.createReadStream(filePath)
-      .pipe(csvParser())
-      .on("data", async (data) => {
-        const location = await checkInvalidLocationDao(
-          data.shipment_destination_location_name
-        );
-        if (location) {
-          invalidLocation.push({
-            destination: data.shipment_destination_location_name,
-            itemId: data.primary_key,
-            lpst: data.LPST,
-            zone: data.Zone,
-            reason: "Location Not Available",
-          });
-        } else {
-          const duplicate = await checkDuplicateLocationItemDao(
-            data.primary_key
-          );
-          if (duplicate) {
-            duplicateEntries.push({
-              destination: data.shipment_destination_location_name,
-              itemId: data.primary_key,
-              lpst: data.LPST,
-              zone: data.Zone,
-              reason: "Duplicate items",
-            });
-          } else if (!REGX.LPST.test(data.LPST)) {
-            invalidEntries.push({
-              destination: data.shipment_destination_location_name,
-              itemId: data.primary_key,
-              lpst: data.LPST,
-              zone: data.Zone,
-              reason: "Incorrect LPST",
-            });
-          } else {
-            const inserted = await createLocationItemDao(data);
-            validEntries.push(inserted);
-          }
-        }
+    for await (const csvLine of readStream.pipe(csvParser())) {
+      await processCsvLine(csvLine);
+      processedRows++;
+      const percentage = Math.round((processedRows / totalRows) * 100);
+      io.emit("progress", percentage);
+    }
 
-        processedRows++;
-        const percentage = Math.round((processedRows / totalRows) * 100);
-        io.emit("progress", percentage);
-      })
-      .on("end", () => {
-        console.log("final cal;led");
+    fs.unlinkSync(filePath); // Delete the temporary uploaded file
 
-        // File processing completed
-        // You can perform any cleanup here if needed
-        fs.unlinkSync(filePath); // Delete the temporary uploaded file
-
-        if (processedRows <= 100) {
-          return JsonResponse(res, {
-            statusCode: 200,
-            status: "success",
-            title: "Items created",
-            message: "Items Created Successfully",
-            data: {
-              invalidLocation,
-              duplicateEntries,
-              inserted: validEntries,
-              invalidEntries,
-            },
-          });
-        }
-      })
-      .on("error", (error) => {
-        console.error("Error processing file:", error);
-        res.sendStatus(500);
-      });
+    return JsonResponse(res, {
+      statusCode: 200,
+      status: "success",
+      title: "Items created",
+      message: "Items Created Successfully",
+      data: {
+        invalidLocation,
+        duplicateEntries,
+        inserted: validEntries,
+        invalidEntries,
+      },
+    });
   } catch (error: any) {
     logger.error(error);
 
