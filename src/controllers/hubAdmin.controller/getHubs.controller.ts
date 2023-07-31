@@ -10,7 +10,10 @@ export const getHubs = async (req: Request, res: Response) => {
     const { data, pageData } = await paginated({
       Model: HubAdminModel,
       aggregationArray: getHubsAggregation({ req, res }),
-      req,
+      paging: {
+        itemPerPage: req.query.itemPerPage as string,
+        page: req.query.page as string,
+      },
     });
 
     return JsonResponse(res, {

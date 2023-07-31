@@ -7,6 +7,10 @@ import LocationModel from "../../models/LocationModel";
 export const findLocations = async (req: Request, res: Response) => {
   try {
     const { data, pageData } = await paginated({
+      paging: {
+        itemPerPage: req.query.itemPerPage as string,
+        page: req.query.page as string,
+      },
       Model: LocationModel,
       aggregationArray: [
         {
@@ -15,7 +19,6 @@ export const findLocations = async (req: Request, res: Response) => {
           },
         },
       ],
-      req,
     });
 
     return JsonResponse(res, {

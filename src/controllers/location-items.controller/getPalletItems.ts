@@ -12,7 +12,10 @@ export const getPalletItems = async (req: Request, res: Response) => {
         { $match: { "pallet.name": req.body.pallet } },
         { $sort: { createdAt: -1 } },
       ],
-      req,
+      paging: {
+        itemPerPage: req.query.itemPerPage as string,
+        page: req.query.page as string,
+      },
     });
 
     return JsonResponse(res, {

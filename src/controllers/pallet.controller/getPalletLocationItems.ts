@@ -14,7 +14,7 @@ export const getPalletLocationItems = async (req: Request, res: Response) => {
 
     const pallet = await PalletModel.findOne({
       palletId: scan,
-    });
+    }).exec();
 
     if (!pallet) {
       return JsonResponse(res, {
@@ -31,7 +31,10 @@ export const getPalletLocationItems = async (req: Request, res: Response) => {
         { $match: { shipmentId: new ObjectId(pallet.shipmentId) } },
         { $sort: { createdAt: -1 } },
       ],
-      req,
+      paging: {
+        itemPerPage: req.query.itemPerPage as string,
+        page: req.query.page as string,
+      },
     });
 
     let stringData = ``;
