@@ -14,6 +14,7 @@ import { JsonResponse } from "./utils/jsonResponse";
 import { IndexRoutes } from "./routes/index/index.route";
 import { UserRoutes } from "./routes/user/user.routes";
 import { AdminHubRoutes } from "./routes/hub/hub.routes";
+import { Server } from "socket.io";
 
 const normalizePort = (val: any) => {
   let port = parseInt(val, 10);
@@ -35,6 +36,21 @@ const server: http.Server = http.createServer(app);
 const port = normalizePort(process.env.PORT || "4000");
 const routes: Array<CommonRoutesConfig> = [];
 const debugLog: debug.IDebugger = debug("app");
+
+export const io = new Server(server, {
+  cors: {
+    origin: [
+      "https://admin.pma.intutrack.com",
+      "https://pma.intutrack.com",
+      "https://pma-admin-vipt-testing.dev.flipr.co.in",
+      "https://admin-dev.pmapping.dev.flipr.co.in", // Dev
+      "https://pmapping-web.dev.flipr.co.in", // Dev
+      "http://localhost:3000",
+      "http://localhost:3001",
+      "https://pmapping-admin.dev.flipr.co.in",
+    ],
+  },
+});
 
 // Adding request limiter
 
