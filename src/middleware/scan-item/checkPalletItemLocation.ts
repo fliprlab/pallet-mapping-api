@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { JsonResponse } from "../../utils/jsonResponse";
 import PalletModel from "../../models/PalletModel";
+import { regExpLocation } from "../../constants";
 
 export const checkPalletItemLocation = async (
   req: Request,
@@ -10,7 +11,7 @@ export const checkPalletItemLocation = async (
   const { palletId, location } = req.body;
   const pallet = await PalletModel.findOne({
     palletId: palletId,
-    destination: location,
+    destination: regExpLocation(location),
   }).exec();
 
   if (!pallet) {
