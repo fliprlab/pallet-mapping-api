@@ -1,4 +1,4 @@
-import { Request } from "express";
+import { ObjectId } from "mongodb";
 import { paginated } from "../../middleware/paginate/paginated.middleware";
 import LocationItemsModel from "../../models/LocationItemsModel";
 
@@ -8,13 +8,23 @@ interface IGetLocationItemsParams {
   status: "created" | "bagged" | "sort";
   date: [Date, Date];
   search: string;
+  hub: {
+    _id: ObjectId;
+    origin: string;
+  };
 }
 
 const getLocationItemsAggregation = (
   params: IGetLocationItemsParams
 ): PipelineStage[] => {
-  const { date, search, status } = params;
+  const { date, search, status, hub } = params;
   const aggr: PipelineStage[] = [];
+
+  aggr.push({
+    $match: {
+      hub: hub,
+    },
+  });
 
   if (search) {
     const SearchRegex = new RegExp(search, "i");
@@ -80,15 +90,12 @@ const getLocationItemsAggregation = (
 };
 
 export const getLocationItemsDao = async (
-  req: Request,
+  paging: { page: string; itemPerPage: string },
   params: IGetLocationItemsParams
 ) => {
   return await paginated({
     Model: LocationItemsModel,
     aggregationArray: getLocationItemsAggregation(params),
-    paging: {
-      itemPerPage: req.query.itemPerPage as string,
-      page: req.query.page as string,
-    },
+    paging: paging,
   });
 };

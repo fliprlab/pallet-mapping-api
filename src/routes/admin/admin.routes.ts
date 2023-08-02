@@ -37,7 +37,7 @@ export class AdminRoutes extends CommonRoutesConfig {
     hubAdminQueries(router);
 
     // location items
-    locationItemsQueries(router);
+    // locationItemsQueries(router);
 
     // Pallet Query
     palletsQuery(router);
