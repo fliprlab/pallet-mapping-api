@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { logger } from "../../config/logger";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { updateLocationItemDao } from "../../dao/location-item-dao/updateLocationItem.dao";
+import dao from "../../dao";
 
 export const removePalletItem = async (req: Request, res: Response) => {
   try {
@@ -19,7 +20,13 @@ export const removePalletItem = async (req: Request, res: Response) => {
       },
     });
 
-    if (updated.modifiedCount === 0) {
+    if (updated) {
+      updated.shipmentId &&
+        (await dao.shipment.removeItemFromShipment({
+          shipmentId: updated.shipmentId,
+          itemId: updated._id,
+        }));
+
       return JsonResponse(res, {
         statusCode: 200,
         status: "error",

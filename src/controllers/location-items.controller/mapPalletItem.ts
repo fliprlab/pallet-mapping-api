@@ -4,6 +4,8 @@ import { JsonResponse } from "../../utils/jsonResponse";
 import LocationItemsModel from "../../models/LocationItemsModel";
 import PalletModel from "../../models/PalletModel";
 import { updateLocationItemDao } from "../../dao/location-item-dao/updateLocationItem.dao";
+import validators from "../../validators";
+import dao from "../../dao";
 
 export const mapPalletItem = async (req: Request, res: Response) => {
   try {
@@ -11,11 +13,13 @@ export const mapPalletItem = async (req: Request, res: Response) => {
 
     const item = await LocationItemsModel.findOne({ itemId: itemId }).exec();
 
-    const pallet = await PalletModel.findOne({ palletId: palletId }).exec();
+    const pallet = await PalletModel.findOne({
+      palletId: palletId,
+    }).exec();
 
     if (!item || !pallet) {
       return JsonResponse(res, {
-        statusCode: 200,
+        statusCode: 400,
         status: "error",
         title: "Invalid Scan",
         message:
@@ -31,6 +35,7 @@ export const mapPalletItem = async (req: Request, res: Response) => {
         pallet: {
           _id: pallet._id,
           name: pallet.palletId,
+          destination: pallet.destination,
         },
         status: "created",
         destination: location,
@@ -39,7 +44,25 @@ export const mapPalletItem = async (req: Request, res: Response) => {
       },
     });
 
-    if (updated.modifiedCount > 0) {
+    // check pallet is for zone/location
+    if (validators.zone.valideZoneId(item.pallet?.destination || "")) {
+      // check status of pallet and remove if it is first item out
+      if (item.pallet?._id) {
+        // remove all items mapping for the
+        dao.pallet.updatePallet(item.pallet._id.toString(), {
+          status: "pallet-out",
+        });
+        dao.items.resetZoneItems({ palletId: item.pallet._id });
+      }
+    }
+
+    if (updated) {
+      // push item to the shipment
+      await dao.shipment.pushItemToShipment({
+        shipmentId: pallet.shipmentId,
+        item: updated,
+      });
+
       return JsonResponse(res, {
         statusCode: 200,
         status: "success",

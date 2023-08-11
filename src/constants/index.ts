@@ -4,6 +4,9 @@ export const PALLET_STATUS = {
   out: "pallet-out",
 };
 
+export const regExpCaseInsen = (value: string) =>
+  new RegExp("^" + value + "$", "i");
+
 export const regExpLocation = (location: string) =>
   new RegExp("^" + location + "$", "i");
 

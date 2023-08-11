@@ -6,6 +6,7 @@ import { paginated } from "../../middleware/paginate/paginated.middleware";
 import ShipmentsModel from "../../models/shipmentsModel";
 import { getLocationPalletsAggregation } from "../../aggregation/pallets/pallet.aggregation";
 import { regExpLocation } from "../../constants";
+import dao from "../../dao";
 
 export const getLocationPallets = async (req: Request, res: Response) => {
   try {
@@ -13,11 +14,13 @@ export const getLocationPallets = async (req: Request, res: Response) => {
 
     console.log("destination", destination);
 
-    const location = await LocationModel.findOne({
-      location: regExpLocation(destination),
-    }).exec();
+    const location = await dao.destination.scanDestination({
+      inputString: destination,
+    });
 
-    if (!location) {
+    console.log("location", location);
+
+    if (location == "") {
       return JsonResponse(res, {
         statusCode: 200,
         status: "error",

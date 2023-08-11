@@ -10,6 +10,7 @@ const schema = new Schema<TLocationItems>(
     pallet: {
       _id: ObjectId,
       name: String,
+      destination: String,
     },
     status: {
       type: String,

@@ -8,6 +8,7 @@ type TLocationItems = {
   pallet?: {
     _id: ObjectId;
     name: string;
+    destination: string;
   };
   status?: TShipmentStatus;
   origin?: string;

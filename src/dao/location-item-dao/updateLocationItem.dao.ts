@@ -11,9 +11,9 @@ interface IUpdate {
 
 export const updateLocationItemDao = async (fields: IUpdate) => {
   const { data, where, upsert = false, unsetData } = fields;
-  return await LocationItemsModel.updateOne(
+  return await LocationItemsModel.findByIdAndUpdate(
     { ...where },
     { $set: data, $unset: unsetData || {} },
-    { upsert: upsert }
+    { upsert: upsert, new: true }
   ).exec();
 };
