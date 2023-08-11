@@ -7,6 +7,8 @@ export const PALLET_STATUS = {
 export const regExpLocation = (location: string) =>
   new RegExp("^" + location + "$", "i");
 
+export const regExpZone = (zone: string) => new RegExp("^" + zone + "$", "i");
+
 export const REGX = {
   PALLET_ID: /^[1-9][0-9]{4}$/,
   GRID_ID: /^G[0-9]{3}-[0-9]{2}$/,
