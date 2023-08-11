@@ -1,6 +1,8 @@
 import { addShipment } from "./addShipment";
 import { getShipmentById } from "./getShipmentById";
 import { getShipments } from "./getShipments";
+import pushItemToShipment from "./pushItemToShipment";
+import removeItemFromShipment from "./removeItemFromShipment";
 import { updateShipment } from "./updateShipment";
 
 export const shipmentDao = {
@@ -8,4 +10,6 @@ export const shipmentDao = {
   updateShipment,
   getShipments,
   getShipmentById,
+  pushItemToShipment,
+  removeItemFromShipment,
 };

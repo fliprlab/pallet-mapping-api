@@ -8,6 +8,7 @@ import { gridQueries } from "./queries/grid.query";
 import { hubAdminQueries } from "./queries/hub-admin.query";
 import { locationItemsQueries } from "./queries/location-items.query";
 import { palletsQuery } from "./queries/pallets.query";
+import { zoneQuery } from "./queries/zone.query";
 
 export class AdminRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -41,6 +42,8 @@ export class AdminRoutes extends CommonRoutesConfig {
 
     // Pallet Query
     palletsQuery(router);
+
+    zoneQuery(router);
 
     return this.app;
   }

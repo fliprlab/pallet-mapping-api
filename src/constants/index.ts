@@ -4,8 +4,13 @@ export const PALLET_STATUS = {
   out: "pallet-out",
 };
 
+export const regExpCaseInsen = (value: string) =>
+  new RegExp("^" + value + "$", "i");
+
 export const regExpLocation = (location: string) =>
   new RegExp("^" + location + "$", "i");
+
+export const regExpZone = (zone: string) => new RegExp("^" + zone + "$", "i");
 
 export const REGX = {
   PALLET_ID: /^[1-9][0-9]{4}$/,

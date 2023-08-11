@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import HubAdminModel from "../../models/HubAdminModel";
 import { JsonResponse } from "../../utils/jsonResponse";
 import LocationItemsModel from "../../models/LocationItemsModel";
+import validators from "../../validators";
 
 export const checkItemAlreadyPallet = async (
   req: Request,
@@ -14,12 +15,18 @@ export const checkItemAlreadyPallet = async (
   }).exec();
 
   if (item) {
-    return JsonResponse(res, {
-      statusCode: 400,
-      status: "error",
-      title: "Failed",
-      message: "Item is already assigned to the Pallet",
-    });
+    // check item in zone pallet
+    if (validators.zone.valideZoneId(item.pallet?.destination ?? "")) {
+      next();
+    } else {
+      return JsonResponse(res, {
+        statusCode: 400,
+        status: "error",
+        title: "Failed",
+        message: "Item is already assigned to the Pallet",
+      });
+    }
+  } else {
+    next();
   }
-  next();
 };

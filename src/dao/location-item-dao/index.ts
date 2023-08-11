@@ -3,6 +3,7 @@ import { checkDuplicateLocationItemDao } from "./checkDuplicateLocationItem.dao"
 import { checkInvalidLocationDao } from "./checkInvalidLocation.dao";
 import { createLocationItemDao } from "./createLocation.dao";
 import { getLocationItemsDao } from "./getLocations.dao";
+import { resetZoneItems } from "./resetZoneItems";
 import { updateLocationItemDao } from "./updateLocationItem.dao";
 
 export const locationItemsDao = {
@@ -12,4 +13,5 @@ export const locationItemsDao = {
   createLocationItemDao,
   checkDuplicateLocationItemDao,
   checkInvalidLocationDao,
+  resetZoneItems,
 };

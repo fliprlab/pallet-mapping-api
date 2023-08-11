@@ -1,17 +1,20 @@
 import { NextFunction, Request, Response } from "express";
 import { JsonResponse } from "../../utils/jsonResponse";
 import PalletModel from "../../models/PalletModel";
-import { regExpLocation } from "../../constants";
+import { regExpCaseInsen } from "../../constants";
 
 export const checkPalletItemLocation = async (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  const { palletId, location } = req.body;
+  const { palletId, location, zone } = req.body;
   const pallet = await PalletModel.findOne({
     palletId: palletId,
-    destination: regExpLocation(location),
+    $or: [
+      { destination: regExpCaseInsen(location) },
+      { destination: regExpCaseInsen(zone) },
+    ],
   }).exec();
 
   if (!pallet) {
