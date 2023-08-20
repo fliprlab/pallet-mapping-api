@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { JsonResponse } from "../../utils/jsonResponse";
 import PalletModel from "../../models/PalletModel";
-import { regExpCaseInsen } from "../../constants";
+import { regExpCaseInsen, regExpZone } from "../../constants";
 
 export const checkPalletItemLocation = async (
   req: Request,
@@ -9,11 +9,14 @@ export const checkPalletItemLocation = async (
   next: NextFunction
 ) => {
   const { palletId, location, zone } = req.body;
+
+  const zoneName = zone.split("-")[0];
+
   const pallet = await PalletModel.findOne({
     palletId: palletId,
     $or: [
       { destination: regExpCaseInsen(location) },
-      { destination: regExpCaseInsen(zone) },
+      { destination: regExpCaseInsen(zoneName) },
     ],
   }).exec();
 
