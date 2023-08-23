@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
 import { logger } from "../../config/logger";
 import { JsonResponse } from "../../utils/jsonResponse";
-import LocationItemsModel from "../../models/LocationItemsModel";
+import dao from "../../dao";
 
 export const scanItem = async (req: Request, res: Response) => {
   try {
     const { scan } = req.body;
 
-    const item = await LocationItemsModel.findOne({ itemId: scan }).exec();
+    const item = await dao.items.getLastLocationItem(scan);
 
     if (!item) {
       return JsonResponse(res, {

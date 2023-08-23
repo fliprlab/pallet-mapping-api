@@ -3,13 +3,28 @@ import { logger } from "../../config/logger";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { paginated } from "../../middleware/paginate/paginated.middleware";
 import LocationItemsModel from "../../models/LocationItemsModel";
+import dao from "../../dao";
 
 export const getPalletItems = async (req: Request, res: Response) => {
   try {
+    const { pallet } = req.body;
+
+    // get shipping id for the pallet
+    const palletData = await dao.pallet.findByPalletId(pallet);
+
+    if (!palletData) {
+      return JsonResponse(res, {
+        statusCode: 200,
+        status: "success",
+        title: "Data Find Successfully",
+        message: "Data Find Successfully",
+      });
+    }
+
     const { data, pageData } = await paginated({
       Model: LocationItemsModel,
       aggregationArray: [
-        { $match: { "pallet.name": req.body.pallet } },
+        { $match: { shipmentId: palletData.shipmentId } },
         { $sort: { createdAt: -1 } },
       ],
       paging: {

@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { logger } from "../../config/logger";
 import { JsonResponse } from "../../utils/jsonResponse";
-import LocationItemsModel from "../../models/LocationItemsModel";
 import PalletModel from "../../models/PalletModel";
 import { updateLocationItemDao } from "../../dao/location-item-dao/updateLocationItem.dao";
 import validators from "../../validators";
@@ -11,7 +10,7 @@ export const mapPalletItem = async (req: Request, res: Response) => {
   try {
     const { itemId, palletId, location } = req.body;
 
-    const item = await LocationItemsModel.findOne({ itemId: itemId }).exec();
+    const item = await dao.items.getLastLocationItem(itemId);
 
     const pallet = await PalletModel.findOne({
       palletId: palletId,

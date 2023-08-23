@@ -1,20 +1,29 @@
 import { NextFunction, Request, Response } from "express";
-import HubAdminModel from "../../models/HubAdminModel";
 import { JsonResponse } from "../../utils/jsonResponse";
-import LocationItemsModel from "../../models/LocationItemsModel";
 import validators from "../../validators";
+import dao from "../../dao";
 
 export const checkItemAlreadyPallet = async (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  const item = await LocationItemsModel.findOne({
-    pallet: { $ne: null },
-    itemId: req.body.scan,
-  }).exec();
+  const { scan } = req.body;
 
-  if (item) {
+  const item = await dao.items.getLastLocationItem(scan);
+  if (!item) {
+    return JsonResponse(res, {
+      statusCode: 400,
+      status: "error",
+      title: "Failed",
+      message: "Item not found",
+    });
+  }
+
+  console.log("Item ", item);
+  console.log("item.pallet", item.pallet);
+
+  if (item.pallet?._id) {
     // check item in zone pallet
     if (validators.zone.valideZoneId(item.pallet?.destination ?? "")) {
       next();
