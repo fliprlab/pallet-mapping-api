@@ -1,13 +1,11 @@
 import { Request, Response } from "express";
 import { JsonResponse } from "../../utils/jsonResponse";
 import { logger } from "../../config/logger";
-
 import { locationItemsDao } from "../../dao/location-item-dao";
-
 import { TLocationItems } from "../../models/type/location-items";
 import LocationModel from "../../models/LocationModel";
-import LocationItemsModel from "../../models/LocationItemsModel";
 import { REGX, regExpLocation } from "../../constants";
+import dao from "../../dao";
 
 export const uploadLocationItem = async (req: Request, res: Response) => {
   try {
@@ -27,9 +25,9 @@ export const uploadLocationItem = async (req: Request, res: Response) => {
         if (!location) {
           invalidLocation.push({ ...item, reason: "Location Not Available" });
         } else {
-          const duplicate = await LocationItemsModel.findOne({
-            itemId: item.itemId,
-          }).exec();
+          const duplicate = await dao.items.checkDuplicateLocationItemDao(
+            item.itemId
+          );
 
           if (duplicate) {
             duplicateEntries.push({ ...item, reason: "Duplicate items" });

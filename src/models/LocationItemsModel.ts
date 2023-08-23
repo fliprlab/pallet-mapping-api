@@ -4,7 +4,7 @@ import { ObjectId } from "mongodb";
 
 const schema = new Schema<TLocationItems>(
   {
-    itemId: { type: String, required: true, unique: true },
+    itemId: { type: String, required: true },
     destination: { type: String, required: true },
     origin: String,
     pallet: {
@@ -14,7 +14,7 @@ const schema = new Schema<TLocationItems>(
     },
     status: {
       type: String,
-      enum: ["created", "out", "cancelled", "picked up"],
+      enum: ["created", "picked up"],
       default: "created",
     },
     shipmentId: ObjectId,
