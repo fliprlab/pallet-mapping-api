@@ -1,8 +1,34 @@
 import LocationItemsModel from "../../models/LocationItemsModel";
 
-export const checkDuplicateLocationItemDao = async (itemId: string) => {
-  return await LocationItemsModel.findOne({
+export const checkDuplicateLocationItemDao = async (
+  itemId: string,
+  uploadFor?: {
+    destination: string;
+    hub: string;
+  }
+): Promise<boolean> => {
+  const item = await LocationItemsModel.findOne({
     itemId: itemId,
-    status: { $eq: "created" },
-  }).exec();
+  })
+    .sort({ _id: -1 })
+    .exec();
+
+  if (!item) {
+    return false;
+  }
+
+  // if hub is same for new item & previous item and destination is different than it can be upload
+  else if (
+    item.hub?.origin.toUpperCase() === uploadFor?.hub.toUpperCase() &&
+    item.destination.toUpperCase() !== uploadFor?.destination.toUpperCase()
+  ) {
+    return false;
+  }
+
+  // check conditions
+  else if (item.status === "created") {
+    return true;
+  }
+
+  return false;
 };

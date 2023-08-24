@@ -48,7 +48,10 @@ const processCsvLine = async (
         reason: "Location Not Available",
       });
     } else {
-      const duplicate = await checkDuplicateLocationItemDao(data.primary_key);
+      const duplicate = await checkDuplicateLocationItemDao(data.primary_key, {
+        destination: data.shipment_destination_location_name,
+        hub: hub.origin,
+      });
       if (duplicate) {
         duplicateEntries.push({
           destination: data.shipment_destination_location_name,
@@ -56,6 +59,17 @@ const processCsvLine = async (
           lpst: data.LPST,
           zone: data.Zone,
           reason: "Duplicate items",
+        });
+      } else if (
+        data.shipment_destination_location_name.toUpperCase() ===
+        hub.origin.toUpperCase()
+      ) {
+        invalidEntries.push({
+          destination: data.shipment_destination_location_name,
+          itemId: data.primary_key,
+          lpst: data.LPST,
+          zone: data.Zone,
+          reason: "Source & Destination is same",
         });
       } else if (!REGX.LPST.test(data.LPST)) {
         invalidEntries.push({
