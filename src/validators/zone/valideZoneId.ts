@@ -3,7 +3,7 @@ const valideZoneId = (zone: string) => {
   return reg.test(zone);
 };
 
-export const ZONE_REG = new RegExp("^[zdZD]\\d{1,5}$");
+export const ZONE_REG = new RegExp("^[a-zA-Z]\\d{1,5}$");
 
 const valideZone = (zone: string) => {
   return ZONE_REG.test(zone);
@@ -11,5 +11,5 @@ const valideZone = (zone: string) => {
 
 export default {
   valideZoneId,
-  valideZone
+  valideZone,
 };

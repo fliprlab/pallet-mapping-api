@@ -12,20 +12,20 @@ export const asignGrid = async (req: Request, res: Response) => {
   try {
     const { gridId, location } = req.body;
     const { userId, origin, pallet, shipmentId } = res.locals;
-    const { findByGridId, updateGrid } = gridDao;
+    const { updateGrid, findHubGrid } = gridDao;
     const { updatePallet } = palletDao;
     const { updateShipment } = shipmentDao;
     const { addEvent } = eventsDao;
     const { updateItems } = ItemDao;
 
-    const grid = await findByGridId(gridId);
+    const grid = await findHubGrid(gridId, origin);
 
     if (!grid) {
       return JsonResponse(res, {
         statusCode: 400,
         status: "error",
         title: "Invalid Grid Id",
-        message: "Grid not find with this id.",
+        message: `Grid not find for this HUB "${origin}".`,
       });
     }
 
