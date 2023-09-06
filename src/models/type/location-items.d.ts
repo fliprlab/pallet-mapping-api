@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb";
-type TShipmentStatus = "created" | "picked up";
+type TShipmentStatus = "created" | "put away" | "picked up" | "dispatched";
 
 type TLocationItems = {
   itemId: string;

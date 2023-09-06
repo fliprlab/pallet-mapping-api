@@ -12,13 +12,9 @@ export const getLocationPallets = async (req: Request, res: Response) => {
   try {
     const { destination } = req.body;
 
-    console.log("destination", destination);
-
     const location = await dao.destination.scanDestination({
       inputString: destination,
     });
-
-    console.log("location", location);
 
     if (location == "") {
       return JsonResponse(res, {

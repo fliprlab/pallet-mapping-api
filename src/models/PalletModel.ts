@@ -10,7 +10,12 @@ const schema = new Schema<TPallet>(
     shipmentId: ObjectId,
     status: {
       type: String,
-      enum: ["pallet-created", "pallet-asign-grid", "pallet-out"],
+      enum: [
+        "pallet-created",
+        "pallet-asign-grid",
+        "pallet-picked-up",
+        "pallet-out",
+      ],
       required: true,
     },
     hub: { type: String, required: true },
