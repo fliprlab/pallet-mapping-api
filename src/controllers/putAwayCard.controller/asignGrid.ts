@@ -7,6 +7,7 @@ import { palletDao } from "../../dao/pallet-dao";
 import { shipmentDao } from "../../dao/shipment-dao";
 import { ItemDao } from "../../dao/item-dao";
 import { ObjectId } from "mongodb";
+import LocationItemsModel from "../../models/LocationItemsModel";
 
 export const asignGrid = async (req: Request, res: Response) => {
   try {
@@ -46,6 +47,13 @@ export const asignGrid = async (req: Request, res: Response) => {
         message: "Grid hub and user origin not matched.",
       });
     }
+
+    await LocationItemsModel.updateMany(
+      { shipmentId },
+      {
+        $set: { status: "put away" },
+      }
+    ).exec();
 
     const update = await updateGrid(grid._id.toString(), {
       palletId: pallet,
