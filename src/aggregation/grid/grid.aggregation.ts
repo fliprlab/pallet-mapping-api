@@ -20,7 +20,11 @@ export const getGridsAggregation = (_params: TRouteParams): PipelineStage[] => {
     const SearchRegex = new RegExp(req.query.search as string, "i");
     aggr.push({
       $match: {
-        $or: [{ gridId: SearchRegex }, { "palletId.name": SearchRegex }],
+        $or: [
+          { gridId: SearchRegex },
+          { "palletId.name": SearchRegex },
+          { "hub.name": SearchRegex },
+        ],
       },
     });
   }

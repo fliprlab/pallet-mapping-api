@@ -4,6 +4,7 @@ import { findByGridId } from "./findByGridId";
 import { findGridById } from "./findGridById";
 import { updateGrid } from "./updateGrid";
 import { findHubGrid } from "./findHubGrid";
+import { checkDuplicateGridDao } from "./checkDuplicateGrid.dao";
 
 export const gridDao = {
   addGrid,
@@ -12,4 +13,5 @@ export const gridDao = {
   findGridById,
   upsertGrids,
   findHubGrid,
+  checkDuplicateGridDao,
 };
