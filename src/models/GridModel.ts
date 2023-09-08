@@ -1,6 +1,5 @@
 import { Model, model, Schema } from "mongoose";
 import { TGrid } from "./type/grid";
-import { ObjectId } from "mongodb";
 
 const schema = new Schema<TGrid>(
   {
@@ -13,8 +12,6 @@ const schema = new Schema<TGrid>(
       default: "unoccupied",
     },
     time: Date,
-    createdBy: { type: ObjectId, required: true },
-    updatedBy: { type: Object, required: true },
     destination: String,
     active: { type: Boolean, default: true },
   },

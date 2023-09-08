@@ -4,18 +4,19 @@ type TGridStatus = "occupied" | "unoccupied";
 
 type TGrid = {
   gridId: string;
-  palletId: {
+  palletId?: {
     _id: ObjectId;
     name: string;
   };
-  time: Date;
+  time?: Date;
   hub: {
-    _id: ObjectId;
+    _id: ObjectId | null;
     name: string;
   };
-  status: TGridStatus;
-  createdBy: ObjectId;
-  updatedBy: { _id: ObjectId; time: Date };
-  destination: string;
-  active: boolean;
+  status?: TGridStatus;
+  createdBy?: ObjectId;
+  updatedBy?: { _id: ObjectId; time: Date };
+  destination?: string;
+  active?: boolean;
+  reason?: string;
 };

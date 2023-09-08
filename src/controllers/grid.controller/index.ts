@@ -4,6 +4,7 @@ import { getAllDestinations } from "./getAllDestinations";
 import { addMultipleGrids } from "./addMultipleGrids";
 import { getHubAdminGridCountData } from "./getHubAdminGridCountData";
 import { updateGridStatus } from "./updateGridStatus";
+import { uploadGrids } from "./uploadGrids";
 
 export const gridController = {
   createGrid,
@@ -12,4 +13,5 @@ export const gridController = {
   addMultipleGrids,
   getHubAdminGridCountData,
   updateGridStatus,
+  uploadGrids,
 };
