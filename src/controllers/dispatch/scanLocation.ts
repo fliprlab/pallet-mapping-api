@@ -28,7 +28,7 @@ export const scanLocation = async (req: Request, res: Response) => {
     }
 
     // if pallet is not picked up
-    if (pallet.status !== "pallet-out") {
+    if (pallet.status !== "pallet-picked-up") {
       return JsonResponse(res, {
         statusCode: 200,
         status: "error",
