@@ -4,8 +4,10 @@ import { checkInvalidLocationDao } from "./checkInvalidLocation.dao";
 import { createLocationItemDao } from "./createLocation.dao";
 import { getLastLocationItem } from "./getLastLocationItem";
 import { getLocationItemsDao } from "./getLocations.dao";
+import { getShipmentItems } from "./getShipmentItems";
 import { resetZoneItems } from "./resetZoneItems";
 import { updateLocationItemDao } from "./updateLocationItem.dao";
+import { updateStatus } from "./updateStatus";
 
 export const locationItemsDao = {
   addLocationItems,
@@ -16,4 +18,6 @@ export const locationItemsDao = {
   checkInvalidLocationDao,
   resetZoneItems,
   getLastLocationItem,
+  getShipmentItems,
+  updateStatus,
 };
