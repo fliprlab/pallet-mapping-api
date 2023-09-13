@@ -9,6 +9,7 @@ import { palletQueries } from "./query/pallet.query";
 import { putAwayQueries } from "./query/putAway.query";
 import { pickUpQueries } from "./query/pickUp.query";
 import { itemsQueries } from "./query/item.query";
+import { dispatchQuery } from "./query/diapatch.query";
 
 export class UserRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
@@ -39,6 +40,8 @@ export class UserRoutes extends CommonRoutesConfig {
     pickUpQueries(router);
     // Scan Items
     itemsQueries(router);
+    // Dispatch Query
+    dispatchQuery(router);
 
     return this.app;
   }

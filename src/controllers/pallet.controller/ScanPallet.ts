@@ -21,7 +21,7 @@ export const scanPallet = async (req: Request, res: Response) => {
         statusCode: 400,
         status: "error",
         title: "Can't Use",
-        message: `This Pallet is already assigned for ${pallet.destination} Location. You Can't reassign it before completing the PICK-UP process.`,
+        message: `This Pallet is already assigned for ${pallet.destination} Location. You Can't reassign it before completing the DISPATCH process.`,
       });
     }
 

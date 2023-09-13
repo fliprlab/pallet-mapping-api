@@ -44,7 +44,7 @@ export const pickUpShipment = async (req: Request, res: Response) => {
     });
 
     await updatePallet(palletId._id, {
-      status: "pallet-out",
+      status: "pallet-picked-up",
       lastUpdatedBy: { id: userId, time: new Date() },
     });
 
