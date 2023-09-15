@@ -16,25 +16,27 @@ export const scanPallet = async (req: Request, res: Response) => {
       });
     }
 
-    // if pallet is not picked up
-    if (pallet.status !== "pallet-picked-up") {
+    if (
+      pallet.status === "pallet-out" ||
+      pallet.status === "pallet-picked-up"
+    ) {
       return JsonResponse(res, {
         statusCode: 200,
-        status: "error",
-        title: "Not Allowed",
-        message:
-          "This pallet has not been picked up, so it cannot be dispatched.",
+        status: "success",
+        title: "Success",
+        message: "Pallet Scan Successfully",
+        data: {
+          pallet_id: pallet.id,
+        },
       });
     }
 
     return JsonResponse(res, {
       statusCode: 200,
-      status: "success",
-      title: "Success",
-      message: "Pallet Scan Successfully",
-      data: {
-        pallet_id: pallet.id,
-      },
+      status: "error",
+      title: "Not Allowed",
+      message:
+        "This pallet has not been picked up, so it cannot be dispatched.",
     });
   } catch (error: any) {
     return JsonResponse(res, {

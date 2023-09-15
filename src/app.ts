@@ -37,18 +37,20 @@ const port = normalizePort(process.env.PORT || "4000");
 const routes: Array<CommonRoutesConfig> = [];
 const debugLog: debug.IDebugger = debug("app");
 
+const origins = [
+  "https://admin.pma.intutrack.com",
+  "https://pma.intutrack.com",
+  "https://pma-admin-vipt-testing.dev.flipr.co.in",
+  "https://admin-dev.pmapping.dev.flipr.co.in", // Dev
+  "https://pmapping-web.dev.flipr.co.in", // Dev
+  "http://localhost:3000",
+  "http://localhost:3001",
+  "https://pmapping-admin.dev.flipr.co.in",
+];
+
 export const io = new Server(server, {
   cors: {
-    origin: [
-      "https://admin.pma.intutrack.com",
-      "https://pma.intutrack.com",
-      "https://pma-admin-vipt-testing.dev.flipr.co.in",
-      "https://admin-dev.pmapping.dev.flipr.co.in", // Dev
-      "https://pmapping-web.dev.flipr.co.in", // Dev
-      "http://localhost:3000",
-      "http://localhost:3001",
-      "https://pmapping-admin.dev.flipr.co.in",
-    ],
+    origin: origins,
   },
 });
 
@@ -72,21 +74,12 @@ const apiRequestLimiter = rateLimit({
 app.use(apiRequestLimiter);
 
 // here we are adding middleware to parse all incoming requests as JSON
-app.use(express.json({ limit: "3mb" }));
+app.use(express.json({ limit: "10mb" }));
 
 // here we are adding middleware to allow cross-origin requests
 app.use(
   cors({
-    origin: [
-      "https://admin.pma.intutrack.com",
-      "https://pma.intutrack.com",
-      "https://pma-admin-vipt-testing.dev.flipr.co.in",
-      "https://admin-dev.pmapping.dev.flipr.co.in", // Dev
-      "https://pmapping-web.dev.flipr.co.in", // Dev
-      "http://localhost:3000",
-      "http://localhost:3001",
-      "https://pmapping-admin.dev.flipr.co.in",
-    ],
+    origin: origins,
   })
 );
 
