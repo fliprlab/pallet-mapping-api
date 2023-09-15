@@ -28,7 +28,10 @@ export const scanLocation = async (req: Request, res: Response) => {
     }
 
     // if pallet is not picked up
-    if (pallet.status !== "pallet-picked-up") {
+    if (
+      pallet.status !== "pallet-picked-up" &&
+      pallet.status !== "pallet-out"
+    ) {
       return JsonResponse(res, {
         statusCode: 200,
         status: "error",
@@ -48,17 +51,20 @@ export const scanLocation = async (req: Request, res: Response) => {
       stringData += `${item.itemId}\n`;
     });
 
-    // change status of pallet to "pallet-out"
-    await dao.pallet.updatePalletStatus({
-      palletId: pallet._id,
-      status: "pallet-out",
-    });
+    // update status if not pallet-out
+    if (pallet.status !== "pallet-out") {
+      // change status of pallet to "pallet-out"
+      await dao.pallet.updatePalletStatus({
+        palletId: pallet._id,
+        status: "pallet-out",
+      });
 
-    // update status of location items
-    await dao.items.updateStatus({
-      shipmentId: pallet.shipmentId,
-      status: "dispatched",
-    });
+      // update status of location items
+      await dao.items.updateStatus({
+        shipmentId: pallet.shipmentId,
+        status: "dispatched",
+      });
+    }
 
     return JsonResponse(res, {
       statusCode: 200,
