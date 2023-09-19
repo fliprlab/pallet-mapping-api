@@ -108,7 +108,11 @@ const processRow = async (
   process.processedRows++;
 };
 
-const startUploadProcess = async (filePath: string, origin: string) => {
+const startUploadProcess = async (
+  filePath: string,
+  origin: string,
+  socketToken: string
+) => {
   const uploadItems: TInvalidItems = {
     invalidLocation: [],
     duplicateEntries: [],
@@ -118,11 +122,7 @@ const startUploadProcess = async (filePath: string, origin: string) => {
   const process = {
     processedRows: 0,
   };
-
-  console.log("Process Start");
   const count = await getCsvRowCount(filePath);
-  console.log("Total Rows", count);
-
   const totalRows = count ?? 0;
 
   const dataBatch: any[] = [];
@@ -130,11 +130,12 @@ const startUploadProcess = async (filePath: string, origin: string) => {
 
   const stream = fs.createReadStream(filePath).pipe(csvParser());
 
+  const socketChannel = `progress-${socketToken}`;
+
   for await (const csvLine of stream) {
     dataBatch.push(csvLine);
     rowCount++;
     if (dataBatch.length >= BATCH_COUNT) {
-      console.log("Batch Pushed ", rowCount);
       await Promise.all(
         dataBatch.map(async (item) => {
           return new Promise((resolve, reject) => {
@@ -145,18 +146,15 @@ const startUploadProcess = async (filePath: string, origin: string) => {
         })
       );
       const percentage = Math.round((process.processedRows / totalRows) * 100);
-      io.emit("progress", {
+      io.emit(socketChannel, {
         percentage,
         uploadItems,
       });
-      console.log("processedRows", process.processedRows);
-      console.log("Batch Finish ", rowCount);
       dataBatch.length = 0;
     }
   }
 
   if (dataBatch.length > 0) {
-    console.log("Batch Pushed Last", rowCount);
     await Promise.all(
       dataBatch.map(async (item) => {
         return new Promise((resolve, reject) => {
@@ -167,12 +165,10 @@ const startUploadProcess = async (filePath: string, origin: string) => {
       })
     );
     const percentage = Math.round((process.processedRows / totalRows) * 100);
-    io.emit("progress", {
+    io.emit(socketChannel, {
       percentage,
       uploadItems,
     });
-    console.log("processedRows", process.processedRows);
-    console.log("Batch Finish Last", rowCount);
   }
 
   fs.unlinkSync(filePath); // Delete the temporary uploaded file
@@ -183,8 +179,9 @@ export const uploadLocationItemV2 = async (req: Request, res: Response) => {
     const file = req.file;
     const filePath = `./uploads/${file?.originalname}`;
     const { origin } = res.locals;
+    const { token } = res.locals;
 
-    startUploadProcess(filePath, origin);
+    startUploadProcess(filePath, origin, token);
 
     return JsonResponse(res, {
       statusCode: 200,
