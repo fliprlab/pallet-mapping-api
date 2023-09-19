@@ -193,6 +193,7 @@ export const checkAccessHub = async (
 
     res.locals.userId = verify.data.userId;
     res.locals.origin = user.origin;
+    res.locals.token = bearerToken;
     next();
   } catch (error) {
     return JsonResponse(res, {
