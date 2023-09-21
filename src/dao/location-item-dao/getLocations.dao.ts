@@ -50,13 +50,20 @@ const getLocationItemsAggregation = (
   } else if (status === "bagged") {
     aggr.push({
       $match: {
-        status: "picked up",
+        status: "put away",
       },
     });
   } else if (status === "sort") {
     aggr.push({
       $match: {
         status: "created",
+        pallet: { $ne: null },
+      },
+    });
+  } else if (status) {
+    aggr.push({
+      $match: {
+        status: status,
         pallet: { $ne: null },
       },
     });
