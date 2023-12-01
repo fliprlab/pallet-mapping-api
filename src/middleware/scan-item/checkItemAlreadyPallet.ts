@@ -20,9 +20,6 @@ export const checkItemAlreadyPallet = async (
     });
   }
 
-  console.log("Item ", item);
-  console.log("item.pallet", item.pallet);
-
   if (item.pallet?._id) {
     // check item in zone pallet
     if (validators.zone.valideZoneId(item.pallet?.destination ?? "")) {

@@ -4,6 +4,7 @@ type TShipmentStatus = "created" | "put away" | "picked up" | "dispatched";
 type TLocationItems = {
   itemId: string;
   destination: string;
+  virtualId?: string;
   _id?: ObjectId;
   pallet?: {
     _id: ObjectId;

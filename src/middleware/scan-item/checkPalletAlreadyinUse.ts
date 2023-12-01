@@ -13,11 +13,26 @@ export const checkPalletAlreadyInUse = async (
   }).exec();
 
   if (pallet && pallet.status !== "pallet-created") {
+    let message = "";
+    let title = "";
+
+    switch (pallet?.status) {
+      case "pallet-asign-grid":
+        title = "PALLET PUT AWAY";
+        message = "Can't assign item";
+        break;
+
+      default:
+        title = "Failed";
+        message = "Pallet is already in Use";
+        break;
+    }
+
     return JsonResponse(res, {
       statusCode: 400,
       status: "error",
-      title: "Failed",
-      message: "Pallet is already in Use",
+      title: title,
+      message: message,
     });
   }
   next();

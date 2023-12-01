@@ -7,6 +7,7 @@ const schema = new Schema<TLocationItems>(
     itemId: { type: String, required: true },
     destination: { type: String, required: true },
     origin: String,
+    virtualId: String,
     pallet: {
       _id: ObjectId,
       name: String,

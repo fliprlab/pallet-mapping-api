@@ -5,7 +5,7 @@ import { ObjectId } from "mongodb";
 const schema = new Schema<TEvents>(
   {
     eventName: { type: String, required: true },
-    createdBy: { type: ObjectId, required: true },
+    createdBy: ObjectId,
     eventDomain: { type: String, required: true },
     relatedTo: { type: Object, required: true },
   },
