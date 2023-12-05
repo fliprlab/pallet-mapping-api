@@ -26,7 +26,7 @@ export const checkDuplicateLocationItemDao = async (
   }
 
   // check conditions
-  else if (item.status === "created" || item.status === "put away") {
+  else if (item.status === "created" || item.status === "picked up") {
     return true;
   }
 
