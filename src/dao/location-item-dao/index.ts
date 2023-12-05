@@ -8,6 +8,7 @@ import { getShipmentItems } from "./getShipmentItems";
 import { resetZoneItems } from "./resetZoneItems";
 import { updateLocationItemDao } from "./updateLocationItem.dao";
 import { updateStatus } from "./updateStatus";
+import updateVirtualId from "./updateVirtualId";
 
 export const locationItemsDao = {
   addLocationItems,
@@ -20,4 +21,5 @@ export const locationItemsDao = {
   getLastLocationItem,
   getShipmentItems,
   updateStatus,
+  updateVirtualId,
 };

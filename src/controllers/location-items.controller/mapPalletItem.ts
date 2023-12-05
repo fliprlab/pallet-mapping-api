@@ -7,6 +7,7 @@ import validators from "../../validators";
 import dao from "../../dao";
 import { ItemDao } from "../../dao/item-dao";
 import { ObjectId } from "mongodb";
+import { locationItemsDao } from "../../dao/location-item-dao";
 
 export const mapPalletItem = async (req: Request, res: Response) => {
   try {
@@ -97,11 +98,14 @@ export const mapPalletItem = async (req: Request, res: Response) => {
 
 const updateVirtualId = async (palletId: string, shipmentId: ObjectId) => {
   try {
-    const items = await ItemDao.getShipmentItmes({
+    const items = await locationItemsDao.getShipmentItems({
       shipmentId: shipmentId,
     });
-    // 6569ad72cb679b89613ccab5
-    // const virtualId =  "B" + palletId + "-" + itemLength,
+    const virtualId = "B" + palletId + "-" + items.length;
+    await locationItemsDao.updateVirtualId({
+      shipmentId: shipmentId,
+      virtualId: virtualId,
+    });
   } catch (error) {
     console.log("Error ", error);
   }
