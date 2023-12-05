@@ -15,13 +15,17 @@ const schema = new Schema<TLocationItems>(
     },
     status: {
       type: String,
-      enum: ["created", "put away", "picked up", "dispatched"],
+      enum: ["created", "put away", "picked up", "dispatched", "cancelled"],
       default: "created",
     },
     shipmentId: ObjectId,
     lpst: String,
     zone: String,
     hub: { _id: ObjectId, origin: String },
+    cancelled: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
