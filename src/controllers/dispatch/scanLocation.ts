@@ -46,9 +46,14 @@ export const scanLocation = async (req: Request, res: Response) => {
       shipmentId: pallet.shipmentId,
     });
 
-    let stringData = ``;
+    let shipMentQrCode = ``;
+    let shipMentQrCodeCancelled = ``;
     shipmentItems.forEach((item) => {
-      stringData += `${item.itemId}\n`;
+      if (item.cancelled) {
+        shipMentQrCodeCancelled += `${item.itemId}\n`;
+      } else {
+        shipMentQrCode += `${item.itemId}\n`;
+      }
     });
 
     // update status if not pallet-out
@@ -72,9 +77,11 @@ export const scanLocation = async (req: Request, res: Response) => {
       title: "Success",
       message: "Pallet Scan Successfully",
       data: {
-        qrCodeData: stringData,
+        qrCodeData: shipMentQrCode,
+        qrCodeDataCancelled: shipMentQrCodeCancelled,
         virtualId: "B" + pallet.palletId + "-" + `${shipmentItems.length}`,
         palletName: pallet.palletId,
+        shipmentItems: shipmentItems,
       },
     });
   } catch (error: any) {
