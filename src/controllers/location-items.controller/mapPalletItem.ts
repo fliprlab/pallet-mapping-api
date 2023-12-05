@@ -5,6 +5,9 @@ import PalletModel from "../../models/PalletModel";
 import { updateLocationItemDao } from "../../dao/location-item-dao/updateLocationItem.dao";
 import validators from "../../validators";
 import dao from "../../dao";
+import { ItemDao } from "../../dao/item-dao";
+import { ObjectId } from "mongodb";
+import { locationItemsDao } from "../../dao/location-item-dao";
 
 export const mapPalletItem = async (req: Request, res: Response) => {
   try {
@@ -62,6 +65,9 @@ export const mapPalletItem = async (req: Request, res: Response) => {
         item: updated,
       });
 
+      // add virtual id on item add
+      updateVirtualId(palletId, pallet.shipmentId);
+
       return JsonResponse(res, {
         statusCode: 200,
         status: "success",
@@ -87,5 +93,20 @@ export const mapPalletItem = async (req: Request, res: Response) => {
       title: "Error",
       message: "Something went wrong. Please try again.",
     });
+  }
+};
+
+const updateVirtualId = async (palletId: string, shipmentId: ObjectId) => {
+  try {
+    const items = await locationItemsDao.getShipmentItems({
+      shipmentId: shipmentId,
+    });
+    const virtualId = "B" + palletId + "-" + items.length;
+    await locationItemsDao.updateVirtualId({
+      shipmentId: shipmentId,
+      virtualId: virtualId,
+    });
+  } catch (error) {
+    console.log("Error ", error);
   }
 };

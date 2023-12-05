@@ -1,9 +1,15 @@
 import { ObjectId } from "mongodb";
-type TShipmentStatus = "created" | "put away" | "picked up" | "dispatched";
+type TShipmentStatus =
+  | "created"
+  | "put away"
+  | "picked up"
+  | "dispatched"
+  | "cancelled";
 
 type TLocationItems = {
   itemId: string;
   destination: string;
+  virtualId?: string;
   _id?: ObjectId;
   pallet?: {
     _id: ObjectId;
@@ -21,4 +27,5 @@ type TLocationItems = {
     _id: ObjectId;
     origin: String;
   };
+  cancelled?: boolean;
 };

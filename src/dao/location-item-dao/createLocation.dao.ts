@@ -1,5 +1,6 @@
 import { ObjectId } from "mongodb";
 import LocationItemsModel from "../../models/LocationItemsModel";
+import { locationItemsDao } from ".";
 
 export interface ICSVLocationItem {
   primary_key: string;
@@ -11,6 +12,19 @@ export interface ICSVLocationItem {
 export const createLocationItemDao = async (
   data: ICSVLocationItem & { hub: { _id: ObjectId; origin: String } }
 ) => {
+  // check item is cancelled
+  const findItem = await locationItemsDao.getLastLocationItem(data.primary_key);
+  if (
+    findItem &&
+    (findItem.status === "created" || findItem.status === "put away")
+  ) {
+    await LocationItemsModel.findByIdAndUpdate(findItem.id, {
+      $set: {
+        cancelled: true,
+      },
+    });
+  }
+
   return await LocationItemsModel.create({
     destination: data.shipment_destination_location_name,
     lpst: data.LPST,

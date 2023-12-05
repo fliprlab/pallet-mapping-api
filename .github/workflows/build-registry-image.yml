@@ -8,8 +8,8 @@ on:
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: registry.mshosting.in
-  USERNAME: registry
-  PASSWORD: admin
+  USERNAME: kkmadhpuriya
+  PASSWORD: Admin@1640
   # github.repository as <account>/<repo>
   IMAGE_NAME: registry.mshosting.in/${{ github.repository }}-${{github.ref_name}}
 
