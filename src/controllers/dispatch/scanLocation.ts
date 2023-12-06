@@ -48,11 +48,13 @@ export const scanLocation = async (req: Request, res: Response) => {
 
     let shipMentQrCode = ``;
     let shipMentQrCodeCancelled = ``;
+    let shipmentLength = 0;
     shipmentItems.forEach((item) => {
       if (item.cancelled) {
         shipMentQrCodeCancelled += `${item.itemId}\n`;
       } else {
         shipMentQrCode += `${item.itemId}\n`;
+        shipmentLength++;
       }
     });
 
@@ -79,7 +81,7 @@ export const scanLocation = async (req: Request, res: Response) => {
       data: {
         qrCodeData: shipMentQrCode,
         qrCodeDataCancelled: shipMentQrCodeCancelled,
-        virtualId: "B" + pallet.palletId + "-" + `${shipmentItems.length}`,
+        virtualId: "B" + pallet.palletId + "-" + `${shipmentLength}`,
         palletName: pallet.palletId,
         shipmentItems: shipmentItems,
       },
