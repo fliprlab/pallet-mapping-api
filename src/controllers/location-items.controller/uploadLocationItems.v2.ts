@@ -14,6 +14,7 @@ import {
 } from "../../dao/location-item-dao/createLocation.dao";
 import { io } from "../../app";
 import { ObjectId } from "mongodb";
+import validators from "../../validators";
 
 const BATCH_COUNT = 200;
 
@@ -81,6 +82,14 @@ const processCsvLine = async (
         lpst: data.LPST,
         zone: data.Zone,
         reason: "Incorrect LPST",
+      });
+    } else if (!validators.zone.valideZoneId(data.Zone)) {
+      uploadItems.invalidEntries.push({
+        destination: data.shipment_destination_location_name,
+        itemId: data.primary_key,
+        lpst: data.LPST,
+        zone: data.Zone,
+        reason: "In-valid Zone",
       });
     } else if (!REGX.PALLET_ITEMS.test(data.primary_key)) {
       uploadItems.invalidEntries.push({
