@@ -7,6 +7,10 @@ import { palletDao } from "../../dao/pallet-dao";
 import { uuid } from "uuidv4";
 import { ItemDao } from "../../dao/item-dao";
 
+/**
+ * @deprecated This function/method is deprecated.
+ * Moved to the scan pallet
+ */
 export const createShipment = async (req: Request, res: Response) => {
   try {
     const { userId, origin } = res.locals;

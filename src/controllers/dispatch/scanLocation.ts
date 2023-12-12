@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { JsonResponse } from "../../utils/jsonResponse";
 import dao from "../../dao";
+import virtualid from "../../utils/virtualid";
 
 export const scanLocation = async (req: Request, res: Response) => {
   try {
@@ -81,12 +82,15 @@ export const scanLocation = async (req: Request, res: Response) => {
       data: {
         qrCodeData: shipMentQrCode,
         qrCodeDataCancelled: shipMentQrCodeCancelled,
-        virtualId: "B" + pallet.palletId + "-" + `${shipmentLength}`,
+        virtualId: await virtualid.getVirtualId({
+          shipmentId: pallet.shipmentId,
+        }),
         palletName: pallet.palletId,
         shipmentItems: shipmentItems,
       },
     });
   } catch (error: any) {
+    console.log("Error ", error);
     return JsonResponse(res, {
       statusCode: 500,
       status: "error",

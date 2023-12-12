@@ -5,6 +5,7 @@ import { paginated } from "../../middleware/paginate/paginated.middleware";
 import LocationItemsModel from "../../models/LocationItemsModel";
 import PalletModel from "../../models/PalletModel";
 import { ObjectId } from "mongodb";
+import virtualid from "../../utils/virtualid";
 
 export const getPalletLocationItems = async (req: Request, res: Response) => {
   try {
@@ -46,7 +47,9 @@ export const getPalletLocationItems = async (req: Request, res: Response) => {
       message: "Data Find Successfully",
       data: {
         qrCodeData: stringData,
-        virtualId: "B" + pallet.palletId + "-" + `${data.length}`,
+        virtualId: await virtualid.getVirtualId({
+          shipmentId: pallet.shipmentId,
+        }),
       },
     });
   } catch (error) {

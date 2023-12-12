@@ -6,6 +6,7 @@ import { uuid } from "uuidv4";
 import { addEvent } from "../../dao/events-dao/addEvent";
 import { updatePalletDao } from "../../dao/pallet-dao/updatePallet.dao";
 import { palletDao } from "../../dao/pallet-dao";
+import virtualid from "../../utils/virtualid";
 
 export const scanPallet = async (req: Request, res: Response) => {
   try {
@@ -32,7 +33,7 @@ export const scanPallet = async (req: Request, res: Response) => {
       status: [{ statusName: "created", updatedBy: userId, time: new Date() }],
       latestStatus: "created",
       shipmentId: uuid(),
-      virtualId: "B" + palletId + "-" + "0",
+      virtualId: await virtualid.getNew(palletId),
     });
 
     if (!shipment) {

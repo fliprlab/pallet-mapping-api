@@ -60,13 +60,10 @@ export const mapPalletItem = async (req: Request, res: Response) => {
 
     if (updated) {
       // push item to the shipment
-      await dao.shipment.pushItemToShipment({
+      dao.shipment.pushItemToShipment({
         shipmentId: pallet.shipmentId,
         item: updated,
       });
-
-      // add virtual id on item add
-      updateVirtualId(palletId, pallet.shipmentId);
 
       return JsonResponse(res, {
         statusCode: 200,
@@ -93,20 +90,5 @@ export const mapPalletItem = async (req: Request, res: Response) => {
       title: "Error",
       message: "Something went wrong. Please try again.",
     });
-  }
-};
-
-const updateVirtualId = async (palletId: string, shipmentId: ObjectId) => {
-  try {
-    const items = await locationItemsDao.getShipmentItems({
-      shipmentId: shipmentId,
-    });
-    const virtualId = "B" + palletId + "-" + items.length;
-    await locationItemsDao.updateVirtualId({
-      shipmentId: shipmentId,
-      virtualId: virtualId,
-    });
-  } catch (error) {
-    console.log("Error ", error);
   }
 };
