@@ -22,6 +22,10 @@ const schema = new Schema<TLocationItems>(
     lpst: String,
     zone: String,
     hub: { _id: ObjectId, origin: String },
+    gridId: {
+      type: String,
+      default: "",
+    },
     cancelled: {
       type: Boolean,
       default: false,

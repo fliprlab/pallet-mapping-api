@@ -51,7 +51,10 @@ export const asignGrid = async (req: Request, res: Response) => {
     await LocationItemsModel.updateMany(
       { shipmentId },
       {
-        $set: { status: "put away" },
+        $set: {
+          status: "put away",
+          gridId: grid.gridId,
+        },
       }
     ).exec();
 
@@ -87,21 +90,21 @@ export const asignGrid = async (req: Request, res: Response) => {
       { statusName: "asign-grid", time: new Date(), updatedBy: userId }
     );
 
-    await addEvent({
+    addEvent({
       createdBy: userId,
       eventDomain: "pallet",
       eventName: "asign-grid",
       relatedTo: { tableName: "shipments", relatedId: shipmentId },
     });
 
-    await addEvent({
+    addEvent({
       createdBy: userId,
       eventDomain: "grid",
       eventName: "asign-grid",
       relatedTo: { tableName: "shipments", relatedId: shipmentId },
     });
 
-    await updateItems({
+    updateItems({
       shipmentId: new ObjectId(shipmentId),
       data: {
         status: "asign-grid",

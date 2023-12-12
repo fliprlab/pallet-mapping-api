@@ -23,6 +23,7 @@ type TLocationItems = {
   zone: string;
   lpst: string;
   reason?: string;
+  gridId?: string;
   hub?: {
     _id: ObjectId;
     origin: String;
