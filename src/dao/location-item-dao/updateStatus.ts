@@ -10,7 +10,7 @@ interface Props {
 export const updateStatus = async (props: Props) => {
   const { status, shipmentId } = props;
   return await LocationItemsModel.updateMany(
-    { shipmentId },
+    { shipmentId, cancelled: false },
     {
       $set: { status },
     }
