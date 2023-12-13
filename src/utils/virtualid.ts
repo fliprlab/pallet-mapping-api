@@ -34,7 +34,7 @@ const getNew = async (palletId: string) => {
     return "B" + palletId + "-" + "0" + Date.now();
   }
   const splitId = splitVirtualId(lastShipment[0].virtualId);
-  return "B" + palletId + "-" + "0" + "-" + splitId.counting + 1;
+  return "B" + palletId + "-" + "0" + "-" + (Number(splitId.counting) + 1);
 };
 
 const getVirtualId = async (props: { shipmentId: ObjectId }) => {

@@ -10,7 +10,12 @@ export const checkPalletItemLocation = async (
 ) => {
   const { palletId, location, zone } = req.body;
 
-  const zoneName = zone.split("-")[0];
+  console.log("Zone ", zone);
+
+  // const zoneName = zone.split("-")[0];
+  const zoneName = zone;
+
+  console.log("Zone Name ", zoneName);
 
   const pallet = await PalletModel.findOne({
     palletId: palletId,

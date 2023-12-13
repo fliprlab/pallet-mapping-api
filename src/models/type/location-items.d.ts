@@ -1,6 +1,8 @@
 import { ObjectId } from "mongodb";
 type TShipmentStatus =
   | "created"
+  | "primary sort"
+  | "secondary sort"
   | "put away"
   | "picked up"
   | "dispatched"
@@ -29,4 +31,5 @@ type TLocationItems = {
     origin: String;
   };
   cancelled?: boolean;
+  sort?: "primary" | "secondary";
 };
