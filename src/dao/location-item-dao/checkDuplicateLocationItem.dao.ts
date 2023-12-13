@@ -16,17 +16,11 @@ export const checkDuplicateLocationItemDao = async (
   if (!item) {
     return false;
   }
-
-  // if hub is same for new item & previous item and destination is different than it can be upload
+  // Same Hub & Destination than show duplicate
   else if (
     item.hub?.origin.toUpperCase() === uploadFor?.hub.toUpperCase() &&
-    item.destination.toUpperCase() !== uploadFor?.destination.toUpperCase()
+    item.destination.toUpperCase() === uploadFor?.destination.toUpperCase()
   ) {
-    return false;
-  }
-
-  // check conditions
-  else if (item.status === "created" || item.status === "picked up") {
     return true;
   }
 
