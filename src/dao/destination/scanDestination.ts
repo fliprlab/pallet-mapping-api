@@ -8,7 +8,10 @@ interface Props {
 const scanDestination = async (props: Props): Promise<string> => {
   const { inputString } = props;
   let destination = "";
-  if (validators.zone.valideZoneId(inputString)) {
+  if (
+    validators.zone.valideZone(inputString) ||
+    validators.zone.valideZoneId(inputString)
+  ) {
     const getDestination = await dao.zone.findZone(inputString);
     getDestination && (destination = getDestination.zone);
   } else {

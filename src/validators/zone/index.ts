@@ -1,9 +1,8 @@
 import valideZoneId from "./valideZoneId";
 
-
 const zone = {
-  valideZoneId: valideZoneId.valideZone,
-  valideZone: valideZoneId.valideZone
+  valideZoneId: valideZoneId.valideZoneId,
+  valideZone: valideZoneId.valideZone,
 };
 
 export default zone;

@@ -1,9 +1,9 @@
-const valideZoneId = (zone: string) => {
-  const reg = new RegExp("^[zdZD]\\d{1,5}-[a-zA-Z]\\d$");
-  return reg.test(zone);
-};
+export const ZONE_ID_REG = new RegExp("^[A-Z][0-9]-[LR][0-9]{1,2}$");
+export const ZONE_REG = new RegExp("^[A-Z][0-9]$");
 
-export const ZONE_REG = new RegExp("^[A-Z][0-9]-[LR][0-9]{1,2}$");
+const valideZoneId = (zone: string) => {
+  return ZONE_ID_REG.test(zone);
+};
 
 const valideZone = (zone: string) => {
   return ZONE_REG.test(zone);
