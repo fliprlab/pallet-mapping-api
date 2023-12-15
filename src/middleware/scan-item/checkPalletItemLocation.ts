@@ -12,8 +12,7 @@ export const checkPalletItemLocation = async (
 
   console.log("Zone ", zone);
 
-  // const zoneName = zone.split("-")[0];
-  const zoneName = zone;
+  const zoneName = zone.split("-")[0];
 
   console.log("Zone Name ", zoneName);
 
