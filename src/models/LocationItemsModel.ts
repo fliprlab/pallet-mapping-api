@@ -54,7 +54,10 @@ schema.pre("findOneAndUpdate", function (next) {
   const pallet = this.get("pallet");
   if (pallet) {
     const destination = pallet.destination;
-    if (validators.zone.valideZoneId(destination)) {
+    if (
+      validators.zone.valideZoneId(destination) ||
+      validators.zone.valideZone(destination)
+    ) {
       this.set({
         sort: "primary",
         status: "primary sort",
