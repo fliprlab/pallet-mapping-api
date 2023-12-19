@@ -47,7 +47,10 @@ export const mapPalletItem = async (req: Request, res: Response) => {
     });
 
     // check pallet is for zone/location
-    if (validators.zone.valideZoneId(item.pallet?.destination || "")) {
+    if (
+      validators.zone.valideZoneId(item.pallet?.destination || "") ||
+      validators.zone.valideZone(item.pallet?.destination || "")
+    ) {
       // check status of pallet and remove if it is first item out
       if (item.pallet?._id) {
         // remove all items mapping for the

@@ -22,7 +22,10 @@ export const checkItemAlreadyPallet = async (
 
   if (item.pallet?._id) {
     // check item in zone pallet
-    if (validators.zone.valideZoneId(item.pallet?.destination ?? "")) {
+    if (
+      validators.zone.valideZoneId(item.pallet?.destination ?? "") ||
+      validators.zone.valideZone(item.pallet?.destination ?? "")
+    ) {
       next();
     } else {
       return JsonResponse(res, {
