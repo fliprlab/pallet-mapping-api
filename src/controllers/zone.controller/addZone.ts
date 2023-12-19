@@ -9,7 +9,14 @@ export const addZone = async (req: Request, res: Response) => {
     const { zone } = req.body;
 
     // check zone formate
-    if (!validators.zone.valideZoneId(zone)) {
+    if (!validators.zone.valideZone(zone)) {
+      return JsonResponse(res, {
+        statusCode: 400,
+        status: "error",
+        title: "OOPS!",
+        message: "Invalid Zone ID Format, Please enter correct zone ID",
+      });
+    } else if (!validators.zone.valideZoneId(zone)) {
       return JsonResponse(res, {
         statusCode: 400,
         status: "error",
