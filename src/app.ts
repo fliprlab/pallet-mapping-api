@@ -43,9 +43,8 @@ const origins = [
   "https://pma-admin-vipt-testing.dev.flipr.co.in",
   "https://admin-dev.pmapping.dev.flipr.co.in", // Dev
   "https://pmapping-web.dev.flipr.co.in", // Dev
-  "http://localhost:3000",
-  "http://localhost:3001",
   "https://pmapping-admin.dev.flipr.co.in",
+  "https://pallet-mapping.d.flipr.co.in",
 ];
 
 export const io = new Server(server, {
