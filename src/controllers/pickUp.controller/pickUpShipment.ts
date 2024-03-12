@@ -54,7 +54,7 @@ export const pickUpShipment = async (req: Request, res: Response) => {
     });
 
     await LocationItemsModel.updateMany(
-      { shipmentId },
+      { shipmentId, cancelled: false },
       {
         $set: { status: "picked up" },
       }
