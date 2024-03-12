@@ -1,0 +1,9 @@
+primary_key,shipment_destination_location_name,trip_route,consignment_id,Shipemnet Type,Zone,LPST
+FMPC2894917523,SatelliteHub_YWP1,,,,Z3-R2,13:30:00
+FMPC2894917524,SatelliteHub_YWP1,,,,Z3-R3,13:30:1
+FMPC2894917525,SatelliteHub_YWP1,,,,Z3-R4,13:30:2
+FMPC2894917526,SatelliteHub_YWP1,,,,Z3-R5,13:30:3
+FMPC2894917527,SatelliteHub_YWP1,,,,Z3-R6,13:30:4
+FMPC2894917528,CENTRALHUB_L_DEL8,,,,Z3-R7,13:30:5
+FMPC2894917529,SatelliteHub_YWP1,,,,Z3-R8,13:30:6
+FMPC2894917530,SatelliteHub_YWP1,,,,Z3-R9,13:30:7

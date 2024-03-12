@@ -49,7 +49,7 @@ export const asignGrid = async (req: Request, res: Response) => {
     }
 
     await LocationItemsModel.updateMany(
-      { shipmentId },
+      { shipmentId, cancelled: false },
       {
         $set: {
           status: "put away",
